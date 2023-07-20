@@ -195,7 +195,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
     both: BothData
   }
 
-  const path = process.env.NODE_ENV === 'production' ? 'https://es-human-eval.vercel.app/api/score' : 'http://0.0.0.0:3000/api/score'
+  const path = process.env.NODE_ENV === 'production' ? 'https://es-human-eval-60730b4tk-1eastar.vercel.app/api/score' : 'http://0.0.0.0:3000/api/score'
 
   const scores = await fetch(path)
   const res_scores = await scores.json()
