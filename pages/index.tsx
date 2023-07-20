@@ -2,6 +2,7 @@ import fsPromises from 'fs/promises'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { styled } from 'styled-components'
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { headers } from "next/headers"
 
 import Dialogue, { Dialogue as DialogueInfo } from '@/components/Dialogue'
 import { ScoreData } from '@/utils/dialogue.utils'
@@ -15,22 +16,26 @@ interface HomeProps {
   usr: DialogueInfo[]
   sys: DialogueInfo[]
   both: DialogueInfo[]
-  scores: ScoreData[]
 }
 
 export default function Home({
   usr,
   sys,
   both,
-  scores,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [usrResult, setUsrResult] = useState<DialogueInfo[]>(usr)
   const [sysResult, setSysResult] = useState<DialogueInfo[]>(sys)
   const [bothResult, setBothResult] = useState<DialogueInfo[]>(both)
-  const [scoreResult, setScoreResult] = useState<ScoreData[]>(scores)
+  const [scoreResult, setScoreResult] = useState<ScoreData[]>([])
 
   const [currentConvId, setCurrentConvId] = useState<string>("10")
   const [currentTurnId, setCurrentTurnId] = useState<string>("6")
+
+  useEffect(() => {
+    fetch('/api/score')
+      .then(res => res.json())
+      .then(res => setScoreResult(res))
+  }, [])
 
   const idList = useMemo(() => {
     const _idList: { [convId: string]: string[] } = {}
@@ -195,10 +200,5 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
     both: BothData
   }
 
-  const path = process.env.NODE_ENV === 'production' ? 'https://es-human-eval-60730b4tk-1eastar.vercel.app/api/score' : 'http://0.0.0.0:3000/api/score'
-
-  const scores = await fetch(path)
-  const res_scores = await scores.json()
-
-  return { props:  { ...results, scores: res_scores }  }
+  return { props: results  }
 }
