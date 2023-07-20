@@ -2,7 +2,6 @@ import fsPromises from 'fs/promises'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { styled } from 'styled-components'
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
-import { headers } from "next/headers"
 
 import Dialogue, { Dialogue as DialogueInfo } from '@/components/Dialogue'
 import { ScoreData } from '@/utils/dialogue.utils'
@@ -11,6 +10,8 @@ import Indicator from '@/components/Indicator'
 import { Tab } from '@/constants/tabs'
 
 import { paths } from '@/constants/paths'
+
+const path = process.env.NODE_ENV == 'production' ? 'https://es-human-eval.vercel.app' : 'http://0.0.0.0:3000'
 
 interface HomeProps {
   usr: DialogueInfo[]
@@ -32,7 +33,7 @@ export default function Home({
   const [currentTurnId, setCurrentTurnId] = useState<string>("6")
 
   useEffect(() => {
-    fetch('/api/score')
+    fetch(`${path}/api/score`)
       .then(res => res.json())
       .then(res => setScoreResult(res))
   }, [])
@@ -121,7 +122,7 @@ export default function Home({
         score,
       }
       
-      await fetch('/api/score', {
+      await fetch(path +'/api/score', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

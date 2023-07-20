@@ -1,6 +1,6 @@
 import Image from "next/image"
 import React, { KeyboardEvent, ChangeEvent, useCallback, useMemo, useState, useRef } from "react"
-import { styled } from "styled-components"
+import { css, styled } from "styled-components"
 
 interface AnswerBoxProps {
   score: string
@@ -72,6 +72,7 @@ function AnswerBox({
   return (
     <Container
       onClick={handleClickBox}
+      $yet={value === -1}
     >
       <Amark>A. &nbsp;</Amark>
       { InputBox }
@@ -81,19 +82,27 @@ function AnswerBox({
 
 export default AnswerBox
 
-const Container = styled.div`
+const Container = styled.div<{ $yet: boolean }>`
   height: 100%;
   box-sizing: border-box;
   width: 150px;
   padding: 15px 25px;
   font-size: 18px;
   font-weight: bold;
-  background-color: rgba(242, 242, 242, .5);
   border-radius: 12px;
   border: 0.2px solid rgba(242, 242, 242, .5);
   display: flex;
   flex-direction: row;
-  align-items: center     ;
+  align-items: center;
+
+  ${props => props.$yet
+    ? css`
+      background-color: rgba(242, 242, 242, .5);
+    `
+    : css`
+      background-color: rgba(242, 242, 242, .5);
+    `
+  }
 `
 
 const Amark = styled.span`
