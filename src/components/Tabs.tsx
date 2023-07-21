@@ -2,50 +2,35 @@ import { Question, Questions } from "@/constants/questions"
 import { Tab } from "@/constants/tabs"
 import Overlay, { OverlayPosition } from "@/elements/Overlay"
 import { ScoreData } from "@/utils/dialogue.utils"
-import clsx from "clsx"
 import Image from "next/image"
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import React, { useCallback, useMemo, useRef, useState } from "react"
 import { css, keyframes, styled } from "styled-components"
 import AnswerBox from "./AnswerBox"
 import OverlayListItem from "./OverlayListItem"
 import QuestionBox from "./QuestionBox"
 
-interface TabContent {
+export interface TabContent {
   usrToM?: string
   sysToM?: string
   response?: string
 }
 
 interface TabsProps {
-  usrToM?: string
-  sysToM?: string
-  bothToM?: [string | undefined, string | undefined]
-  usrToMResponse?: string
-  sysToMResponse?: string
-  bothToMResponse?: string
-  goldResponse?: string
-  // baselineResponse: string
   score?: ScoreData
   onSubmit: (tab: Tab, qKey: string, score: number) => void
+  onMatchTab: (tab: Tab) => TabContent
 }
 
 function Tabs({
-  usrToM,
-  sysToM,
-  bothToM,
-  usrToMResponse,
-  sysToMResponse,
-  bothToMResponse,
-  goldResponse,
-  // baselineResponse,
   score,
   onSubmit,
+  onMatchTab,
 }: TabsProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const overleyRef = useRef<(HTMLDivElement | null)[]>([])
 
   const [leftTab, setLeftTab] = useState<Tab>(Tab.USR)
-  const [rightTab, setRightTab] = useState<Tab>(Tab.SYS)
+  const [rightTab, setRightTab] = useState<Tab>(Tab.GOLD)
 
   const [showTabSelectOverlay, setShowTabSelectOverlay] = useState(false)
   const [focusedTab, setFocusedTabIndex] = useState<number>(-1)   // 0: left tab, 1: right tab
@@ -72,44 +57,6 @@ function Tabs({
     </TabHeader>
   ), [focusedTab, handleClickDropDown, showTabSelectOverlay])
 
-  const matchTab = useCallback((tab: Tab): TabContent => {
-    if (tab === Tab.USR) {
-      return {
-        usrToM: usrToM,
-        sysToM: "-",
-        response: usrToMResponse,
-      }
-    } else if (tab === Tab.SYS) {
-      return {
-        usrToM: "-",
-        sysToM: sysToM,
-        response: sysToMResponse,
-      }
-    } else if (tab === Tab.BOTH) {
-      return {
-        usrToM: bothToM?.[0] ?? "-",
-        sysToM: bothToM?.[1] ?? "-",
-        response: bothToMResponse,
-      }
-    } else if (tab === Tab.GOLD) {
-      return {
-        usrToM: "-",
-        sysToM: "-",
-        response: goldResponse,
-      }
-    } else {
-      return {}
-    }
-  }, [
-    usrToM,
-    usrToMResponse,
-    sysToM,
-    sysToMResponse,
-    bothToM,
-    bothToMResponse,
-    goldResponse,
-  ])
-
   const getQuestionScores = useCallback((q: Question) => [
     score?.scores?.[q.key]?.[leftTab].toString() || "-1",
     score?.scores?.[q.key]?.[rightTab].toString() || "-1",
@@ -120,8 +67,8 @@ function Tabs({
   ], [leftTab, renderTabHeader, rightTab])
 
   const TabContents: TabContent[] = useMemo(() => [
-    matchTab(leftTab), matchTab(rightTab)
-  ], [matchTab, leftTab, rightTab])
+    onMatchTab(leftTab), onMatchTab(rightTab)
+  ], [onMatchTab, leftTab, rightTab])
 
   const handleClickOverlayElement = useCallback((tab: string) => {
     if (focusedTab === 0) setLeftTab(tab as Tab)

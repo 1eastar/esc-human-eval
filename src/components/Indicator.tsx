@@ -14,7 +14,7 @@ function Indicator({
   idList,
   onSearch,
 }: IndicatorProps) {
-  const [convId, setConvId] = useState("10")
+  const [convId, setConvId] = useState("31")
   const [turnId, setTurnId] = useState("6")
 
   const convIdList = useMemo(() => (

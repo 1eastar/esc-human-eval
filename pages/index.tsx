@@ -5,35 +5,33 @@ import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 
 import Dialogue, { Dialogue as DialogueInfo } from '@/components/Dialogue'
 import { ScoreData } from '@/utils/dialogue.utils'
-import Tabs from '@/components/Tabs'
+import Tabs, { TabContent } from '@/components/Tabs'
 import Indicator from '@/components/Indicator'
 import { Tab } from '@/constants/tabs'
 
-import { paths } from '@/constants/paths'
-
-const path = process.env.NODE_ENV == 'production' ? 'https://es-human-eval.vercel.app' : 'http://0.0.0.0:3000'
+import { basePath, paths } from '@/constants/paths'
 
 interface HomeProps {
+  fiveShot: DialogueInfo[]
   usr: DialogueInfo[]
-  sys: DialogueInfo[]
   both: DialogueInfo[]
 }
 
 export default function Home({
+  fiveShot,
   usr,
-  sys,
   both,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const [fiveShotResult, setFiveShotResult] = useState<DialogueInfo[]>(fiveShot)
   const [usrResult, setUsrResult] = useState<DialogueInfo[]>(usr)
-  const [sysResult, setSysResult] = useState<DialogueInfo[]>(sys)
   const [bothResult, setBothResult] = useState<DialogueInfo[]>(both)
   const [scoreResult, setScoreResult] = useState<ScoreData[]>([])
 
-  const [currentConvId, setCurrentConvId] = useState<string>("10")
+  const [currentConvId, setCurrentConvId] = useState<string>("31")
   const [currentTurnId, setCurrentTurnId] = useState<string>("6")
 
   useEffect(() => {
-    fetch(`${path}/api/score`)
+    fetch(`${basePath}/api/score`)
       .then(res => res.json())
       .then(res => setScoreResult(res))
   }, [])
@@ -53,14 +51,9 @@ export default function Home({
     usrResult.find(res => res.conv_id.toString() === currentConvId && res.turn_id.toString() === currentTurnId)
   ), [currentConvId, currentTurnId, usrResult])
 
-
   const currentUsrToM = useMemo(() => (
     usrResult.find(res => res.conv_id.toString() === currentConvId && res.turn_id.toString() === currentTurnId)?.tom_usr
   ), [currentConvId, currentTurnId, usrResult])
-
-  const currentSysToM = useMemo(() => (
-    sysResult.find(res => res.conv_id.toString() === currentConvId && res.turn_id.toString() === currentTurnId)?.tom_sys
-  ), [currentConvId, currentTurnId, sysResult])
 
   const currentBothToM: [string | undefined, string | undefined] = useMemo(() => ([
     bothResult.find(res => res.conv_id.toString() === currentConvId && res.turn_id.toString() === currentTurnId)?.tom_usr,
@@ -72,10 +65,10 @@ export default function Home({
       .find(res => res.conv_id.toString() === currentConvId && res.turn_id.toString() === currentTurnId)?.clean_prediction
   ), [currentConvId, currentTurnId, usrResult])
 
-  const currentSysResponse = useMemo(() => (
-    sysResult
+  const currentFiveShotResponse = useMemo(() => (
+    fiveShotResult
       .find(res => res.conv_id.toString() === currentConvId && res.turn_id.toString() === currentTurnId)?.clean_prediction
-  ), [currentConvId, currentTurnId, sysResult])
+  ), [currentConvId, currentTurnId, fiveShotResult])
 
   const currentBothResponse = useMemo(() => (
     bothResult
@@ -95,6 +88,43 @@ export default function Home({
   const currentScores = useMemo(() => (
     scoreResult.find(s => s.conv_id.toString() === currentConvId && s.turn_id.toString() === currentTurnId)
   ), [currentConvId, currentTurnId, scoreResult])
+
+  const handleMatchTab = useCallback((tab: Tab): TabContent => {
+    if (tab === Tab.USR) {
+      return {
+        usrToM: currentUsrToM,
+        sysToM: "-",
+        response: currentUsrResponse,
+      }
+    } else if (tab === Tab.FIVESHOT) {
+      return {
+        usrToM: "-",
+        sysToM: "-",
+        response: currentFiveShotResponse,
+      }
+    } else if (tab === Tab.BOTH) {
+      return {
+        usrToM: currentBothToM?.[0] ?? "-",
+        sysToM: currentBothToM?.[1] ?? "-",
+        response: currentBothResponse,
+      }
+    } else if (tab === Tab.GOLD) {
+      return {
+        usrToM: "-",
+        sysToM: "-",
+        response: currentGoldResponse,
+      }
+    } else {
+      return {}
+    }
+  }, [
+    currentUsrToM,
+    currentUsrResponse,
+    currentFiveShotResponse,
+    currentBothToM,
+    currentBothResponse,
+    currentGoldResponse,
+  ])
 
   const handleSearchId = useCallback((convId: string, turnId: string) => {
     const convIds = usrResult.map(d => d.conv_id + '')
@@ -122,7 +152,7 @@ export default function Home({
         score,
       }
       
-      await fetch(path +'/api/score', {
+      await fetch(basePath +'/api/score', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -155,13 +185,7 @@ export default function Home({
         />
       </DialogueSlider>
       <Tabs
-        usrToM={currentUsrToM}
-        sysToM={currentSysToM}
-        bothToM={currentBothToM}
-        usrToMResponse={currentUsrResponse}
-        sysToMResponse={currentSysResponse}
-        bothToMResponse={currentBothResponse}
-        goldResponse={currentGoldResponse}
+        onMatchTab={handleMatchTab}
         score={currentScores}
         onSubmit={handleSubmit}
       />
@@ -186,18 +210,17 @@ const DialogueSlider = styled.div`
 `
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  // Read the existing data from the JSON file
+  const FiveShotBuffer = await fsPromises.readFile(paths.FiveShot)
   const UsrBuffer = await fsPromises.readFile(paths.USR)
-  const SysBuffer = await fsPromises.readFile(paths.SYS)
   const BothBuffer = await fsPromises.readFile(paths.BOTH)
 
+  const FiveShotData = JSON.parse(FiveShotBuffer.toString())
   const UsrData = JSON.parse(UsrBuffer.toString())
-  const SysData = JSON.parse(SysBuffer.toString())
   const BothData = JSON.parse(BothBuffer.toString())
 
   const results = {
+    fiveShot: FiveShotData,
     usr: UsrData,
-    sys: SysData,
     both: BothData
   }
 

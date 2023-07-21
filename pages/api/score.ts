@@ -51,9 +51,9 @@ export default async function handler(req, res) {
         scores: {
           [qKey]: {
             [Tab.USR]: -1,
-            [Tab.SYS]: -1,
             [Tab.BOTH]: -1,
             [Tab.GOLD]: -1,
+            [Tab.FIVESHOT]: -1,
             [tab]: score
           }
         }

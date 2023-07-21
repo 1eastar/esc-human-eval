@@ -2,9 +2,9 @@ import { Tab } from "@/constants/tabs"
 
 export interface Scores {
   [Tab.USR]: number
-  [Tab.SYS]: number
   [Tab.BOTH]: number
   [Tab.GOLD]: number
+  [Tab.FIVESHOT]: number
   // baseline: number
 }
 
@@ -14,9 +14,9 @@ export interface ScoreData {
   scores: {
     [questionKey: string]: {
       [Tab.USR]: number
-      [Tab.SYS]: number
       [Tab.BOTH]: number
       [Tab.GOLD]: number
+      [Tab.FIVESHOT]: number
     }
   }
 }
@@ -38,9 +38,9 @@ export interface ScoreData {
 export function makeScoreScheme(score: number, tab: Tab, baseScores?: Scores) {
   return {
     [Tab.USR]: -1,
-    [Tab.SYS]: -1,
     [Tab.BOTH]: -1,
     [Tab.GOLD]: -1,
+    [Tab.FIVESHOT]: -1,
 
     ...baseScores,
     [tab]: score,

@@ -1,7 +1,7 @@
 
 export enum Tab {
+  FIVESHOT = '5 Shot (no ToM)',
   USR = 'Usr ToM',
-  SYS = 'Sys ToM',
   BOTH = 'Usr+Sys ToM',
-  GOLD = 'Gold'
+  GOLD = 'Gold',
 }

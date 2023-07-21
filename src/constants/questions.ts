@@ -7,22 +7,18 @@ export interface Question {
 export const Questions: Question[] = [
   {
     key: "0",
-    content: "Is the model response grounded to inferred ToM?",
+    content: "Do you think the ground-truth response requires theory of mind?",
   },
   {
     key: "1",
-    content: "Is the model response grounded to inferred ToM? Is the model response grounded to inferred ToM? Is the model response grounded to inferred ToM? ",
+    content: "Does the inferred user ToM seem correct?",
   },
   {
     key: "2",
-    content: "Is the model response grounded to inferred ToM?",
+    content: "Does the inferred system ToM seem effective?",
   },
   {
     key: "3",
-    content: "Is the model response grounded to inferred ToM?",
-  },
-  {
-    key: "4",
-    content: "Is the model response grounded to inferred ToM?",
+    content: "Is the response grounded to inferred ToM?",
   },
 ]
