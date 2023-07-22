@@ -161,7 +161,7 @@ export default function Home({
             }
           }
       newScoreData.scores[qKey][tab] = score
-
+      console.log(newScoreData)
       setScoreDocument(newScoreData)
       // await fetch(basePath +'/api/score', {
       //   method: 'POST',
