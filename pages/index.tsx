@@ -160,6 +160,7 @@ export default function Home({
               }
             }
           }
+      console.log(newScoreData)
       newScoreData.scores[qKey][tab] = score
       console.log(newScoreData)
       setScoreDocument(newScoreData)
