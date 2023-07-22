@@ -19,6 +19,7 @@ export async function getScores() {
 
 export async function setScoreDocument(scoreData: ScoreData) {
   await setDoc(doc(db, "score", `${scoreData.conv_id}_${scoreData.turn_id}`), scoreData)
+  return await getScores()
 }
 
 export async function editScoreDocument() {
