@@ -13,7 +13,7 @@ export async function getScores() {
     console.log(doc.id, " => ", doc.data())
     scoreList.concat([doc.data() as ScoreData])
   })
-
+  console.log(scoreList)
   return scoreList
 }
 
