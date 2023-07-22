@@ -161,9 +161,19 @@ export default function Home({
             }
           }
       console.log(newScoreData)
+
+      if (!Object.keys(newScoreData.scores).includes(qKey)) {
+        newScoreData.scores[qKey] = {
+          [Tab.USR]: -1,
+          [Tab.BOTH]: -1,
+          [Tab.GOLD]: -1,
+          [Tab.FIVESHOT]: -1,
+        }
+      }
       newScoreData.scores[qKey][tab] = score
-      console.log(newScoreData)
       setScoreDocument(newScoreData)
+
+      console.log(newScoreData)
       // await fetch(basePath +'/api/score', {
       //   method: 'POST',
       //   headers: {
