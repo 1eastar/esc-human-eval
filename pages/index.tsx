@@ -9,7 +9,8 @@ import Tabs, { TabContent } from '@/components/Tabs'
 import Indicator from '@/components/Indicator'
 import { Tab } from '@/constants/tabs'
 
-import { basePath, paths } from '@/constants/paths'
+import { paths } from '@/constants/paths'
+import { getScores, setScoreDocument } from '@/api/db.api'
 
 interface HomeProps {
   fiveShot: DialogueInfo[]
@@ -31,9 +32,14 @@ export default function Home({
   const [currentTurnId, setCurrentTurnId] = useState<string>("6")
 
   useEffect(() => {
-    fetch(`${basePath}/api/score`)
-      .then(res => res.json())
-      .then(res => setScoreResult(res))
+    getScores()
+      .then(scoreSnapshot => {
+        const scoreList: ScoreData[] = []
+        scoreSnapshot.forEach(doc => {
+          scoreList.concat([doc.data() as ScoreData])
+        })
+        setScoreResult(scoreList)
+      })
   }, [])
 
   const idList = useMemo(() => {
@@ -144,34 +150,43 @@ export default function Home({
       alert('conv_id 또는 turn_id가 잘못되었습니다.')
 
     } else {
-      const data = {
-        convId: +currentConvId,
-        turnId: +currentTurnId,
-        qKey,
-        tab,
-        score,
-      }
-      
-      await fetch(basePath +'/api/score', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
-      .then(res => {
-        if (res.status !== 200) {
-          throw new Error('status is not 200')
-        }
-        return res
-      })
-      .then(res => res.json())
-      .then(res => {
-        setScoreResult(res)
-      })
+      const newScoreData: ScoreData = currentScores
+        ? JSON.parse(JSON.stringify(currentScores))
+        : {
+            "conv_id": +currentConvId,
+            "turn_id": +currentTurnId,
+            "scores": {
+              [qKey]: {
+                [Tab.USR]: -1,
+                [Tab.BOTH]: -1,
+                [Tab.GOLD]: -1,
+                [Tab.FIVESHOT]: -1,
+              }
+            }
+          }
+      newScoreData.scores[qKey][tab] = score
+
+      setScoreDocument(newScoreData)
+      // await fetch(basePath +'/api/score', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify(data)
+      // })
+      // .then(res => {
+      //   if (res.status !== 200) {
+      //     throw new Error('status is not 200')
+      //   }
+      //   return res
+      // })
+      // .then(res => res.json())
+      // .then(res => {
+      //   setScoreResult(res)
+      // })
     }
 
-  }, [currentConvId, currentTurnId, idList])
+  }, [currentConvId, currentScores, currentTurnId, idList])
 
   return (
     <Container>
