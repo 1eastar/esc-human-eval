@@ -33,12 +33,8 @@ export default function Home({
 
   useEffect(() => {
     getScores()
-      .then(scoreSnapshot => {
-        const scoreList: ScoreData[] = []
-        scoreSnapshot.forEach(doc => {
-          scoreList.concat([doc.data() as ScoreData])
-        })
-        setScoreResult(scoreList)
+      .then(list => {
+        setScoreResult(list)
       })
   }, [])
 
