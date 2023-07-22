@@ -11,7 +11,7 @@ export async function getScores() {
   scoreSnapshot.forEach((doc) => {
     // 가져온 모든 문서들을 확인
     console.log(doc.id, " => ", doc.data())
-    scoreList.concat([doc.data() as ScoreData])
+    scoreList.push(doc.data() as ScoreData)
   })
   console.log(scoreList)
   return scoreList
