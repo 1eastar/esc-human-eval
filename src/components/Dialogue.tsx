@@ -12,14 +12,14 @@ export interface Dialogue {
   conv_id: number
   turn_id: number
   context: string
-  tom_usr: string
-  tom_sys: string
-  prediction: string
-  response: string
+  tom_usr?: string
+  tom_sys?: string
+  prediction?: string
+  response?: string
   clean_prediction: string
   clean_response: string
-  raw_prediction: string
-  metrics: {
+  raw_prediction?: string
+  metrics?: {
     Bleu_1: number
     Bleu_2: number
     Bleu_3: number
@@ -33,6 +33,7 @@ export interface Dialogue {
     VectorExtremaCosineSimilarity: number
     GreedyMatchingScore: number
   }
+  ft_prediction?: string
 }
 
 interface DialogueProps {

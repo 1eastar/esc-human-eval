@@ -16,16 +16,22 @@ interface HomeProps {
   fiveShot: DialogueInfo[]
   usr: DialogueInfo[]
   both: DialogueInfo[]
+  gptOpt: DialogueInfo[]
+  opt: DialogueInfo[]
 }
 
 export default function Home({
   fiveShot,
   usr,
   both,
+  gptOpt,
+  opt,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [fiveShotResult, setFiveShotResult] = useState<DialogueInfo[]>(fiveShot)
   const [usrResult, setUsrResult] = useState<DialogueInfo[]>(usr)
   const [bothResult, setBothResult] = useState<DialogueInfo[]>(both)
+  const [gptOptResult, setGptOptResult] = useState<DialogueInfo[]>(gptOpt)
+  const [optResult, setOptResult] = useState<DialogueInfo[]>(opt)
   const [scoreResult, setScoreResult] = useState<ScoreData[]>([])
 
   const [currentConvId, setCurrentConvId] = useState<string>("31")
@@ -82,6 +88,16 @@ export default function Home({
       .find(res => res.conv_id.toString() === currentConvId && res.turn_id.toString() === currentTurnId)?.clean_response
   ), [currentConvId, currentTurnId, usrResult])
 
+  const currentGPTOPTResponse = useMemo(() => (
+    gptOptResult
+      .find(res => res.conv_id.toString() === currentConvId && res.turn_id.toString() === currentTurnId)?.clean_prediction
+  ), [currentConvId, currentTurnId, gptOptResult])
+
+  const currentOPTResponse = useMemo(() => (
+    optResult
+      .find(res => res.conv_id.toString() === currentConvId && res.turn_id.toString() === currentTurnId)?.clean_prediction
+  ), [currentConvId, currentTurnId, optResult])
+
   // const currentBaselineResponse = useMemo(() => (
   //   usrResult
   //     .find(res => res.conv_id === currentConvId && res.turn_id === currentTurnId)?.prediction
@@ -116,6 +132,18 @@ export default function Home({
         sysToM: "-",
         response: currentGoldResponse,
       }
+    } else if (tab === Tab.GPT_OPT) {
+      return {
+        usrToM: currentUsrToM,
+        sysToM: "-",
+        response: currentGPTOPTResponse,
+      }
+    } else if (tab === Tab.OPT) {
+      return {
+        usrToM: "-",
+        sysToM: "-",
+        response: currentOPTResponse,
+      }
     } else {
       return {}
     }
@@ -126,6 +154,8 @@ export default function Home({
     currentBothToM,
     currentBothResponse,
     currentGoldResponse,
+    currentGPTOPTResponse,
+    currentOPTResponse,
   ])
 
   const handleSearchId = useCallback((convId: string, turnId: string) => {
@@ -236,15 +266,21 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   const FiveShotBuffer = await fsPromises.readFile(paths.FiveShot)
   const UsrBuffer = await fsPromises.readFile(paths.USR)
   const BothBuffer = await fsPromises.readFile(paths.BOTH)
+  const GPTOPTBuffer = await fsPromises.readFile(paths.GPT_OPT)
+  const OPTBuffer = await fsPromises.readFile(paths.OPT)
 
   const FiveShotData = JSON.parse(FiveShotBuffer.toString())
   const UsrData = JSON.parse(UsrBuffer.toString())
   const BothData = JSON.parse(BothBuffer.toString())
+  const GPTOPTData = JSON.parse(GPTOPTBuffer.toString())
+  const OPTData = JSON.parse(OPTBuffer.toString())
 
   const results = {
     fiveShot: FiveShotData,
     usr: UsrData,
-    both: BothData
+    both: BothData,
+    gptOpt: GPTOPTData,
+    opt: OPTData,
   }
 
   return { props: results  }

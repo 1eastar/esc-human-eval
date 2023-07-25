@@ -4,4 +4,6 @@ export enum Tab {
   USR = 'Usr ToM',
   BOTH = 'Usr+Sys ToM',
   GOLD = 'Gold',
+  GPT_OPT = 'ChatGPT with OPT',
+  OPT = 'OPT',
 }
