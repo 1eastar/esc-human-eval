@@ -232,13 +232,13 @@ export default function Home({
 
   return (
     <Container>
+      <Indicator
+        idList={idList}
+        onSearch={handleSearchId}
+      />
       <DialogueSlider>
         <Dialogue
           dialogue={currentDialogue}
-        />
-        <Indicator
-          idList={idList}
-          onSearch={handleSearchId}
         />
       </DialogueSlider>
       <Tabs
@@ -261,9 +261,7 @@ const Container = styled.div`
 
 const DialogueSlider = styled.div`
   display: flex;
-  align-items: start;
-  gap: 150px;
-  height: 50vh;
+  flex-direction: column;
 `
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {

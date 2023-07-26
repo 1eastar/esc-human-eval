@@ -10,10 +10,10 @@ export async function getScores() {
   const scoreList: ScoreData[] = []
   scoreSnapshot.forEach((doc) => {
     // 가져온 모든 문서들을 확인
-    console.log(doc.id, " => ", doc.data())
+    // console.log(doc.id, " => ", doc.data())
     scoreList.push(doc.data() as ScoreData)
   })
-  console.log(scoreList)
+  // console.log(scoreList)
   return scoreList
 }
 

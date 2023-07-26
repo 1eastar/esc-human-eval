@@ -94,12 +94,22 @@ function Tabs({
       <ContentWrapper>
         <ContentRow>
           { TabContents.map((tab, i) => (
-            <TabUsrContentBox key={`${i}-${tab.response}`}>{ tab.usrToM }</TabUsrContentBox>
+            <TabUsrContentBox
+              key={`${i}-${tab.response}`}
+              $visible={tab.usrToM !== '-'}
+            >
+              { tab.usrToM }
+            </TabUsrContentBox>
           ))}
         </ContentRow>
         <ContentRow>
           { TabContents.map((tab, i) => (
-            <TabSysContentBox key={`${i}-${tab.response}`}>{ tab.sysToM }</TabSysContentBox>
+            <TabSysContentBox
+              key={`${i}-${tab.response}`}
+              $visible={tab.sysToM !== '-'}
+            >
+              { tab.sysToM }
+            </TabSysContentBox>
           ))}
         </ContentRow>
         <ContentRow>
@@ -198,30 +208,9 @@ const TabHeader = styled.div`
   }
 `
 
-const TabUsrContentBox = styled.div`
+const TabUsrContentBox = styled.div<{ $visible?: boolean }>`
   border-radius: 8px;
-  border: 3px solid rgba(225, 240, 217, 1);
-  background-color: rgba(242, 242, 242, .5);
-  padding: 20px 25px;
-  display: flex;
-  align-items: center;
-  width: 50%;
-  word-break: break-word;
-`
-
-const TabSysContentBox = styled.div`
-  border-radius: 8px;
-  border: 3px solid rgba(217, 227, 242, 1);
-  background-color: rgba(242, 242, 242, .5);
-  padding: 20px 25px;
-  display: flex;
-  align-items: center;
-  width: 50%;
-  word-break: break-word;
-`
-
-const TabResponseContentBox = styled.div`
-  border-radius: 8px;
+  /* border: 3px solid rgba(225, 240, 217, 1); */
   border: 3px solid rgba(242, 242, 242, 1);
   background-color: rgba(242, 242, 242, .5);
   padding: 20px 25px;
@@ -229,6 +218,56 @@ const TabResponseContentBox = styled.div`
   align-items: center;
   width: 50%;
   word-break: break-word;
+  font-size: 18px;
+  
+  ${props => 
+    props.$visible
+    ? css`
+    
+    `
+    : css`
+      opacity: 0;
+      height: 1px;
+      z-index: -1;
+    `
+  }
+`
+
+const TabSysContentBox = styled.div<{ $visible?: boolean }>`
+  border-radius: 8px;
+  /* border: 3px solid rgba(217, 227, 242, 1); */
+  border: 3px solid rgba(242, 242, 242, 1);
+  background-color: rgba(242, 242, 242, .5);
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  word-break: break-word;
+  font-size: 18px;
+
+  ${props => 
+    props.$visible
+    ? css`
+    
+    `
+    : css`
+      opacity: 0;
+      height: 1px;
+      z-index: -1;
+    `
+  }
+`
+
+const TabResponseContentBox = styled.div`
+  border-radius: 8px;
+  border: 3px solid rgba(242, 242, 242, 1);
+  background-color: rgba(36,145,247,.08);
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  word-break: break-word;
+  font-size: 18px;
 `
 
 const QAContainer = styled.div`

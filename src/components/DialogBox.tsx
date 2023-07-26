@@ -42,10 +42,10 @@ function DialogBox({
       $type={type}
     >
       { rawText }
-      { type === UttrType.SUPPORTER
+      {/* { type === UttrType.SUPPORTER
         ? Supporter
         : Seeker
-      }
+      } */}
     </DialogBubble>
   )
 }
@@ -55,11 +55,13 @@ export default DialogBox
 const DialogBubble = styled.div<{ $type: UttrType }>`
   position: relative;
   padding: 12px 24px;
-  border-radius: 12px;
+  border-radius: 32px;
   min-height: 50px;
-  min-width: 150px;
-  max-width: 400px;
-  margin: 10px 0;
+  max-width: 800px;
+  margin: 20px 0;
+  width: fit-content;
+  font-size: 18px;
+  font-weight: 500;
 
   display: flex;
   align-items: center;
@@ -69,11 +71,13 @@ const DialogBubble = styled.div<{ $type: UttrType }>`
     ? css`
       margin-left: auto;
       margin-right: 20px;
-      background-color: rgba(217, 227, 242, .7);
+      background-color: rgba(36,145,247,1);
+      color: rgba(250,252,255,1);
     `
     : css`
       margin-left: 20px;
-      background-color: rgba(225, 240, 217, .7);
+      background-color: rgba(225,225,230,1);
+      color: rgba(21,21,22,1);
     `
   )}
 `

@@ -60,6 +60,10 @@ function Dialogue({
 
   return (
     <Container>
+      <DialogueHeader>
+        <DialogueHeaderText>User</DialogueHeaderText>
+        <DialogueHeaderText>System</DialogueHeaderText>
+      </DialogueHeader>
       { utterances.map(uttr => (
         <DialogBox
           key={uttr}
@@ -76,10 +80,25 @@ export default Dialogue
 const Container = styled.div`
   height: 100%;
   overflow-y: scroll;
-  width: 600px;
-  padding-top: 50px;
+  width: 1000px;
+  padding-top: 100px;
 
   &::-webkit-scrollbar {
     display: none;
   }
+`
+
+const DialogueHeader = styled.div`
+  width: 1000px;
+  box-sizing: border-box;
+  padding: 20px 40px;
+  border-bottom: 1.5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+const DialogueHeaderText = styled.div`
+  font-size: 18px;
+  font-weight: bold;
 `

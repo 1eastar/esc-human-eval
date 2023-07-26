@@ -109,8 +109,9 @@ const Input = styled.input`
   outline: none;
   text-decoration: none;
   border: none;
-  margin-left: 30px;
+  margin: 0 15px;
   width: 100px;
+  text-align: center;
 `
 
 const show = keyframes`

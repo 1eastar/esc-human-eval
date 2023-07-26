@@ -91,30 +91,26 @@ function Indicator({
 
   return (
     <Container>
-      <ArrowIndicatorWrapper>
-        <ArrowIndicator
-          onClick={handleClickPrev}
-        >
-          &lt;&nbsp;이전
-        </ArrowIndicator>
-        <ArrowIndicator
-          onClick={handleClickNext}
-        >
-          다음&nbsp;&gt;
-        </ArrowIndicator>
-      </ArrowIndicatorWrapper>
-      <SearchWrapper>
-        <SelectOverlayInput
-          defaultValue={convId}
-          idList={convIdList}
-          onClickItem={handleSelectConvId}
-        />
-        <SelectOverlayInput
-          defaultValue={turnId}
-          idList={turnIdList}
-          onClickItem={handleSelectTurnId}
-        />
-      </SearchWrapper>
+      <ArrowIndicator
+        onClick={handleClickPrev}
+      >
+        &lt;&nbsp;이전
+      </ArrowIndicator>
+      <SelectOverlayInput
+        defaultValue={convId}
+        idList={convIdList}
+        onClickItem={handleSelectConvId}
+      />
+      <SelectOverlayInput
+        defaultValue={turnId}
+        idList={turnIdList}
+        onClickItem={handleSelectTurnId}
+      />
+      <ArrowIndicator
+        onClick={handleClickNext}
+      >
+        다음&nbsp;&gt;
+      </ArrowIndicator>
     </Container>
   )
 }
@@ -123,10 +119,17 @@ export default Indicator
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin-top: 60px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
   gap: 30px;
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 0px -35px 30px 18px rgba(0, 0, 0, .4);
+  z-index: 100000;
 `
 
 const ArrowIndicatorWrapper = styled.div`
