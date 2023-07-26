@@ -5,6 +5,8 @@ export interface Scores {
   [Tab.BOTH]: number
   [Tab.GOLD]: number
   [Tab.FIVESHOT]: number
+  [Tab.GPT_OPT]: number
+  [Tab.OPT]: number
   // baseline: number
 }
 
@@ -17,6 +19,8 @@ export interface ScoreData {
       [Tab.BOTH]: number
       [Tab.GOLD]: number
       [Tab.FIVESHOT]: number
+      [Tab.GPT_OPT]: number
+      [Tab.OPT]: number
     }
   }
 }

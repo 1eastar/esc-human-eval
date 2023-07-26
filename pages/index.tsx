@@ -187,6 +187,8 @@ export default function Home({
                 [Tab.BOTH]: -1,
                 [Tab.GOLD]: -1,
                 [Tab.FIVESHOT]: -1,
+                [Tab.GPT_OPT]: -1,
+                [Tab.OPT]: -1,
               }
             }
           }
@@ -197,6 +199,8 @@ export default function Home({
           [Tab.BOTH]: -1,
           [Tab.GOLD]: -1,
           [Tab.FIVESHOT]: -1,
+          [Tab.GPT_OPT]: -1,
+          [Tab.OPT]: -1,
         }
       }
       newScoreData.scores[qKey][tab] = score

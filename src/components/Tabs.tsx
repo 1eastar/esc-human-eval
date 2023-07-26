@@ -58,8 +58,8 @@ function Tabs({
   ), [focusedTab, handleClickDropDown, showTabSelectOverlay])
 
   const getQuestionScores = useCallback((q: Question) => [
-    score?.scores?.[q.key]?.[leftTab].toString() || "-1",
-    score?.scores?.[q.key]?.[rightTab].toString() || "-1",
+    score?.scores?.[q.key]?.[leftTab]?.toString() || "-1",
+    score?.scores?.[q.key]?.[rightTab]?.toString() || "-1",
   ], [leftTab, rightTab, score?.scores])
 
   const TabHeaders = useMemo(() => [
