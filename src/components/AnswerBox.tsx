@@ -1,24 +1,19 @@
-import { Tab } from "@/constants/tabs"
-import Image from "next/image"
 import React, { ChangeEvent, useCallback, useMemo, useState, useRef } from "react"
 import { css, styled } from "styled-components"
 
 interface AnswerBoxProps {
-  tab: Tab
   questionKey: string
   score: string
   onChangeInput: (qKey: string, score: string) => void
 }
 
 function AnswerBox({
-  tab,
   questionKey,
   score,
   onChangeInput,
 }: AnswerBoxProps) {
-  const inputRef = useRef<HTMLInputElement>(null)
-
   const [value, setValue] = useState(+score)
+  console.log(score, value)
 
   const handleChangeInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setValue(+e.target.value)
@@ -28,7 +23,6 @@ function AnswerBox({
   const InputBox = useMemo(() => (
     <InputContainer>
       <Input
-        ref={inputRef}
         type="number"
         min={-1}
         max={5}

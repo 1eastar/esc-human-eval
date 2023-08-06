@@ -98,10 +98,9 @@ function Tabs({
       </ContentWrapper>
       <QAContainer>
         { Questions.map(q => (
-          <QA key={`${rationale?.id}-${currentTab}-${q.key}`}>
+          <QA key={`${rationale?.id}-${currentTab}-${q.key}=${getQuestionScores(q.key)}`}>
             <QuestionBox question={q} />
             <AnswerBox
-              tab={currentTab}
               questionKey={q.key}
               onChangeInput={handleChangeInput}
               score={getQuestionScores(q.key)}
