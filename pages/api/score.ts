@@ -1,7 +1,6 @@
 import fsPromises from 'fs/promises'
 
 import { paths } from '@/constants/paths'
-import { makeScoreScheme, ScoreData } from '../../src/utils/dialogue.utils'
 import { Tab } from '@/constants/tabs'
 
 interface ResponseBody {

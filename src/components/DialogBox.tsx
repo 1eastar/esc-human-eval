@@ -2,16 +2,15 @@ import Image from "next/image"
 import { useCallback, useMemo } from "react"
 import { css, styled } from "styled-components"
 
-import { Dialogue, UttrType } from "./Dialogue"
-
+type Position = 'left' | 'right'
 
 interface DialogBoxProps {
-  type: UttrType
+  position: Position
   text: string
 }
 
 function DialogBox({
-  type,
+  position,
   text,
 }: DialogBoxProps) {
 
@@ -19,30 +18,30 @@ function DialogBox({
     <TypeImage
       src="/seeker.png"
       alt="seeker"
-      $type={type}
+      $position={position}
       width={40}
       height={40}
     />
-  ), [type])
+  ), [position])
 
   const Supporter = useMemo(() => (
     <TypeImage
       src="/supporter.png"
       alt="supporter"
-      $type={type}
+      $position={position}
       width={40}
       height={40}
     />
-  ), [type])
+  ), [position])
 
   const rawText = useMemo(() => text.replace('supporter: ', "").replace("seeker: ", ""), [text])
 
   return (
     <DialogBubble
-      $type={type}
+      $position={position}
     >
       { rawText }
-      {/* { type === UttrType.SUPPORTER
+      {/* { position === 'left'
         ? Supporter
         : Seeker
       } */}
@@ -52,12 +51,12 @@ function DialogBox({
 
 export default DialogBox
 
-const DialogBubble = styled.div<{ $type: UttrType }>`
+const DialogBubble = styled.div<{ $position: Position }>`
   position: relative;
   padding: 12px 24px;
   border-radius: 32px;
   min-height: 50px;
-  max-width: 800px;
+  max-width: 850px;
   margin: 20px 0;
   width: fit-content;
   font-size: 18px;
@@ -67,7 +66,7 @@ const DialogBubble = styled.div<{ $type: UttrType }>`
   align-items: center;
 
   ${props => (
-    props.$type === UttrType.SUPPORTER
+    props.$position === 'left'
     ? css`
       margin-left: auto;
       margin-right: 20px;
@@ -82,13 +81,13 @@ const DialogBubble = styled.div<{ $type: UttrType }>`
   )}
 `
 
-const TypeImage = styled(Image)<{ $type: UttrType }>`
+const TypeImage = styled(Image)<{ $position: Position }>`
   position: absolute;
 
   border-radius: 8px;
 
   ${props =>
-    props.$type === UttrType.SUPPORTER
+    props.$position === 'left'
       ? css`
         top: -20px;
         right: -20px;

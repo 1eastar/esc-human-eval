@@ -7,46 +7,18 @@ export interface Question {
 export const Questions: Question[] = [
   {
     key: "0",
-    content: "Do you think the ground-truth response requires theory of mind?",
+    content: "Consistency : Input 이랑 서로 연결이 되는지",
   },
   {
     key: "1",
-    content: "Does the inferred user ToM seem correct?",
+    content: "Specificity : Does the rationale provide precise details about why the diagnosis were made?",
   },
   {
     key: "2",
-    content: "Does the inferred system ToM seem effective?",
+    content: "Helpfulness : rationale 이 정답을 도출하는 데에 얼마나 도움이 되는지",
   },
   {
     key: "3",
-    content: "Is the response grounded to inferred ToM?",
-  },
-  {
-    key: "4",
-    content: "Fluency: Which model’s response is more fluent?",
-  },
-  {
-    key: "5",
-    content: "Consistency: Which model’s response is more consistent with its role? Which model’s response is less self-contradictory?",
-  },
-  {
-    key: "6",
-    content: "Coherence: Which model’s response is more on-topic and in-depth? Which model’s response is more natural in topic transition?",
-  },
-  {
-    key: "7",
-    content: "Identification: Which model’s response is more skillful in identifying the user’s problem?",
-  },
-  {
-    key: "8",
-    content: "Comforting: Which model’s response is better at comforting the user?",
-  },
-  {
-    key: "9",
-    content: "Suggestion: Which model can give more helpful and informative suggestions?",
-  },
-  {
-    key: "10",
-    content: "Overall: Which model’s response is generally better?",
+    content: "임상적용 가능성: rationale의 임상 적용 가능성이 어느정도 되는지",
   },
 ]

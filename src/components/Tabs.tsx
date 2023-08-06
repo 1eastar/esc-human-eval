@@ -1,49 +1,52 @@
 import { Question, Questions } from "@/constants/questions"
-import { Tab } from "@/constants/tabs"
+import { RationaleScore, Tab } from "@/constants/tabs"
 import Overlay, { OverlayPosition } from "@/elements/Overlay"
-import { ScoreData } from "@/utils/dialogue.utils"
 import Image from "next/image"
-import React, { useCallback, useMemo, useRef, useState } from "react"
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { css, keyframes, styled } from "styled-components"
+import { Rationale } from "../../pages"
 import AnswerBox from "./AnswerBox"
 import OverlayListItem from "./OverlayListItem"
 import QuestionBox from "./QuestionBox"
 
-export interface TabContent {
-  usrToM?: string
-  sysToM?: string
-  response?: string
+interface TabsProps {
+  rationale?: Rationale
+  score: RationaleScore
+  onSubmit: (score: RationaleScore) => void
 }
 
-interface TabsProps {
-  score?: ScoreData
-  onSubmit: (tab: Tab, qKey: string, score: number) => void
-  onMatchTab: (tab: Tab) => TabContent
+const tabFieldMatch = {
+  [Tab.GPT4_GOLD]: 'gpt4_gold',
+  [Tab.GPT4_COT]: 'gpt4_CoT',
+  [Tab.LM_COT]: 'lm_CoT',
+  [Tab.VL_COT]: 'vl_CoT',
 }
 
 function Tabs({
+  rationale,
   score,
   onSubmit,
-  onMatchTab,
 }: TabsProps) {
   const containerRef = useRef<HTMLDivElement>(null)
-  const overleyRef = useRef<(HTMLDivElement | null)[]>([])
+  const overleyRef = useRef<HTMLDivElement>(null)
 
-  const [leftTab, setLeftTab] = useState<Tab>(Tab.USR)
-  const [rightTab, setRightTab] = useState<Tab>(Tab.GOLD)
-
+  const [currentTab, setCurrentTab] = useState<Tab>(Tab.GPT4_GOLD)
   const [showTabSelectOverlay, setShowTabSelectOverlay] = useState(false)
-  const [focusedTab, setFocusedTabIndex] = useState<number>(-1)   // 0: left tab, 1: right tab
 
-  const handleClickDropDown = useCallback((idx: number) => () => {
+  const [tmpScore, setTmpScore] = useState<RationaleScore>(score)
+
+  useEffect(() => {
+    setTmpScore(score)
+  }, [rationale, score])
+
+  const handleClickDropDown = useCallback(() => {
     setShowTabSelectOverlay(prev => !prev)
-    setFocusedTabIndex(idx)
   }, [])
 
-  const renderTabHeader = useCallback((positionIdx: number, text: string) => (
+  const renderTabHeader = useCallback((text: string) => (
     <TabHeader
-      key={positionIdx}
-      ref={ref => overleyRef.current[positionIdx] = ref}
+      key={text}
+      ref={overleyRef}
     >
       { text }
       <DropDownIcon
@@ -51,97 +54,71 @@ function Tabs({
         alt="dropdown"
         width={15}
         height={15}
-        onClick={handleClickDropDown(positionIdx)}
-        $isOpen={showTabSelectOverlay && focusedTab === positionIdx}
+        onClick={handleClickDropDown}
+        $isOpen={showTabSelectOverlay}
       />
     </TabHeader>
-  ), [focusedTab, handleClickDropDown, showTabSelectOverlay])
+  ), [handleClickDropDown, showTabSelectOverlay])
 
-  const getQuestionScores = useCallback((q: Question) => [
-    score?.scores?.[q.key]?.[leftTab]?.toString() || "-1",
-    score?.scores?.[q.key]?.[rightTab]?.toString() || "-1",
-  ], [leftTab, rightTab, score?.scores])
+  const renderTabRationale = useCallback(() => (
+    <TabContentBox>
+      { rationale?.[tabFieldMatch[currentTab]] }
+    </TabContentBox>
+  ), [currentTab, rationale])
 
-  const TabHeaders = useMemo(() => [
-    renderTabHeader(0, leftTab), renderTabHeader(1, rightTab)
-  ], [leftTab, renderTabHeader, rightTab])
+  const getQuestionScores = useCallback((qKey: string) => (
+    score.scores[currentTab].find(s => s.key === qKey)?.score || "-1"
+  ), [currentTab, score?.scores])
 
-  const TabContents: TabContent[] = useMemo(() => [
-    onMatchTab(leftTab), onMatchTab(rightTab)
-  ], [onMatchTab, leftTab, rightTab])
-
-  const handleClickOverlayElement = useCallback((tab: string) => {
-    if (focusedTab === 0) setLeftTab(tab as Tab)
-    else setRightTab(tab as Tab)
-
+  const handleClickOverlayElement = useCallback((tab: Tab) => () => {
     setShowTabSelectOverlay(false)
-  }, [focusedTab])
+    setCurrentTab(tab)
+  }, [])
 
-  const handleSubmit = useCallback((qKey: string, idx: number) => (score: string) => {
-    if (idx === 0) {
-      onSubmit(leftTab, qKey, +score)
-    } else {
-      onSubmit(rightTab, qKey, +score)
-    }
-  }, [leftTab, onSubmit, rightTab])
+  const handleChangeInput = useCallback((qKey: string, score: string) => {
+    const newScore = JSON.parse(JSON.stringify(tmpScore))   // deep copy
+    newScore.scores[currentTab][+qKey].score = score
+    setTmpScore(newScore)
+  }, [currentTab, tmpScore])
+
+  const handleSubmit = useCallback(() => {
+    onSubmit(tmpScore)
+  }, [onSubmit, tmpScore])
   
   return (
     <>
       { showTabSelectOverlay && <OverlayBG onClick={() => setShowTabSelectOverlay(false)}/>}
       <HeaderWrapper ref={containerRef}>
-        { TabHeaders }
+        { renderTabHeader(currentTab) }
       </HeaderWrapper>
       <ContentWrapper>
         <ContentRow>
-          { TabContents.map((tab, i) => (
-            <TabUsrContentBox
-              key={`${i}-${tab.response}`}
-              $visible={tab.usrToM !== '-'}
-            >
-              { tab.usrToM }
-            </TabUsrContentBox>
-          ))}
-        </ContentRow>
-        <ContentRow>
-          { TabContents.map((tab, i) => (
-            <TabSysContentBox
-              key={`${i}-${tab.response}`}
-              $visible={tab.sysToM !== '-'}
-            >
-              { tab.sysToM }
-            </TabSysContentBox>
-          ))}
-        </ContentRow>
-        <ContentRow>
-          { TabContents.map((tab, i) => (
-            <TabResponseContentBox key={`${i}-${tab.response}`}>
-              { tab.response }
-            </TabResponseContentBox>
-          ))}
+          { renderTabRationale() }
         </ContentRow>
       </ContentWrapper>
       <QAContainer>
         { Questions.map(q => (
-          <QA key={q.key}>
+          <QA key={`${rationale?.id}-${currentTab}-${q.key}`}>
             <QuestionBox question={q} />
-            <Awrapper>
-              <AnswerBox
-                score={getQuestionScores(q)[0]}
-                onSubmit={handleSubmit(q.key, 0)}
-              />
-              <AnswerBox
-                score={getQuestionScores(q)[1]}
-                onSubmit={handleSubmit(q.key, 1)}
-              />
-            </Awrapper>
+            <AnswerBox
+              tab={currentTab}
+              questionKey={q.key}
+              onChangeInput={handleChangeInput}
+              score={getQuestionScores(q.key)}
+            />
           </QA>
         ))}
+        <SubmitButton
+          onClick={handleSubmit}
+        >
+          저장
+        </SubmitButton>
       </QAContainer>
 
 
       <Overlay
         show={showTabSelectOverlay}
-        target={overleyRef.current[focusedTab]}
+        target={overleyRef.current}
         container={containerRef.current}
         placement={OverlayPosition.BOTTOM}
         rootClose
@@ -151,7 +128,7 @@ function Tabs({
             <OverlayListItem
               key={t}
               text={t}
-              onClick={handleClickOverlayElement}
+              onClick={handleClickOverlayElement(t)}
             />
           ))}
         </OverlayContainer>
@@ -194,7 +171,7 @@ const TabHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   height: 50px;
   border-radius: 8px;
   box-sizing: border-box;
@@ -208,32 +185,7 @@ const TabHeader = styled.div`
   }
 `
 
-const TabUsrContentBox = styled.div<{ $visible?: boolean }>`
-  border-radius: 8px;
-  /* border: 3px solid rgba(225, 240, 217, 1); */
-  border: 3px solid rgba(242, 242, 242, 1);
-  background-color: rgba(242, 242, 242, .5);
-  padding: 20px 25px;
-  display: flex;
-  align-items: center;
-  width: 50%;
-  word-break: break-word;
-  font-size: 18px;
-  
-  ${props => 
-    props.$visible
-    ? css`
-    
-    `
-    : css`
-      opacity: 0;
-      height: 1px;
-      z-index: -1;
-    `
-  }
-`
-
-const TabSysContentBox = styled.div<{ $visible?: boolean }>`
+const TabContentBox = styled.div`
   border-radius: 8px;
   /* border: 3px solid rgba(217, 227, 242, 1); */
   border: 3px solid rgba(242, 242, 242, 1);
@@ -241,31 +193,7 @@ const TabSysContentBox = styled.div<{ $visible?: boolean }>`
   padding: 20px 25px;
   display: flex;
   align-items: center;
-  width: 50%;
-  word-break: break-word;
-  font-size: 18px;
-
-  ${props => 
-    props.$visible
-    ? css`
-    
-    `
-    : css`
-      opacity: 0;
-      height: 1px;
-      z-index: -1;
-    `
-  }
-`
-
-const TabResponseContentBox = styled.div`
-  border-radius: 8px;
-  border: 3px solid rgba(242, 242, 242, 1);
-  background-color: rgba(36,145,247,.08);
-  padding: 20px 25px;
-  display: flex;
-  align-items: center;
-  width: 50%;
+  width: 100%;
   word-break: break-word;
   font-size: 18px;
 `
@@ -279,27 +207,12 @@ const QAContainer = styled.div`
   gap: 40px;
 `
 
-const QA = styled.div<{ $isAll?: boolean }>`
+const QA = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-
-  ${props =>
-    props.$isAll
-      ? css`
-        flex-direction: column;
-      `
-      : css``
-  }
-`
-
-const Awrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
 `
 
 const DropDownIcon = styled(Image)<{ $isOpen?: boolean }>`
@@ -317,10 +230,10 @@ const DropDownIcon = styled(Image)<{ $isOpen?: boolean }>`
   ${props =>
     props.$isOpen
     ? css`
-      transform: rotate(0deg);
+      transform: rotate(180deg);
     `
     : css`
-      transform: rotate(180deg);
+      transform: rotate(0deg);
     `
   }
 `
@@ -357,4 +270,23 @@ const OverlayBG = styled.div`
   width: 100vw;
   height: 100vh;
   /* background-color: rgba(0, 0, 0, .05); */
+`
+
+const SubmitButton = styled.div`
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 12px;
+  border: 2px solid rgba(242, 242, 242, 1);
+  align-self: flex-end;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(242, 242, 242, .5);
+    border: 2px solid rgb(183, 206, 241);
+  }
 `

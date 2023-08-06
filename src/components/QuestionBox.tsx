@@ -32,7 +32,7 @@ const Container = styled.div`
   border-radius: 12px;
   border: 0.2px solid rgba(242, 242, 242, .5);
   align-self: start;
-  margin-left: 50px;
+  margin-left: 20px;
 `
 
 const Qmark = styled.span`

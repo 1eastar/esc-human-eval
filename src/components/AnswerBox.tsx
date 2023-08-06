@@ -1,77 +1,46 @@
+import { Tab } from "@/constants/tabs"
 import Image from "next/image"
-import React, { KeyboardEvent, ChangeEvent, useCallback, useMemo, useState, useRef } from "react"
+import React, { ChangeEvent, useCallback, useMemo, useState, useRef } from "react"
 import { css, styled } from "styled-components"
 
 interface AnswerBoxProps {
+  tab: Tab
+  questionKey: string
   score: string
-  onSubmit: (score: string) => void
+  onChangeInput: (qKey: string, score: string) => void
 }
 
 function AnswerBox({
+  tab,
+  questionKey,
   score,
-  onSubmit,
+  onChangeInput,
 }: AnswerBoxProps) {
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const [focused, setFocused] = useState<boolean>(false)
   const [value, setValue] = useState(+score)
-
-  const handleInputKeyPress = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      setFocused(false)
-      onSubmit(value.toString())
-    }
-  }, [onSubmit, value])
 
   const handleChangeInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setValue(+e.target.value)
-  }, [])
+    onChangeInput(questionKey, e.target.value)
+  }, [onChangeInput, questionKey])
 
-  const handleClickBox = useCallback(() => {
-    setFocused(true)
-    setTimeout(() => inputRef.current?.focus(), 100)
-  }, [])
-
-  const handleBlur = useCallback(() => {
-    setFocused(false)
-  }, [])
-
-  const InputBox = useMemo(() => {
-    if (focused) {
-      return (
-        <InputContainer>
-          <Input
-            ref={inputRef}
-            type="number"
-            min={-1}
-            max={5}
-            step={1}
-            defaultValue={value}
-            onKeyPress={handleInputKeyPress}
-            onChange={handleChangeInput}
-            onBlur={handleBlur}
-          />
-        </InputContainer>
-      )
-    } else {
-      return (
-        <InputContainer>
-          &nbsp;&nbsp;{ score }
-          {/* <Image
-            src="/edit.png"
-            alt="edit"
-            width={20}
-            height={20}
-            onClick={handleClickEdit}
-          /> */}
-        </InputContainer>
-      )
-    }
-  }, [focused, handleBlur, handleChangeInput, handleInputKeyPress, score, value])
+  const InputBox = useMemo(() => (
+    <InputContainer>
+      <Input
+        ref={inputRef}
+        type="number"
+        min={-1}
+        max={5}
+        step={1}
+        defaultValue={value}
+        onChange={handleChangeInput}
+      />
+    </InputContainer>
+  ), [handleChangeInput, value])
 
   return (
     <Container
-      onClick={handleClickBox}
       $yet={value === -1}
     >
       <Amark>A. &nbsp;</Amark>

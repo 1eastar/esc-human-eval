@@ -1,9 +1,24 @@
 
 export enum Tab {
-  FIVESHOT = '5 Shot (no ToM)',
-  USR = 'Usr ToM',
-  BOTH = 'Usr+Sys ToM',
-  GOLD = 'Gold',
-  GPT_OPT = 'ChatGPT with OPT',
-  OPT = 'OPT',
+  GPT4_GOLD = 'GPT4_GOLD',
+  GPT4_COT = 'GPT4_COT',
+  LM_COT = 'LM_COT',
+  VL_COT = 'VL_COT',
+}
+
+export interface QuestionScore {
+  key: string
+  score: string
+}
+
+export interface TabScore {
+  [Tab.GPT4_GOLD]: QuestionScore[]
+  [Tab.GPT4_COT]: QuestionScore[]
+  [Tab.LM_COT]: QuestionScore[]
+  [Tab.VL_COT]: QuestionScore[]
+}
+
+export interface RationaleScore {
+  id: number
+  scores: TabScore
 }

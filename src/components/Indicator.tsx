@@ -4,90 +4,38 @@ import SelectOverlayInput from "./SelectOverlayInput"
 
 
 interface IndicatorProps {
-  idList: {
-    [convId: string]: string[]
-  }
-  onSearch: (convId: string, turnId: string) => void
+  maxId: string
+  onSearch: (id: string) => void
 }
 
 function Indicator({
-  idList,
+  maxId,
   onSearch,
 }: IndicatorProps) {
-  const [convId, setConvId] = useState("31")
-  const [turnId, setTurnId] = useState("6")
-
-  const convIdList = useMemo(() => (
-    Object.keys(idList)
-  ), [idList])
-
-  const handleSelectConvId = useCallback((id: string) => {
-    setConvId(id)
-    // convId를 선택하면 turnId를 새로 지정해줘야 함.
-    setTurnId("")
-  }, [])
-  
-  const turnIdList = useMemo(() => (
-    idList[convId]
-  ), [convId, idList])
-
-  const handleSelectTurnId = useCallback((id: string) => {
-    setTurnId(id)
-
-    onSearch(convId, id)
-  }, [convId, onSearch])
+  const [id, setId] = useState("1")
 
   const handleClickPrev = useCallback(() => {
-    const turnIdList = idList[convId]
-    let convIdIndex = Object.keys(idList).findIndex(id => id === convId)
-    let turnIdIndex = turnIdList.findIndex(id => id === turnId)
-
-    if (turnIdIndex === 0) {
-      if (convIdIndex === 0) {
+    if (id === "1") {
         alert('처음입니다.')
-      } else {
-        convIdIndex -= 1
-        const newConvId = Object.keys(idList)[convIdIndex]
-        const newTurnId = idList[newConvId][idList[newConvId].length - 1]
-        setConvId(newConvId)
-        setTurnId(newTurnId)
-
-        onSearch(newConvId, newTurnId)
-      }
     } else {
-      turnIdIndex -= 1
-      setTurnId(turnIdList[turnIdIndex])
+      const nextId = (+id - 1) + ''
+      setId(nextId)
 
-      onSearch(convId, turnIdList[turnIdIndex])
+      onSearch(nextId)
     }
-  }, [convId, idList, onSearch, turnId])
+  }, [id, onSearch])
 
   const handleClickNext = useCallback(() => {
-    const turnIdList = idList[convId]
-    let convIdIndex = Object.keys(idList).findIndex(id => id === convId)
-    let turnIdIndex = turnIdList.findIndex(id => id === turnId)
-
-    if (turnIdIndex + 1 === turnIdList.length) {
-      if (convIdIndex + 1 === Object.keys(idList).length) {
-        alert('마지막입니다.')
-      } else {
-        turnIdIndex = 0
-        convIdIndex += 1
-        const newConvId = Object.keys(idList)[convIdIndex]
-        const newTurnId = idList[newConvId][0]
-        setConvId(newConvId)
-        setTurnId(newTurnId)
-
-        onSearch(newConvId, newTurnId)
-      }
+    if (+id >= +maxId) {
+      console.log(id, maxId)
+      alert('마지막입니다.')
     } else {
-      turnIdIndex += 1
-      setTurnId(turnIdList[turnIdIndex])
-
-      onSearch(convId, turnIdList[turnIdIndex])
+      const prevId = (+id + 1) + ''
+      setId(prevId)
+      console.log(prevId, maxId)
+      onSearch(prevId)
     }
-    
-  }, [convId, idList, onSearch, turnId])
+  }, [id, maxId, onSearch])
 
   return (
     <Container>
@@ -97,14 +45,8 @@ function Indicator({
         &lt;&nbsp;이전
       </ArrowIndicator>
       <SelectOverlayInput
-        defaultValue={convId}
-        idList={convIdList}
-        onClickItem={handleSelectConvId}
-      />
-      <SelectOverlayInput
-        defaultValue={turnId}
-        idList={turnIdList}
-        onClickItem={handleSelectTurnId}
+        defaultValue={id}
+        maxId={maxId}
       />
       <ArrowIndicator
         onClick={handleClickNext}
@@ -130,20 +72,6 @@ const Container = styled.div`
   background-color: rgba(255, 255, 255);
   box-shadow: 0px -35px 30px 18px rgba(0, 0, 0, .4);
   z-index: 100000;
-`
-
-const ArrowIndicatorWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  justify-content: end;
-`
-
-const SearchWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  width: 100%;
 `
 
 const ArrowIndicator = styled.div`
