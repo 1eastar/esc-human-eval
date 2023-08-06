@@ -1,5 +1,7 @@
+import Image from "next/image"
+import { useRouter } from "next/router"
 import { useCallback, useMemo, useState } from "react"
-import { styled } from "styled-components"
+import { css, styled } from "styled-components"
 import SelectOverlayInput from "./SelectOverlayInput"
 
 
@@ -12,6 +14,8 @@ function Indicator({
   maxId,
   onSearch,
 }: IndicatorProps) {
+  const router = useRouter()
+
   const [id, setId] = useState("1")
 
   const handleClickPrev = useCallback(() => {
@@ -37,22 +41,38 @@ function Indicator({
     }
   }, [id, maxId, onSearch])
 
+  const handleClickBack = useCallback(() => {
+    router.back()
+  }, [router])
+
   return (
     <Container>
-      <ArrowIndicator
-        onClick={handleClickPrev}
-      >
-        &lt;&nbsp;이전
-      </ArrowIndicator>
-      <SelectOverlayInput
-        defaultValue={id}
-        maxId={maxId}
+      <BackButton
+        src='/leftarrow2.png'
+        alt='leftarrow'
+        width={30}
+        height={30}
+        onClick={handleClickBack}
       />
-      <ArrowIndicator
-        onClick={handleClickNext}
-      >
-        다음&nbsp;&gt;
-      </ArrowIndicator>
+      <IndicatorWrapper>
+        <ArrowIndicator
+          onClick={handleClickPrev}
+        >
+          &lt;&nbsp;이전
+        </ArrowIndicator>
+        <SelectOverlayInput
+          defaultValue={id}
+          maxId={maxId}
+        />
+        <ArrowIndicator
+          onClick={handleClickNext}
+        >
+          다음&nbsp;&gt;
+        </ArrowIndicator>
+      </IndicatorWrapper>
+      <Wrapper>
+        <Input disabled value={router.query.name || ""}/>
+      </Wrapper>
     </Container>
   )
 }
@@ -63,15 +83,23 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 70px;
   width: 100%;
-  gap: 30px;
   position: fixed;
   top: 0;
   background-color: rgba(255, 255, 255);
   box-shadow: 0px -35px 30px 18px rgba(0, 0, 0, .4);
   z-index: 100000;
+`
+
+const IndicatorWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
 `
 
 const ArrowIndicator = styled.div`
@@ -86,3 +114,29 @@ const ArrowIndicator = styled.div`
   user-select: none;
 `
 
+const BackButton = styled(Image)`
+  margin-left: 30px;
+  cursor: pointer;
+`
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 10px 20px;
+`
+
+const Input = styled.input`
+  outline: none;
+  text-decoration: none;
+  border: none;
+  margin: 0 15px;
+  width: 100px;
+  text-align: center;
+`

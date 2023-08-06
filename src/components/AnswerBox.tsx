@@ -13,7 +13,6 @@ function AnswerBox({
   onChangeInput,
 }: AnswerBoxProps) {
   const [value, setValue] = useState(+score)
-  console.log(score, value)
 
   const handleChangeInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setValue(+e.target.value)

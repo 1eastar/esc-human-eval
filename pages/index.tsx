@@ -1,129 +1,147 @@
-import fsPromises from 'fs/promises'
-import { useCallback, useEffect, useMemo, useState } from 'react'
-import { styled } from 'styled-components'
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { useRouter } from "next/router"
+import { ChangeEvent, useCallback, useState } from "react"
+import { css, styled } from "styled-components"
 
-import Tabs from '@/components/Tabs'
-import Indicator from '@/components/Indicator'
-import { RationaleScore, Tab, TabScore } from '@/constants/tabs'
 
-import { paths } from '@/constants/paths'
-import { getScores, setScoreDocument } from '@/api/db.api'
-import { Label } from '@/constants/lables'
-import { Questions } from '@/constants/questions'
-import BaseInfo from '@/components/BaseInfo'
+interface IdentificationProps {
 
-export interface Rationale {
-  id: number
-  patient_data: string
-  label: Label
-  gpt4_gold: string
-  gpt4_CoT: string
-  lm_CoT: string
-  vl_CoT: string
-} 
-
-interface HomeProps {
-  rationales: Rationale[]
 }
 
-export default function Home({
-  rationales: _rationales,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [rationales, setRationales] = useState<Rationale[]>(_rationales)
-  const [scoreResult, setScoreResult] = useState<RationaleScore[]>([])
+function Identification({}: IdentificationProps) {
+  const router = useRouter()
 
-  const [currentId, setCurrentId] = useState<string>("1")
+  const [name, setName] = useState("")
+  const [isInputFocused, setIsInputFocused] = useState(false)
 
-  useEffect(() => {
-    getScores()
-      .then(list => {
-        setScoreResult(list)
-      })
+  const handleChangeInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value)
   }, [])
 
-  const currentRationale = useMemo(() => (
-    rationales.find(r => r.id === +currentId)
-  ), [currentId, rationales])
-
-  const currentScores: RationaleScore = useMemo(() => (
-    scoreResult.find(s => s.id === +currentId) || {
-      "id": +currentId,
-      "scores": {
-        [Tab.GPT4_GOLD]: Questions.map(q => ({
-          key: q.key,
-          score: "-1",
-        })),
-        [Tab.GPT4_COT]: Questions.map(q => ({
-          key: q.key,
-          score: "-1",
-        })),
-        [Tab.LM_COT]: Questions.map(q => ({
-          key: q.key,
-          score: "-1",
-        })),
-        [Tab.VL_COT]: Questions.map(q => ({
-          key: q.key,
-          score: "-1",
-        }))
-      }
-    } as RationaleScore
-  ), [currentId, scoreResult])
-
-  const handleSearchId = useCallback((id: string) => {
-    setCurrentId(id)
+  const onFocusInput = useCallback(() => {
+    setIsInputFocused(true)
   }, [])
 
-  const handleSubmit = useCallback(async (score: RationaleScore) => {
-    setScoreDocument(score)
-      .then(scoreList => {
-        setScoreResult(scoreList)
-      })
+  const onBlurInput = useCallback(() => {
+    setIsInputFocused(false)
   }, [])
 
+  const handleSubmit = useCallback(() => {
+    if (!!name) {
+      router.push(`/home?name=${name}`)
+    } else {
+      alert('성함을 입력해주세요.')
+    }
+  }, [name, router])
+  
   return (
-    <Container>
-      <Indicator
-        maxId={rationales.length + ''}
-        onSearch={handleSearchId}
-      />
-      <DialogueSlider>
-        <BaseInfo
-          patientData={currentRationale?.patient_data}
-          label={currentRationale?.label}
-        />
-      </DialogueSlider>
-      <Tabs
-        rationale={currentRationale}
-        score={currentScores}
-        onSubmit={handleSubmit}
-      />
-    </Container>
+    <WindowContainer>
+      <Container>
+        <Explaination>
+          성함을 입력해주세요.
+          <SmallTypograph>(어느 분께서 작성한 건지 구분하기 위함입니다)</SmallTypograph>
+        </Explaination>
+        <ButtonRow>
+          <Wrapper $isFocused={isInputFocused}>
+            <Input
+              value={name}
+              onChange={handleChangeInput}
+              onFocus={onFocusInput}
+              onBlur={onBlurInput}
+              />
+          </Wrapper>
+          <Button
+            onClick={handleSubmit}
+          >
+            확인
+          </Button>
+        </ButtonRow>
+      </Container>
+    </WindowContainer>
   )
 }
 
+export default Identification
+
+const WindowContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+`
 
 const Container = styled.div`
-  width: 80vw;
+  width: 600px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const Explaination = styled.div`
+  font-size: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 20px;
 `
 
-const DialogueSlider = styled.div`
+const SmallTypograph = styled.div`
+  font-size: 16px;
+`
+
+const Wrapper = styled.div<{ $isFocused?: boolean }>`
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 10px 20px;
+
+  ${props => props.$isFocused
+    ? css`
+      border: 2.5px solid rgb(183, 206, 241);
+    `
+    : css`
+      border: 2.5px solid rgba(212, 212, 212, 1);
+    `
+  }
 `
 
-export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  const buffer = await fsPromises.readFile(paths.RATIOANLES)
+const Input = styled.input`
+  outline: none;
+  text-decoration: none;
+  border: none;
+  margin: 0 15px;
+  width: 100px;
+  text-align: center;
+`
 
-  const data = JSON.parse(buffer.toString())
+const ButtonRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`
 
-  const results = {
-    rationales: data,
+const Button = styled.div`
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2.5px solid rgba(242, 242, 242, .8);
+  transition: all .3 ease-in-out;
+
+  &:hover {
+    background-color: rgba(242, 242, 242, .6);
   }
-
-  return { props: results  }
-}
+`

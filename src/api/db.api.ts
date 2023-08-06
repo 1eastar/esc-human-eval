@@ -3,23 +3,25 @@ import { addDoc, collection, doc, DocumentData, getDoc, getDocs, setDoc } from '
 import { RationaleScore } from '@/constants/tabs'
 
 
-export async function getScores() {
+export async function getScores(name: string) {
   const scoreCollection = collection(db, 'score')
   const scoreSnapshot = await getDocs(scoreCollection)
 
   const scoreList: RationaleScore[] = []
   scoreSnapshot.forEach((doc) => {
     // 가져온 모든 문서들을 확인
-    // console.log(doc.id, " => ", doc.data())
-    scoreList.push(doc.data() as RationaleScore)
+    if (doc.id.includes(name)) {
+      console.log(doc.id, " => ", doc.data())
+      scoreList.push(doc.data() as RationaleScore)
+    }
   })
-  // console.log(scoreList)
+  console.log(scoreList)
   return scoreList
 }
 
-export async function setScoreDocument(scoreData: RationaleScore) {
-  await setDoc(doc(db, "score", `${scoreData.id}`), scoreData)
-  return await getScores()
+export async function setScoreDocument(scoreData: RationaleScore, name: string) {
+  await setDoc(doc(db, "score", `${name}-${scoreData.id}`), scoreData)
+  return await getScores(name)
 }
 
 export async function editScoreDocument() {
