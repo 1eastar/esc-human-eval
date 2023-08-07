@@ -91,6 +91,10 @@ export default function Home({
     setScoreDocument(score, name)
       .then(scoreList => {
         setScoreResult(scoreList)
+        alert('저장되었습니다.')
+      })
+      .catch(e => {
+        alert('알 수 없는 오류가 발생했습니다. ehdwls6703@gmail.com 으로 문의 바랍니다.')
       })
   }, [name])
 

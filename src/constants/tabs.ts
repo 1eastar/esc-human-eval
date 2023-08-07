@@ -1,11 +1,11 @@
 
 export enum Tab {
-  GPT4_GOLD = 'GPT4_GOLD',
-  GPT4_COT = 'GPT4_COT',
-  OPT_1B = 'OPT_1B',
-  OPT_6B = 'OPT_6B',
-  LLAMA2_7B = 'LLAMA2_7B',
-  RESNET_LLAMA2 = 'RESNET_LLAMA2',
+  GPT4_GOLD = '1번 (GPT4_GOLD)',
+  GPT4_COT = '2번 (GPT4_COT)',
+  OPT_1B = '3번 (OPT_1B)',
+  OPT_6B = '4번 (OPT_6B)',
+  LLAMA2_7B = '5번 (LLAMA2_7B)',
+  RESNET_LLAMA2 = '6번 (RESNET_LLAMA2)',
 }
 
 export interface QuestionScore {
