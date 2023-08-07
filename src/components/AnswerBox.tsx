@@ -12,30 +12,41 @@ function AnswerBox({
   score,
   onChangeInput,
 }: AnswerBoxProps) {
-  const [value, setValue] = useState(+score)
+  const [value, setValue] = useState(score)
 
-  const handleChangeInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setValue(+e.target.value)
+  const handleChangeInput = useCallback((e: ChangeEvent<HTMLSelectElement>) => {
+    // console.log(e.target.value)
+    setValue(e.target.value)
     onChangeInput(questionKey, e.target.value)
   }, [onChangeInput, questionKey])
 
   const InputBox = useMemo(() => (
     <InputContainer>
       <Input
+        name="score"
+        onChange={handleChangeInput}
+        value={value}
+      >
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </Input>
+      {/* <Input
         type="number"
         min={-1}
         max={5}
         step={1}
         defaultValue={value}
         onChange={handleChangeInput}
-      />
+      /> */}
     </InputContainer>
   ), [handleChangeInput, value])
 
   return (
-    <Container
-      $yet={value === -1}
-    >
+    <Container>
       <Amark>A. &nbsp;</Amark>
       { InputBox }
     </Container>
@@ -44,7 +55,7 @@ function AnswerBox({
 
 export default AnswerBox
 
-const Container = styled.div<{ $yet: boolean }>`
+const Container = styled.div`
   height: 100%;
   box-sizing: border-box;
   width: 150px;
@@ -56,15 +67,7 @@ const Container = styled.div<{ $yet: boolean }>`
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  ${props => props.$yet
-    ? css`
-      background-color: rgba(242, 242, 242, .5);
-    `
-    : css`
-      background-color: rgba(242, 242, 242, .5);
-    `
-  }
+  background-color: rgba(242, 242, 242, .5);
 `
 
 const Amark = styled.span`
@@ -79,7 +82,7 @@ const InputContainer = styled.div`
   height: 30px;
 `
 
-const Input = styled.input`
+const Input = styled.select`
   text-decoration: none;
   border: none;
   width: 50px;

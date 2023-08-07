@@ -17,7 +17,7 @@ import { useRouter } from 'next/router'
 export interface Rationale {
   id: number
   patient_data: string
-  label: Label
+  org_label: Label
   gpt4_gold: string
   gpt4_CoT: string
   lm_CoT: string
@@ -57,19 +57,27 @@ export default function Home({
       "scores": {
         [Tab.GPT4_GOLD]: Questions.map(q => ({
           key: q.key,
-          score: "-1",
+          score: "0",
         })),
         [Tab.GPT4_COT]: Questions.map(q => ({
           key: q.key,
-          score: "-1",
+          score: "0",
         })),
-        [Tab.LM_COT]: Questions.map(q => ({
+        [Tab.OPT_1B]: Questions.map(q => ({
           key: q.key,
-          score: "-1",
+          score: "0",
         })),
-        [Tab.VL_COT]: Questions.map(q => ({
+        [Tab.OPT_6B]: Questions.map(q => ({
           key: q.key,
-          score: "-1",
+          score: "0",
+        })),
+        [Tab.LLAMA2_7B]: Questions.map(q => ({
+          key: q.key,
+          score: "0",
+        })),
+        [Tab.RESNET_LLAMA2]: Questions.map(q => ({
+          key: q.key,
+          score: "0",
         }))
       }
     } as RationaleScore
@@ -84,7 +92,7 @@ export default function Home({
       .then(scoreList => {
         setScoreResult(scoreList)
       })
-  }, [])
+  }, [name])
 
   return (
     <Container>
@@ -95,7 +103,7 @@ export default function Home({
       <DialogueSlider>
         <BaseInfo
           patientData={currentRationale?.patient_data}
-          label={currentRationale?.label}
+          label={currentRationale?.org_label}
         />
       </DialogueSlider>
       <Tabs
@@ -110,6 +118,7 @@ export default function Home({
 
 const Container = styled.div`
   width: 80vw;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
   align-items: center;

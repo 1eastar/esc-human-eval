@@ -1,4 +1,5 @@
 import { Label } from "@/constants/lables"
+import { makePatientDataSimple } from "@/utils/rationale.utils"
 import styled from "styled-components"
 import DialogBox from "./DialogBox"
 
@@ -20,7 +21,7 @@ function BaseInfo({
       </DialogueHeader>
         <DialogBox
           position='right'
-          text={patientData ?? "-"}
+          text={makePatientDataSimple(patientData ?? "-")}
         />
         <DialogBox
           position='left'

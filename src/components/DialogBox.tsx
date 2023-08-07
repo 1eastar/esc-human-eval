@@ -14,37 +14,11 @@ function DialogBox({
   text,
 }: DialogBoxProps) {
 
-  const Seeker = useMemo(() => (
-    <TypeImage
-      src="/seeker.png"
-      alt="seeker"
-      $position={position}
-      width={40}
-      height={40}
-    />
-  ), [position])
-
-  const Supporter = useMemo(() => (
-    <TypeImage
-      src="/supporter.png"
-      alt="supporter"
-      $position={position}
-      width={40}
-      height={40}
-    />
-  ), [position])
-
-  const rawText = useMemo(() => text.replace('supporter: ', "").replace("seeker: ", ""), [text])
-
   return (
     <DialogBubble
       $position={position}
     >
-      { rawText }
-      {/* { position === 'left'
-        ? Supporter
-        : Seeker
-      } */}
+      { text }
     </DialogBubble>
   )
 }
@@ -61,6 +35,7 @@ const DialogBubble = styled.div<{ $position: Position }>`
   width: fit-content;
   font-size: 18px;
   font-weight: 500;
+  white-space: pre-line;
 
   display: flex;
   align-items: center;
@@ -79,22 +54,4 @@ const DialogBubble = styled.div<{ $position: Position }>`
       color: rgba(21,21,22,1);
     `
   )}
-`
-
-const TypeImage = styled(Image)<{ $position: Position }>`
-  position: absolute;
-
-  border-radius: 8px;
-
-  ${props =>
-    props.$position === 'left'
-      ? css`
-        top: -20px;
-        right: -20px;
-      `
-      : css`
-        top: -20px;
-        left: -20px;
-      `
-  }
 `

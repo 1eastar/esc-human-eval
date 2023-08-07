@@ -16,10 +16,12 @@ interface TabsProps {
 }
 
 const tabFieldMatch = {
-  [Tab.GPT4_GOLD]: 'gpt4_gold',
-  [Tab.GPT4_COT]: 'gpt4_CoT',
-  [Tab.LM_COT]: 'lm_CoT',
-  [Tab.VL_COT]: 'vl_CoT',
+  [Tab.GPT4_GOLD]: 'GPT4_Gold',
+  [Tab.GPT4_COT]: 'GPT4_CoT',
+  [Tab.OPT_1B]: 'OPT1B',
+  [Tab.OPT_6B]: 'OPT6B',
+  [Tab.LLAMA2_7B]: 'LLaMA2_7B',
+  [Tab.RESNET_LLAMA2]: 'resnet50_llama2',
 }
 
 function Tabs({
@@ -67,7 +69,7 @@ function Tabs({
   ), [currentTab, rationale])
 
   const getQuestionScores = useCallback((qKey: string) => (
-    score.scores[currentTab].find(s => s.key === qKey)?.score || "-1"
+    score.scores[currentTab].find(s => s.key === qKey)?.score || "0"
   ), [currentTab, score?.scores])
 
   const handleClickOverlayElement = useCallback((tab: Tab) => () => {

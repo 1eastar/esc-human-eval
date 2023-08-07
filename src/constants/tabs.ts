@@ -2,8 +2,10 @@
 export enum Tab {
   GPT4_GOLD = 'GPT4_GOLD',
   GPT4_COT = 'GPT4_COT',
-  LM_COT = 'LM_COT',
-  VL_COT = 'VL_COT',
+  OPT_1B = 'OPT_1B',
+  OPT_6B = 'OPT_6B',
+  LLAMA2_7B = 'LLAMA2_7B',
+  RESNET_LLAMA2 = 'RESNET_LLAMA2',
 }
 
 export interface QuestionScore {
@@ -14,8 +16,10 @@ export interface QuestionScore {
 export interface TabScore {
   [Tab.GPT4_GOLD]: QuestionScore[]
   [Tab.GPT4_COT]: QuestionScore[]
-  [Tab.LM_COT]: QuestionScore[]
-  [Tab.VL_COT]: QuestionScore[]
+  [Tab.OPT_1B]: QuestionScore[]
+  [Tab.OPT_6B]: QuestionScore[]
+  [Tab.LLAMA2_7B]: QuestionScore[]
+  [Tab.RESNET_LLAMA2]: QuestionScore[]
 }
 
 export interface RationaleScore {

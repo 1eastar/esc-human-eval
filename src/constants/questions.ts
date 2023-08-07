@@ -7,18 +7,22 @@ export interface Question {
 export const Questions: Question[] = [
   {
     key: "0",
-    content: "Consistency : Input 이랑 서로 연결이 되는지",
+    content: "Consistency : 모델이 생성한 Rationale이 진단 결과까지 사고의 흐름이 얼마나 자연스러운지",
   },
   {
     key: "1",
-    content: "Specificity : Does the rationale provide precise details about why the diagnosis were made?",
+    content: "Correctness : 모델이 생성한 Rationale의 각 과정이 얼마나 의학적으로 정확한지",
   },
   {
     key: "2",
-    content: "Helpfulness : rationale 이 정답을 도출하는 데에 얼마나 도움이 되는지",
+    content: "Specificity : 모델이 생성한 Rationale이 얼마나 구체적인 정보를 제공하는지",
   },
   {
     key: "3",
-    content: "임상적용 가능성: rationale의 임상 적용 가능성이 어느정도 되는지",
+    content: "Helpfulness : 모델이 생성한 Rationale이 실제 진단 결과를 얼마나 뒷받침하는지",
+  },
+  {
+    key: "4",
+    content: "Human-likeness: 모델이 생성한 Rationale이 얼마나 의사들과 유사한지",
   },
 ]
