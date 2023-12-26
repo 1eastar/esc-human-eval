@@ -1,54 +1,68 @@
 import { Question, Questions } from "@/constants/questions"
-import { RationaleScore, Tab } from "@/constants/tabs"
+import { SampleScore, Tab } from "@/constants/tabs"
 import Overlay, { OverlayPosition } from "@/elements/Overlay"
+import { makeRationaleDataSimple } from "@/utils/rationale.utils"
 import Image from "next/image"
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { css, keyframes, styled } from "styled-components"
-import { Rationale } from "../../pages/home"
+import { Sample } from "../../pages/home"
 import AnswerBox from "./AnswerBox"
+import DialogBox from "./DialogBox"
 import OverlayListItem from "./OverlayListItem"
 import QuestionBox from "./QuestionBox"
 
 interface TabsProps {
-  rationale?: Rationale
-  score: RationaleScore
-  onSubmit: (score: RationaleScore) => void
+  sample?: Sample
+  score: SampleScore
+  onSubmit: (score: SampleScore) => void
 }
 
 const tabFieldMatch = {
-  [Tab.GPT4_GOLD]: 'GPT4_Gold',
-  [Tab.GPT4_COT]: 'GPT4_CoT',
-  [Tab.OPT_1B]: 'OPT1B',
-  [Tab.OPT_6B]: 'OPT6B',
-  [Tab.LLAMA2_7B]: 'LLaMA2_7B',
-  [Tab.RESNET_LLAMA2]: 'resnet50_llama2',
+  [Tab.GOLD]: 'Gold',
+  [Tab.GPT_INITIAL]: 'GPT_initial',
+  [Tab.GPT_DIRECT]: 'GPT_direct',
+  [Tab.GPT_REFEEL]: 'GPT_refeel',
+  [Tab.GPT_REFEELP]: 'GPT_refeelP',
+  [Tab.LLAMA2_INITIAL]: 'LLaMA2_initial',
+  [Tab.LLAMA2_DIRECT]: 'LLaMA2_direct',
+  [Tab.LLAMA2_REFEEL]: 'LLaMA2_refeel',
+  [Tab.LLAMA2_REFFELP]: 'LLaMA2_refeelP',
 }
 
 function Tabs({
-  rationale,
+  sample,
   score,
   onSubmit,
 }: TabsProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const overleyRef = useRef<HTMLDivElement>(null)
 
-  const [currentTab, setCurrentTab] = useState<Tab>(Tab.GPT4_GOLD)
+  const [currentTab, setCurrentTab] = useState<Tab>(Tab.GOLD)
   const [showTabSelectOverlay, setShowTabSelectOverlay] = useState(false)
 
-  const [tmpScore, setTmpScore] = useState<RationaleScore>(score)
+  const [tmpScore, setTmpScore] = useState<SampleScore>(score)
 
   useEffect(() => {
     setTmpScore(score)
-  }, [rationale, score])
+  }, [sample, score])
+  
+  useEffect(() => {
+    setCurrentTab(Tab.GOLD)
+  }, [sample])
 
   const handleClickDropDown = useCallback(() => {
     setShowTabSelectOverlay(prev => !prev)
   }, [])
 
+  const Answer = useMemo(() => (
+    `(${sample?.[tabFieldMatch[currentTab]]?.strg_pred}) ${sample?.[tabFieldMatch[currentTab]]?.res_pred}`
+  ), [currentTab, sample])
+
   const renderTabHeader = useCallback((text: string) => (
     <TabHeader
       key={text}
       ref={overleyRef}
+      onClick={handleClickDropDown}
     >
       { text }
       <DropDownIcon
@@ -56,7 +70,6 @@ function Tabs({
         alt="dropdown"
         width={15}
         height={15}
-        onClick={handleClickDropDown}
         $isOpen={showTabSelectOverlay}
       />
     </TabHeader>
@@ -64,9 +77,9 @@ function Tabs({
 
   const renderTabRationale = useCallback(() => (
     <TabContentBox>
-      { rationale?.[tabFieldMatch[currentTab]] }
+      { makeRationaleDataSimple(sample?.[tabFieldMatch[currentTab]]) }
     </TabContentBox>
-  ), [currentTab, rationale])
+  ), [currentTab, sample])
 
   const getQuestionScores = useCallback((qKey: string) => (
     score.scores[currentTab].find(s => s.key === qKey)?.score || "0"
@@ -93,6 +106,12 @@ function Tabs({
       <HeaderWrapper ref={containerRef}>
         { renderTabHeader(currentTab) }
       </HeaderWrapper>
+      <AnswerWrapper>
+        <DialogBox
+          position='right'
+          text={Answer}
+        />
+      </AnswerWrapper>
       <ContentWrapper>
         <ContentRow>
           { renderTabRationale() }
@@ -100,7 +119,7 @@ function Tabs({
       </ContentWrapper>
       <QAContainer>
         { Questions.map(q => (
-          <QA key={`${rationale?.id}-${currentTab}-${q.key}=${getQuestionScores(q.key)}`}>
+          <QA key={`${sample?.id}-${currentTab}-${q.key}=${getQuestionScores(q.key)}`}>
             <QuestionBox question={q} />
             <AnswerBox
               questionKey={q.key}
@@ -178,12 +197,18 @@ const TabHeader = styled.div`
   box-sizing: border-box;
   transition: background-color 0.2s ease-in-out;
   font-weight: bold;
-  cursor: default;
+  cursor: pointer;
 
   &:hover {
     background-color: rgba(242, 242, 242, .5);
     border-bottom: 2px solid rgb(183, 206, 241);
   }
+`
+
+const AnswerWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: end;
 `
 
 const TabContentBox = styled.div`
@@ -219,14 +244,8 @@ const QA = styled.div`
 const DropDownIcon = styled(Image)<{ $isOpen?: boolean }>`
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
   margin-left: 10px;
   padding: 1px;
-
-  &:hover {
-    background-color: rgba(212, 212, 212, 1);
-
-  }
 
   ${props =>
     props.$isOpen

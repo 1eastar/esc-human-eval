@@ -10,43 +10,26 @@ export interface Scores {
 //   // baseline: number
 }
 
-// export interface ScoreData {
-//   conv_id: number
-//   turn_id: number
-//   scores: {
-//     [questionKey: string]: {
-//       [Tab.USR]: number
-//       [Tab.BOTH]: number
-//       [Tab.GOLD]: number
-//       [Tab.FIVESHOT]: number
-//       [Tab.GPT_OPT]: number
-//       [Tab.OPT]: number
-//     }
-//   }
-// }
+interface ContextElement {
+  speaker: 'seeker' | 'supporter'
+  response: string
+}
 
-// /**
-//  * scores.json 구조
-//  * 
-//  * conv_id
-//  * turn_id
-//  * scores: {
-//  *    question_key: {
-//  *        usr
-//  *        sys
-//  *        both
-//  *        gold
-//  *    }
-//  * }
-//  */
-// export function makeScoreScheme(score: number, tab: Tab, baseScores?: Scores) {
-//   return {
-//     [Tab.USR]: -1,
-//     [Tab.BOTH]: -1,
-//     [Tab.GOLD]: -1,
-//     [Tab.FIVESHOT]: -1,
-
-//     ...baseScores,
-//     [tab]: score,
-//   }
-// }
+export function splitContext(ctx: string) {
+  const split_ctx = ctx.split('\n')
+  const result: ContextElement[] = split_ctx.map(res => {
+    if (res.includes('seeker:')) {
+      return {
+        speaker: 'seeker',
+        response: res.replace('seeker: ', '')
+      }
+    } else {
+      return {
+        speaker: 'supporter',
+        response: res.replace('supporter: ', '')
+      }
+    }
+  })
+  // console.log(result)
+  return result
+}

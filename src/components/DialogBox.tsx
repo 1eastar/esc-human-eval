@@ -39,9 +39,10 @@ const DialogBubble = styled.div<{ $position: Position }>`
 
   display: flex;
   align-items: center;
+  z-index: -1;
 
   ${props => (
-    props.$position === 'left'
+    props.$position === 'right'
     ? css`
       margin-left: auto;
       margin-right: 20px;

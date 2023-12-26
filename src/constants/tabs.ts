@@ -1,11 +1,14 @@
 
 export enum Tab {
-  GPT4_GOLD = '1번 (GPT4_GOLD)',
-  GPT4_COT = '2번 (GPT4_COT)',
-  OPT_1B = '3번 (OPT_1B)',
-  OPT_6B = '4번 (OPT_6B)',
-  LLAMA2_7B = '5번 (LLAMA2_7B)',
-  RESNET_LLAMA2 = '6번 (RESNET_LLAMA2)',
+  GOLD = '1번 (Gold)',
+  GPT_INITIAL = '2번 (GPT_initial)',
+  GPT_DIRECT = '3번 (GPT_direct)',
+  GPT_REFEEL = '4번 (GPT_refeel)',
+  GPT_REFEELP = '5번 (GPT_refeel+)',
+  LLAMA2_INITIAL = '6번 (LLaMA2_initial)',
+  LLAMA2_DIRECT = '7번 (LLaMA2_direct)',
+  LLAMA2_REFEEL = '8번 (LLaMA2_refeel)',
+  LLAMA2_REFFELP = '9번 (LLaMA2_refeel+)',
 }
 
 export interface QuestionScore {
@@ -14,15 +17,18 @@ export interface QuestionScore {
 }
 
 export interface TabScore {
-  [Tab.GPT4_GOLD]: QuestionScore[]
-  [Tab.GPT4_COT]: QuestionScore[]
-  [Tab.OPT_1B]: QuestionScore[]
-  [Tab.OPT_6B]: QuestionScore[]
-  [Tab.LLAMA2_7B]: QuestionScore[]
-  [Tab.RESNET_LLAMA2]: QuestionScore[]
+  [Tab.GOLD]: QuestionScore[]
+  [Tab.GPT_INITIAL]: QuestionScore[]
+  [Tab.GPT_DIRECT]: QuestionScore[]
+  [Tab.GPT_REFEEL]: QuestionScore[]
+  [Tab.GPT_REFEELP]: QuestionScore[]
+  [Tab.LLAMA2_INITIAL]: QuestionScore[]
+  [Tab.LLAMA2_DIRECT]: QuestionScore[]
+  [Tab.LLAMA2_REFEEL]: QuestionScore[]
+  [Tab.LLAMA2_REFFELP]: QuestionScore[]
 }
 
-export interface RationaleScore {
+export interface SampleScore {
   id: number
   scores: TabScore
 }

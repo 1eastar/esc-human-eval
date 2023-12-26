@@ -2,39 +2,51 @@ import fsPromises from 'fs/promises'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { styled } from 'styled-components'
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { useRouter } from 'next/router'
 
 import Tabs from '@/components/Tabs'
 import Indicator from '@/components/Indicator'
-import { RationaleScore, Tab, TabScore } from '@/constants/tabs'
+import { SampleScore, Tab, TabScore } from '@/constants/tabs'
 
 import { paths } from '@/constants/paths'
 import { getScores, setScoreDocument } from '@/api/db.api'
 import { Label } from '@/constants/lables'
 import { Questions } from '@/constants/questions'
 import BaseInfo from '@/components/BaseInfo'
-import { useRouter } from 'next/router'
 
-export interface Rationale {
+export interface ModelResponse {
+  strg_pred: string
+  res_pred: string
+  stage: string
+  feedback: string
+}
+
+export interface Sample {
   id: number
-  patient_data: string
-  org_label: Label
-  gpt4_gold: string
-  gpt4_CoT: string
-  lm_CoT: string
-  vl_CoT: string
+  context: string
+  state: string
+  Gold: ModelResponse
+  GPT_initial: ModelResponse
+  GPT_direct: ModelResponse
+  GPT_refeel: ModelResponse
+  GPT_refeelP: ModelResponse
+  LLaMA2_initial: ModelResponse
+  LLaMA2_direct: ModelResponse
+  LLaMA2_refeel: ModelResponse
+  LLaMA2_refeelP: ModelResponse
 } 
 
 interface HomeProps {
-  rationales: Rationale[]
+  samples: Sample[]
 }
 
 export default function Home({
-  rationales: _rationales,
+  samples: _samples,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const router = useRouter()
 
-  const [rationales, setRationales] = useState<Rationale[]>(_rationales)
-  const [scoreResult, setScoreResult] = useState<RationaleScore[]>([])
+  const [samples, setSamples] = useState<Sample[]>(_samples)
+  const [scoreResult, setScoreResult] = useState<SampleScore[]>([])
 
   const [currentId, setCurrentId] = useState<string>("1")
 
@@ -47,71 +59,84 @@ export default function Home({
       })
   }, [name])
 
-  const currentRationale = useMemo(() => (
-    rationales.find(r => r.id === +currentId)
-  ), [currentId, rationales])
+  const currentSample = useMemo(() => (
+    samples.find(r => r.id === +currentId)
+  ), [currentId, samples])
 
-  const currentScores: RationaleScore = useMemo(() => (
+  const currentScores: SampleScore = useMemo(() => (
     scoreResult.find(s => s.id === +currentId) || {
       "id": +currentId,
       "scores": {
-        [Tab.GPT4_GOLD]: Questions.map(q => ({
+        [Tab.GOLD]: Questions.map(q => ({
           key: q.key,
           score: "0",
         })),
-        [Tab.GPT4_COT]: Questions.map(q => ({
+        [Tab.GPT_INITIAL]: Questions.map(q => ({
           key: q.key,
           score: "0",
         })),
-        [Tab.OPT_1B]: Questions.map(q => ({
+        [Tab.GPT_DIRECT]: Questions.map(q => ({
           key: q.key,
           score: "0",
         })),
-        [Tab.OPT_6B]: Questions.map(q => ({
+        [Tab.GPT_REFEEL]: Questions.map(q => ({
           key: q.key,
           score: "0",
         })),
-        [Tab.LLAMA2_7B]: Questions.map(q => ({
+        [Tab.GPT_REFEELP]: Questions.map(q => ({
           key: q.key,
           score: "0",
         })),
-        [Tab.RESNET_LLAMA2]: Questions.map(q => ({
+        [Tab.LLAMA2_INITIAL]: Questions.map(q => ({
           key: q.key,
           score: "0",
-        }))
+        })),
+        [Tab.LLAMA2_DIRECT]: Questions.map(q => ({
+          key: q.key,
+          score: "0",
+        })),
+        [Tab.LLAMA2_REFEEL]: Questions.map(q => ({
+          key: q.key,
+          score: "0",
+        })),
+        [Tab.LLAMA2_REFFELP]: Questions.map(q => ({
+          key: q.key,
+          score: "0",
+        })),
       }
-    } as RationaleScore
+    } as SampleScore
   ), [currentId, scoreResult])
 
   const handleSearchId = useCallback((id: string) => {
     setCurrentId(id)
   }, [])
 
-  const handleSubmit = useCallback(async (score: RationaleScore) => {
+  const handleSubmit = useCallback(async (score: SampleScore) => {
     setScoreDocument(score, name)
       .then(scoreList => {
         setScoreResult(scoreList)
         alert('저장되었습니다.')
       })
       .catch(e => {
-        alert('알 수 없는 오류가 발생했습니다. ehdwls6703@gmail.com 으로 문의 바랍니다.')
+        console.log(e)
+        alert('알 수 없는 오류가 발생했습니다. 문의 바랍니다.')
       })
   }, [name])
 
   return (
     <Container>
       <Indicator
-        maxId={rationales.length + ''}
+        maxId={samples.length + ''}
         onSearch={handleSearchId}
       />
       <DialogueSlider>
         <BaseInfo
-          patientData={currentRationale?.patient_data}
-          label={currentRationale?.org_label}
+          context={currentSample?.context}
+          // label={currentRationale?.org_label}
         />
       </DialogueSlider>
       <Tabs
-        rationale={currentRationale}
+        sample={currentSample}
         score={currentScores}
         onSubmit={handleSubmit}
       />
@@ -140,7 +165,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   const data = JSON.parse(buffer.toString())
 
   const results = {
-    rationales: data,
+    samples: data,
   }
 
   return { props: results  }

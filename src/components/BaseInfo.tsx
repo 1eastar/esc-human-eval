@@ -1,32 +1,37 @@
 import { Label } from "@/constants/lables"
+import { splitContext } from "@/utils/dialogue.utils"
 import { makePatientDataSimple } from "@/utils/rationale.utils"
+import { useMemo } from "react"
 import styled from "styled-components"
 import DialogBox from "./DialogBox"
 
 interface BaseInfoProps {
-  patientData?: string
-  label?: Label
+  context?: string
 }
 
 function BaseInfo({
-  patientData,
-  label,
+  context,
 }: BaseInfoProps) {
+
+  const splittedContext = useMemo(() => 
+    splitContext(context ?? '-')
+  , [context])
 
   return (
     <Container>
       <DialogueHeader>
-        <DialogueHeaderText>Patient Info</DialogueHeaderText>
-        <DialogueHeaderText>Answer</DialogueHeaderText>
+        <DialogueHeaderText>Seeker</DialogueHeaderText>
+        <DialogueHeaderText>Supporter</DialogueHeaderText>
       </DialogueHeader>
-        <DialogBox
-          position='right'
-          text={makePatientDataSimple(patientData ?? "-")}
-        />
-        <DialogBox
-          position='left'
-          text={label ?? "-"}
-        />
+      {
+        splittedContext.map(ctxEl => (
+          <DialogBox
+            key={ctxEl.response}
+            position={ctxEl.speaker == 'seeker' ? 'left' : 'right'}
+            text={ctxEl.response ?? "-"}
+          />
+        ))
+      }
     </Container>
   )
 }

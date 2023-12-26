@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCgZsTwnjJ6Brr1OzqGSqicNVW5IGdgWgc",
-  authDomain: "mr2-dli.firebaseapp.com",
-  projectId: "mr2-dli",
-  storageBucket: "mr2-dli.appspot.com",
-  messagingSenderId: "54832589088",
-  appId: "1:54832589088:web:dcd989e584b49222b1cf45"
+  apiKey: "AIzaSyBb6mnA4FeFXewXUKVCkV1odJfXFX6cv4Q",
+  authDomain: "esc-dli.firebaseapp.com",
+  projectId: "esc-dli",
+  storageBucket: "esc-dli.appspot.com",
+  messagingSenderId: "217768356450",
+  appId: "1:217768356450:web:bada364b59bac15e677f3b"
 }
 
 // const firebaseConfig = {
@@ -28,3 +28,4 @@ const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
 
 export const db = getFirestore(app)
+console.log(db)
