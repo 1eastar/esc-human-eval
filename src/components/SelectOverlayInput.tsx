@@ -34,6 +34,8 @@ function SelectOverlayInput({
     if (e.key == 'Enter') {
       if (+search > +maxId) {
         alert(`${maxId}까지 입력 가능합니다.`)
+      } else if (+search < 1) {
+        alert('1 이상의 숫자를 입력해주세요.')
       } else {
         onSearch(search)
       }
