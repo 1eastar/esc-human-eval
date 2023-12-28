@@ -55,7 +55,7 @@ function Tabs({
   }, [])
 
   const Answer = useMemo(() => (
-    `(${sample?.[tabFieldMatch[currentTab]]?.strg_pred}) ${sample?.[tabFieldMatch[currentTab]]?.res_pred}`
+    `(${sample?.[tabFieldMatch[currentTab]]?.strategy}) ${sample?.[tabFieldMatch[currentTab]]?.utterance}`
   ), [currentTab, sample])
 
   const renderTabHeader = useCallback((text: string) => (
@@ -77,7 +77,7 @@ function Tabs({
 
   const renderTabRationale = useCallback(() => (
     <TabContentBox>
-      { makeRationaleDataSimple(sample?.[tabFieldMatch[currentTab]]) }
+      { makeRationaleDataSimple(sample?.[tabFieldMatch[currentTab]], sample?.stage) }
     </TabContentBox>
   ), [currentTab, sample])
 
@@ -112,15 +112,19 @@ function Tabs({
           text={Answer}
         />
       </AnswerWrapper>
-      <ContentWrapper>
+      {/* <ContentWrapper>
         <ContentRow>
           { renderTabRationale() }
         </ContentRow>
-      </ContentWrapper>
+      </ContentWrapper> */}
       <QAContainer>
-        { Questions.map(q => (
+        { Questions.map((q, i) => (
           <QA key={`${sample?.id}-${currentTab}-${q.key}=${getQuestionScores(q.key)}`}>
-            <QuestionBox question={q} />
+            <QuestionBox
+              question={q}
+              stage={sample?.stage ?? "-"}
+              info={i == 5 ? sample?.state ?? "" : ""}
+            />
             <AnswerBox
               questionKey={q.key}
               onChangeInput={handleChangeInput}

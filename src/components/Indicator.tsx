@@ -45,6 +45,11 @@ function Indicator({
     router.back()
   }, [router])
 
+  const handleSearch = useCallback((id: string) => {
+    setId(id)
+    onSearch(id)
+  }, [onSearch])
+
   return (
     <Container>
       <BackButton
@@ -63,6 +68,7 @@ function Indicator({
         <SelectOverlayInput
           defaultValue={id}
           maxId={maxId}
+          onSearch={handleSearch}
         />
         <ArrowIndicator
           onClick={handleClickNext}

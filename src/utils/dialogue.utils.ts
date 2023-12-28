@@ -16,7 +16,8 @@ interface ContextElement {
 }
 
 export function splitContext(ctx: string) {
-  const split_ctx = ctx.split('\n')
+  const split_ctx = ctx.trim().split('\n')
+  console.log(split_ctx)
   const result: ContextElement[] = split_ctx.map(res => {
     if (res.includes('seeker:')) {
       return {
@@ -30,6 +31,6 @@ export function splitContext(ctx: string) {
       }
     }
   })
-  // console.log(result)
+  console.log(result)
   return result
 }

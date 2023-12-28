@@ -4,16 +4,25 @@ import { styled } from "styled-components"
 
 interface QuestionBoxProps {
   question: Question
+  stage: string
+  info: string
 }
 
 function QuestionBox({
   question,
+  stage,
+  info,
 }: QuestionBoxProps) {
 
   return (
     <Container>
-      <Qmark>Q. &nbsp;</Qmark>
-      { question.content }
+      { question.content.replace('제시된 stage', `${stage} stage`) }
+      { info &&
+        <Info>
+          <Bold>Seeker&#39;s state</Bold>
+          {info}
+        </Info>
+      }
     </Container>
   )
 }
@@ -35,7 +44,13 @@ const Container = styled.div`
   margin-left: 20px;
 `
 
-const Qmark = styled.span`
-  font-size: 18px;
+const Bold = styled.div`
   font-weight: bold;
+`
+
+const Info = styled.div`
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: pre-wrap;
 `

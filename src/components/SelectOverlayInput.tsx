@@ -1,4 +1,4 @@
-import { ChangeEvent, useCallback, useEffect, useMemo, useRef, useState } from "react"
+import { ChangeEvent, KeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import styled from "styled-components"
 import { css } from "styled-components"
 
@@ -6,11 +6,13 @@ import { css } from "styled-components"
 interface SelectOverlayInputProps {
   defaultValue: string
   maxId: string
+  onSearch: (id: string) => void
 }
 
 function SelectOverlayInput({
   defaultValue,
   maxId,
+  onSearch,
 }: SelectOverlayInputProps) {
 
   const [search, setSearch] = useState(defaultValue)
@@ -21,12 +23,22 @@ function SelectOverlayInput({
   }, [defaultValue])
 
   const handleChangeInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    if (+e.target.value > +maxId) {
-      alert(`${maxId}까지 입력 가능합니다.`)
-    } else {
+    // if (+e.target.value > +maxId) {
+    //   alert(`${maxId}까지 입력 가능합니다.`)
+    // } else {
       setSearch(e.target.value)
+    // }
+  }, [])
+  
+  const handleKeyPress = useCallback((e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key == 'Enter') {
+      if (+search > +maxId) {
+        alert(`${maxId}까지 입력 가능합니다.`)
+      } else {
+        onSearch(search)
+      }
     }
-  }, [maxId])
+  }, [maxId, onSearch, search])
 
   const onFocusInput = useCallback(() => {
     setIsInputFocused(true)
@@ -43,6 +55,7 @@ function SelectOverlayInput({
         onChange={handleChangeInput}
         onFocus={onFocusInput}
         onBlur={onBlurInput}
+        onKeyPress={handleKeyPress}
       />
     </Wrapper>
   )

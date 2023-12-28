@@ -17,13 +17,16 @@ import BaseInfo from '@/components/BaseInfo'
 export interface ModelResponse {
   strg_pred: string
   res_pred: string
-  stage: string
   feedback: string
 }
 
 export interface Sample {
   id: number
+  start_turn: number
+  end_turn: number
+  total_len: number
   context: string
+  stage: string
   state: string
   Gold: ModelResponse
   GPT_initial: ModelResponse
@@ -160,7 +163,7 @@ const DialogueSlider = styled.div`
 `
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  const buffer = await fsPromises.readFile(paths.RATIOANLES)
+  const buffer = await fsPromises.readFile(paths.DATA)
 
   const data = JSON.parse(buffer.toString())
 

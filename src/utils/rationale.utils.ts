@@ -8,9 +8,9 @@ export function makePatientDataSimple(patientData: string) {
   return patientData
 }
 
-export function makeRationaleDataSimple(modelResponse: ModelResponse): string[] {
+export function makeRationaleDataSimple(modelResponse: ModelResponse, stage: string = ""): string[] {
   return [
-    '- stage: ' + modelResponse.stage,
+    '- stage: ' + stage,
     '\n',
     modelResponse.feedback.replace('[STRG FEEDBACK] ', '- strategy feedback:\n').replace('[UTT FEEDBACK] ', '\n- utterance feedback:\n'),
   ]
