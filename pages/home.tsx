@@ -28,6 +28,9 @@ export interface Sample {
   context: string
   stage: string
   state: string
+  emotion_type: string
+  problem_type: string
+  situation: string
   Gold: ModelResponse
   GPT_initial: ModelResponse
   GPT_direct: ModelResponse
@@ -65,6 +68,10 @@ export default function Home({
   const currentSample = useMemo(() => (
     samples.find(r => r.id === +currentId)
   ), [currentId, samples])
+
+  const backgroundText = useMemo(() => (
+    `The following is a conversation between a supporter and a seeker about ${currentSample?.emotion_type} regarding a/an ${currentSample?.problem_type}. The seeker says \"${currentSample?.situation}\"`
+  ), [currentSample?.emotion_type, currentSample?.problem_type, currentSample?.situation])
 
   const currentScores: SampleScore = useMemo(() => (
     scoreResult.find(s => s.id === +currentId) || {
@@ -134,6 +141,7 @@ export default function Home({
       />
       <DialogueSlider>
         <BaseInfo
+          background={backgroundText}
           context={currentSample?.context}
           // label={currentRationale?.org_label}
         />

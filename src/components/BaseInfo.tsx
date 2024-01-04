@@ -3,14 +3,17 @@ import { splitContext } from "@/utils/dialogue.utils"
 import { makePatientDataSimple } from "@/utils/rationale.utils"
 import { useMemo } from "react"
 import styled from "styled-components"
+import Background from "./Background"
 import DialogBox from "./DialogBox"
 
 interface BaseInfoProps {
   context?: string
+  background: string
 }
 
 function BaseInfo({
   context,
+  background,
 }: BaseInfoProps) {
 
   const splittedContext = useMemo(() => 
@@ -19,6 +22,7 @@ function BaseInfo({
 
   return (
     <Container>
+      <Background text={background} />
       <DialogueHeader>
         <DialogueHeaderText>Seeker</DialogueHeaderText>
         <DialogueHeaderText>Supporter</DialogueHeaderText>

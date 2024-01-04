@@ -7,6 +7,9 @@
         "context": "supporter: (Affirmation and Reassurance) I know you'll try very hard! Relax so you can do your best\nseeker: Yes, because sometimes I see people studying before the test and I don't think it's a good idea due to you will be more anxious\nsupporter: (Information) I agree. It can stress you out more when you're already stressed.\nseeker: People try studying until late and they don't sleep properly which is bad for them\nseeker: I try study the day before but not until late\nseeker: and sleep well\n",
         "stage": "Action",
         "state": "The seeker is dealing with anxiety, particularly in situations like tests, travels, and going out. They recognize that their anxiety levels are high and they believe it's not good for them. They are also concerned about the way some people handle stress, such as studying late before a test, and they try to manage their own stress by studying earlier and ensuring they get a good night's sleep.",
+        "emotion_type": "anxiety",
+        "problem_type": "appearance anxiety",
+        "situation": "I am an anxiety person, when I have test, I'm going to travel, I'm going out and so on I will always have anxiety however I don't think it's goo to have so much anxiety, it's not good for yourself.",
         "Gold": {
             "strategy": "Information",
             "utterance": "Yes, people do better on tests when they are well rested.",
@@ -61,6 +64,9 @@
         "context": "seeker: That sounds wonderful.\nsupporter: (Affirmation and Reassurance) You should focus on yourself and remember you are a amazing woman!\nseeker: Thanks for the support. Is it too early to start a new relationship?\nsupporter: (Others) If you are sure you are ready for it then No. However make sure you dont judge them by previous relationships.\nseeker: I have to think about it more but I am lonely already\n",
         "stage": "Comforting",
         "state": "The seeker is feeling sad and lonely due to a recent breakup and is considering entering a new relationship. They are unsure about the timing and are still processing their feelings.",
+        "emotion_type": "sadness",
+        "problem_type": "breakup with partner",
+        "situation": "How can I cope with losing my boyfriend to another woman?",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "I understand but wouldnt you rather be alone and focusing on yourself instead of miserable relationship?",
@@ -115,6 +121,9 @@
         "context": "supporter: (Restatement or Paraphrasing) So you are feeling lonely and bereft? I am sorry to hear that. Can you give me more information? \nseeker: Basic story, got back to the United States from deployment.\nsupporter: (Restatement or Paraphrasing) Ah, so you were overseas and were conducting the relationship long distance? \nseeker: She kept me going while I was gone, but since I returned, she's been so cold to me\nsupporter: (Reflection of Feelings) Do you feel that is unfair of her to have done this whilst you were away serving your country? \nseeker: Kind of, I know that life moves on while people are away\nseeker: I just don't get it though, I return and this is what I get\n",
         "stage": "Comforting",
         "state": "The seeker is feeling lonely, depressed, and confused following a breakup with a partner they were interested in. They are struggling to understand and accept the situation, especially since it occurred while they were away on deployment.",
+        "emotion_type": "depression",
+        "problem_type": "breakup with partner",
+        "situation": "Just got back from deployment. Found out the girl that I was interested in does not like me anymore. I am trying to move on, but don't know where to go from here.",
         "Gold": {
             "strategy": "Others",
             "utterance": "But she should have understood that you were doing your duty whilst also providing for the pair of you ",
@@ -169,6 +178,9 @@
         "context": "supporter: (Reflection of Feelings) That is understandable. would you like to tell me what you plan on doing \nseeker: Sometimes I have suicidal feelings...\nsupporter: (Restatement or Paraphrasing) That is a serious emotion. Have you been talking to anyone yet\nseeker: No, I live alone\nsupporter: (Others) Do you have family or friends you can reach out too\nseeker: I have one friend who lives in my neighborhood, but I dont trust him much.\n",
         "stage": "Exploration",
         "state": "The seeker is feeling extremely desolate and lonely after their breakup. They have expressed feelings of depression and suicidal thoughts. The seeker also seems to lack trustful and supportive relationships in their life.",
+        "emotion_type": "depression",
+        "problem_type": "breakup with partner",
+        "situation": "I recently broke up with my girlfriend. I have been feeling very lonely and depressed.",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "Have you considered calling a help line. They are free, private and very professional",
@@ -223,6 +235,9 @@
         "context": "seeker: I am feeling a bit sad and down\nsupporter: (Question) I am sorry to hear that. Do you want to tell me about it?\nseeker: I hate the way I look. Everytime I look in the mirror I cry\nsupporter: (Affirmation and Reassurance) I see. Can you be more specific? A lot of people are insecure about their looks you know. \nseeker: When I look in the mirror, I think Im the ugliest person in the world sometimes\nsupporter: (Question) How old are you if you don't mind my asking? This is a common thing among young people. \nseeker: I am 32\n",
         "stage": "Exploration",
         "state": "The seeker is dealing with appearance anxiety and self-esteem issues, causing feelings of sadness and disgust. They are struggling to accept their physical appearance, often leading to crying when looking at themselves in the mirror. The seeker believes they are unattractive and this is negatively impacting their emotional wellbeing.",
+        "emotion_type": "disgust",
+        "problem_type": "appearance anxiety",
+        "situation": "I hate looking at myself in the mirror, every time I do I feel like the ugliest person in the whole world. I feel like nobody will ever love me.",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "I see. Well can you tell me what specific part of your appearance do you hate? Maybe it could be altered?",
@@ -277,6 +292,9 @@
         "context": "supporter: (Others) Your wife left you for your father? How very ... redneck. \nseeker: I have not. I am unaware of what help services there are out there to offer or how to go about requesting these services? \nsupporter: (Providing Suggestions) Hmmm I would start with your GP, if you have one. \nseeker: GP? what's a GP? \nsupporter: (Information) Doctor. Sorry I am in England - I think that would be physician for you\nseeker: Correct. A doctor for me is a physician\nsupporter: (Information) Well, perhaps you could see your G ... um, physician and tell them that you think you have a problem? They might be able to provide calcium supplements too. \nseeker: I am currently needing mental help with this I think? how do I go about finding a provider? \nsupporter: (Providing Suggestions) If you have been drinking a long time, you probably need physical help too in case of withdrawal. Your doctor is the best place to start for both. \nseeker: Okay I will look into receiving both of those\n",
         "stage": "Action",
         "state": "The seeker is struggling with alcohol abuse which has resulted in job loss. They are unaware of the help services available to them. They are seeking advice on how to get physical and mental help, and are open to suggestions. They seem to be willing to see a doctor (physician) for their problem.",
+        "emotion_type": "sadness",
+        "problem_type": "alcohol abuse",
+        "situation": "I drank too much and was late for work again and got fired.",
         "Gold": {
             "strategy": "Question",
             "utterance": "What is your financial situation? Are you in trouble now you have no job? ",
@@ -331,6 +349,9 @@
         "context": "seeker: not being able to accomplish those things makes me feel hopeless\nseeker: frustrated\nseeker: feel like I'm meaningless to thers\nsupporter: (Affirmation and Reassurance) It's important to remember that you choose what goals to pursue. You decide the criteria for success and failure. You are the final arbiter of your life.\nseeker: those are all goals in my life that I need to reach\nseeker: I just don't know how most of the time\nsupporter: (Providing Suggestions) I understand. We all have goals. Goals can be helpful. But ask yourself why you chose those particular goals. \nseeker: I feel like I can't get guidance anywhere\nseeker: those are goals that when I accomplish them it will make me feel better\n",
         "stage": "Action",
         "state": "The seeker is struggling with depression and feelings of hopelessness and frustration. They have set personal goals but are having difficulty achieving them, which is contributing to their feelings of worthlessness. They are seeking guidance and believe that achieving their goals will alleviate their current emotional state.",
+        "emotion_type": "depression",
+        "problem_type": "ongoing depression",
+        "situation": "For a long time I have struggled with depression",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "It sounds like you need someone to tell you what to do, or to give you permission to do what you want to do. ",
@@ -385,6 +406,9 @@
         "context": "seeker: thats cool, what are you studying?\nsupporter: (Others) Economics and Geography \nseeker: thats awesome!\nsupporter: (Reflection of Feelings) Thank you!\nseeker: I was horrible in my high school economics class, I could have used your help for sure lol\nsupporter: (Reflection of Feelings) trust me the first economics test I took I got a 55% it did not come naturally to me\nseeker: It is not easy! What kind of work are you wanting to do when you are finished with college?\n",
         "stage": "Exploration",
         "state": "The seeker is showing an interest in the supporter's experiences and future plans, and is also expressing empathy towards the supporter's challenges in studying economics.",
+        "emotion_type": "depression",
+        "problem_type": "job crisis",
+        "situation": "I am a mother of two and I have been a stay at home, homeschooling mom since Covid hit last year. Can hardly make ends meet.",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "Urban planning, what do you do for work?",
@@ -439,6 +463,9 @@
         "context": "seeker: When I look in the mirror, I think Im the ugliest person in the world sometimes\nsupporter: (Question) How old are you if you don't mind my asking? This is a common thing among young people. \nseeker: I am 32\nsupporter: (Providing Suggestions) I see. Well can you tell me what specific part of your appearance do you hate? Maybe it could be altered?\nseeker: I hate everything when I see my reflection. I just feel fat and ugly\nsupporter: (Self-disclosure) Well, I have been overweight and I know it sucks. Perhaps you could join a weight loss group?\nseeker: I have been working out and eating better. Even though I am losing weight, I still feel horrible\n",
         "stage": "Action",
         "state": "The seeker is struggling with severe self-esteem issues and body image dissatisfaction. They have a very negative perception of their own appearance, to the point of hating their reflection. Despite making efforts to improve their physical health, their emotional state and self-perception remain negative. The seeker is likely dealing with appearance anxiety.",
+        "emotion_type": "disgust",
+        "problem_type": "appearance anxiety",
+        "situation": "I hate looking at myself in the mirror, every time I do I feel like the ugliest person in the whole world. I feel like nobody will ever love me.",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "Well you should be proud of the progress! Maybe buy yourself some new clothes?",
@@ -493,6 +520,9 @@
         "context": "supporter: (Question) How long are you doing the online school?\nseeker: Last semester and this semester. It feels like a lot longer though. \nsupporter: (Question) What are you missing most? Friends?\nseeker: A balance in life. I spend so much time online. I'm always staring at a screen. I would like to get aware from the computer.\nsupporter: (Providing Suggestions) As the vaccination started, I believe we will be back to normal soon.. \nseeker: Yeah, I can't wait for things to return to normal. Until then, I don't know what I can do to feel normal.\n",
         "stage": "Action",
         "state": "The seeker is feeling overwhelmed by the pressures of online learning due to COVID-19. They miss having a balance in their life and are tired of constantly being in front of a screen. They are eagerly waiting for the situation to return to normal. The seeker seems to be experiencing stress and anxiety due to the current circumstances.",
+        "emotion_type": "anxiety",
+        "problem_type": "academic pressure",
+        "situation": "I'm finding the COVID online learning experience to be too much for me at this time. I want to stop school, but I don't think I can afford to. I need to get done with school.",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "I saw some of my friends hang out in zoom... having virtual drinks.. have you tried that?",
@@ -547,6 +577,9 @@
         "context": "supporter: (Question) I'm doing well. How are you?\nseeker: I'm actually not doing that great. I'm feeling pretty bad\nsupporter: (Affirmation and Reassurance) I'm sorry to hear that, what's going on?\nseeker: Well, I'm a little frustrated with my friends because they aren't taking the pandemic seriously.\nseeker: They think it's a hoax.\nsupporter: (Restatement or Paraphrasing) I see. I assume you are taking it seriously? \nseeker: Yes, I take it very seriously. I lost my grandfather to the illness earlier in the year and I also contracted it. I was sicker than I ever have been and I still can't smell or taste.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling frustrated and upset because their friends are not taking the pandemic seriously. They're also feeling distressed due to personal experiences with the illness.",
+        "emotion_type": "anxiety",
+        "problem_type": "problems with friends",
+        "situation": "my friends refuse to take the pandemic seriously",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "Oh wow, I'm very sorry to hear that! I'm sorry for your loss. ",
@@ -601,6 +634,9 @@
         "context": "seeker: I am making slow gains on my art gear project.\nsupporter: (Question) hmm I don't know....I didn't get one. I gather you are in the US?\nsupporter: (Question) CAn you tell me more about your art gear project?\nsupporter: (Restatement or Paraphrasing) It sounds like you are frustrated that the stiimulus check program has not helped you get your art project off the ground, am I right?\nsupporter: (Question) Are you still with me?\nseeker: I have an Canon MkII camera to which of coarse I am searching for an small lense\nseeker: The time it takes to purchase is gonig to be dependant on an budget.\n",
         "stage": "Action",
         "state": "The seeker is trying to make progress on an art gear project, specifically looking to purchase a new lens for their Canon MkII camera. However, they seem to be facing financial constraints which is causing frustration and slowing down the progress of their project.",
+        "emotion_type": "disgust",
+        "problem_type": "procrastination",
+        "situation": "I always make my goals ealry and every so often before an breakthrough I make the best cut I can get. I want to make myself less suscepatable to self sabotage and intrusions.",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "I see.  Have you looked into bartering?  Someone who has such a lense may be willing to barter it for something you have, or some service you could offer them.",
@@ -655,6 +691,9 @@
         "context": "seeker: Oh, well, I'm sorry to hear that. I think participation in local governance is actually the most achievable path for change, but perhaps how it's structured where you are, it wouldn't really matter much if you participated.\nseeker: I guess mayorals are only technically local, not like parliamentary elections\nsupporter: (Others) If I were in London or a major city I'd vote for Mayor. I am in a rural area and we don't have one :D. I vote for local councillors tho\nseeker: Oh, I take it to mean that you are anti-Khan? If you feel like you'd need to vote for mayor in London\nsupporter: (Self-disclosure) I like Khan :) \nseeker: Jeremy Corbyn, no surrender?\nsupporter: (Self-disclosure) I like him too lol. \nseeker: You sound like someone I'd like to smoke a spliff withIn a moderated manner of course, in relevance to the topic I opened with\n",
         "stage": "Action",
         "state": "The seeker is struggling with marijuana addiction and appears to be trying to distract themselves with a political discussion. They are still thinking about using marijuana, even in a 'moderated manner', indicating they may not be fully ready to quit yet.",
+        "emotion_type": "fear",
+        "problem_type": "alcohol abuse",
+        "situation": "I'm addicted to marijuana and cannot stop consuming it on a daily basis.",
         "Gold": {
             "strategy": "Information",
             "utterance": "But I don't get to vote for London mayor. Only if I were a London resident or nearby would I (sorry for tortured syntax)",
@@ -709,6 +748,9 @@
         "context": "seeker: bye\nsupporter: (Others) bye\nseeker: actually\nseeker: i forgot to ask, how long have you been gardening? and what is it about gardening that helps you do you think?\nseeker: did i lose you\nsupporter: (Self-disclosure) gardening is my passion. I am doing it when I was 5. It makes me calm and relaxed. You can try it. Seeing plants growing is like seeing a new life to grow.\nseeker: i live in an apartment so i don't have a place to garden...but i get a lot of pleasure from my houseplants\nseeker: i think it's seeing nature....i also feel better when i walk in the nearby park...it's the birds and trees...they help my low mood\nseeker: but sometimes i am just too low to get started a walk!\nseeker: i will be getting a vaccine soon and i think seeing people again will help me...do you hve your vaccine yet?\n",
         "stage": "Action",
         "state": "The seeker is feeling isolated due to the COVID-19 pandemic and the need to stay at home because of a pre-existing condition. They are trying to find ways to manage their depression and find pleasure in activities like gardening and walking in the park. However, they also express struggling to find motivation to get started on these activities. The seeker is hopeful that getting vaccinated and being able to socialize again will help improve their mood.",
+        "emotion_type": "depression",
+        "problem_type": "ongoing depression",
+        "situation": "having to stay in my apartment all the time due to  covid.  i have a pre-existing condition that puts me at risk.  i feel isolated as a result.  i need social contact to feel better",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "In apartment you house plants are great option. I love walking to. It is a great stress reliever.",
@@ -763,6 +805,9 @@
         "context": "seeker: yes\nsupporter: (Others) Has this been happening to you for a long time?\nseeker: It happened in my teens, but it still impacts me\nsupporter: (Affirmation and Reassurance) You are a very strong person for reaching out and expressing your feelings. You have a lot to be proud of!\nseeker: They were very harsh, with me.. just like my parents\n",
         "stage": "Comforting",
         "state": "The seeker is feeling deeply affected by past experiences of bullying during their teenage years. They are still feeling the impact of these experiences, and it seems that they also had a difficult relationship with their parents.",
+        "emotion_type": "depression",
+        "problem_type": "school bullying",
+        "situation": "I suffered bullying at school. for the simple fact of being not very fat but if stuffed, they called me a cow, they made the expression of a cow, they threw my bag in the trash, I had no friends. It was hard and strong to be able to study there, after that they changed my school, everything was fine until those from the previous school found out where I was studying and the bullying started again. It has had an impact on my life, I believe that even my feelings are the same, I have not been able to forget it.",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "You were put in a very difficult situation with multiple people. I can imagine that you have been so stressed out from the pressure of people hurting you.",
@@ -817,6 +862,9 @@
         "context": "supporter: (Others) Hello\nseeker: Good evening!\nsupporter: (Question) What's your problem?\nseeker: I am having anger issues and thinking nasty thoughts toward my husband\nsupporter: (Question) Is this because of something he does or you are experiencing angry issue with everything?\nseeker: Mostly because of how he treats me lately\nseeker: He makes disrespectful comments.... Are you female or male\nsupporter: (Restatement or Paraphrasing) So from what I understand, you think your anger is because of your husband's fault. Have you talked to him about his behavior?\nsupporter: (Self-disclosure) I am female\nseeker: No it wouldn't do any good I am afraid. Whenever I try to stand up for myself he says Oh here we go again Poor you etc\nseeker: Like just tonight I mopped floor and he came up and said What are you sick ? Youre actually cleaning.\nseeker: Than I said yes I was actually on my hands and knees last week when I mopped and he\nseeker: said well get used to being on your knees\nseeker: and touched himself\n",
         "stage": "Exploration",
         "state": "The seeker is feeling angry and disrespected due to her husband's offensive comments and behavior. She is struggling to cope with her feelings of anger, which are intensifying due to her ongoing struggle with Major Clinical Depression. She feels helpless and believes that discussing her feelings with her husband won't change anything.",
+        "emotion_type": "anger",
+        "problem_type": "ongoing depression",
+        "situation": "I have been diagnosed with Major Clinical Depression over 20 years ago. I am struggling with anger with my husband lately",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "That's gross. I can't believe he said all those things to you. I'm sorry you have to hear those words from your husband.",
@@ -871,6 +919,9 @@
         "context": "seeker: Hi there.\nsupporter: (Question) Hello. How are you feeling today?\nseeker: I am feeling pretty down about my appearance.\nsupporter: (Self-disclosure) I get that way too. Is there any particular cause or aspect you are focussed on?\nseeker: It is mainly my weight i just can't seem to loose any and it is making me quite sad.\nsupporter: (Restatement or Paraphrasing) Gosh I am very sorry to hear that you are struggling to loose weight and it is making you sad. May I ask what you are doing to attempt to loose the weight? I hear cardio is very good for that.\nseeker: Well i do use my bike. But i really struggle with motivation and i know i snack too much. But i have just been too busy to spend any real time facing the problem, you know?\n",
         "stage": "Comforting",
         "state": "The seeker is feeling down about their appearance, specifically their weight. They're struggling with motivation and acknowledge that they snack too much. They're also feeling overwhelmed due to being too busy to dedicate time to addressing the problem.",
+        "emotion_type": "depression",
+        "problem_type": "appearance anxiety",
+        "situation": "I think that i am gaining weight and hard as i try I can not keep it off and i am getting vry put down.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "I totally understand. I was the same way over worked and under motivated. I found that mixing in low impact weight work outs was really effective as well as each morning setting out healthy snacks that way i don't have to think about getting something it is already there.",
@@ -925,6 +976,9 @@
         "context": "seeker: Turns out he was cheating on me for the past 3 months with his best friend :(\nsupporter: (Affirmation and Reassurance) whoa, that's pretty messed up! \nsupporter: (Question) how long were you together?\nseeker: Tell me about!\nseeker: We were planning on moving in together next year\nsupporter: (Restatement or Paraphrasing) wow, I definitely wouldn't go through with that then. Are you sure he was cheating?\nseeker: I noticed a few signs and confronted him about it \nseeker: He didn\u2019t even deny it !\nseeker: He wasn\u2019t remorseful at all... it\u2019s like he doesn\u2019t even love me\nseeker: How can you love someone yet betray the, somquiclu\nseeker: So quickly **\n",
         "stage": "Comforting",
         "state": "The seeker is feeling hurt and betrayed after discovering their boyfriend's infidelity. They express shock and disbelief, especially given their plans to move in together. The seeker is struggling to understand how their partner could act unlovingly and betray them.",
+        "emotion_type": "depression",
+        "problem_type": "breakup with partner",
+        "situation": "I have caught my BF cheating on me with his best friend that he told me not to worry about",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "did he admit to it? I would agree that he probably doesn't feel the way you want him to. ",
@@ -979,6 +1033,9 @@
         "context": "seeker: For a long time, even before my ex left us\nsupporter: (Reflection of Feelings) Oh my ! I can fully understand how you feel protective of your children and guilty for asking others for help\nsupporter: (Affirmation and Reassurance) I can tell just from what you wrote you are a GREAT mom and doing amazing job.. You definitely have your hands full\nsupporter: (Reflection of Feelings) It sounds like because you have no help you have to do it all and you feel like you can't cope so to speak \nseeker: Yes, I do and thank you. It's so hard. I never thought I would be doing it by myself and sometimes I feel like I have no idea what I'm doing and that what I am doing is wrong.\nsupporter: (Self-disclosure) but my goodness one mom to another you are only one person and give yourself some slack.. YOu are doing two peoples job.. Its not that you are worthless its just stress causing you to put yourself down\nseeker: Sometimes, I feel like I'm losing my mind\nsupporter: (Affirmation and Reassurance) It is so HARD being a single parent and Im sure kids miss their dad or maybe not but I am sure they put pressure on to be both parents . They are young and as long as you truly do your best and sometimes that means taking care of you so you can be the best , you are only one person and the kids when older will appreciate all that you did . Keep the faith\nseeker: They do ask about him sometimes and I tell them that he can't come and see us right now, but for the most part, I don't think they even notice. They definitely notice when he is around, and then they get upset when he leaves.\nsupporter: (Reflection of Feelings) Yes I can imagine it would be for all of you. It just confuses them and brings up feelings. \nseeker: Yes, it does. I'm not sure if those feelings are good or bad.\nseeker: He wasn't really here all that much before he officially left so by the time he did, they were used to him being gone\n",
         "stage": "Action",
         "state": "The seeker is a single parent who is dealing with anxiety and depression. They are struggling with feelings of guilt and worthlessness, and are overwhelmed by the responsibilities of raising children alone. The seeker also expresses feelings of confusion and uncertainty about how the absence of their ex-partner is affecting their children.",
+        "emotion_type": "anxiety",
+        "problem_type": "ongoing depression",
+        "situation": "A build up of things over time, and some recent things",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "I am sorry you have to go through this. I just pray that you never forget how great you are and when negative feelings rear its ugly head you don't give into those negative feelings. Could you make a list of positive affirmations you could make print out and read daily",
@@ -1033,6 +1090,9 @@
         "context": "supporter: (Question) Are her friends a good influence on her/\nseeker: True. She hates to brush her own hair but could sit for for an hour while I brush her hair! lol\nseeker: Yes, for the most part.\nsupporter: (Providing Suggestions) Maybe you could treat her to a new haircut, give her a new pride in herself? \nseeker: With the pandemic, we have not been out too much. I gave her a much needed haircut about a month ago. Trimmed off about six inches, but it's still way past her shoulders. We will hopefully go for a professional cut soon. I need one too!\nseeker: That is a very good idea.\nsupporter: (Others) Oh of course I had forgotten about the pandemic. It seems ages since we had normal life! \nseeker: Agreed!\nseeker: We went to a sit down restaurant last week for the first time in a year!\nsupporter: (Others) Well I hope I have been able to be of help and it has been nice to talk to you!\nseeker: Yes, thank you. It has been helpful. I sometimes feel like I am the only one having trouble with their kids.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling frustrated and overwhelmed by their eleven-year-old daughter's behavior, including her lack of responsibility and focus on school. The situation is causing the seeker to feel isolated and they are open to advice about how to better handle the situation.",
+        "emotion_type": "disgust",
+        "problem_type": "issues with children",
+        "situation": "My eleven year old daughter is being difficult right now. Won't pick up anything, spends all day on the computer or on her phone or tablet, isn't focusing on school, won't eat anything other than mac and cheese and chocolate.",
         "Gold": {
             "strategy": "Others",
             "utterance": "Heh I promise you are not :) ",
@@ -1087,6 +1147,9 @@
         "context": "supporter: (Question) Hello, how are you feeling?\nseeker: Tired, very tired!!\nsupporter: (Question) Oh? How come so tired?\nseeker: Because I can't sleep... I don't know what's wrong with me I just lay there awake for hours!\nsupporter: (Self-disclosure) Oh I have had trouble sleeping before! Would you like to know what helped me?\nseeker: Yes please, I'm desperate, I'll try anything!\nsupporter: (Providing Suggestions) First of all, fixed sleep and wake times. If you toss and turn for hours, still get up at the same time. Eventually your body will tire and sleeping will naturally become easier.\nseeker: I have to always get up for work so I am sticking to the same routines, I just lie in bed with so many thoughts racing around my head and I just can't get off to sleep\nsupporter: (Providing Suggestions) Second thing I do is I have a wind down routine. No work past a certain time, no matter what. Only soft music, pleasant movie, some light reading, and dim the lights. It slows your body down before sleep. It will help slow that racing thoughts you are having.\nseeker: I did try reading a book last night, but I don't really have lights that I can dim, it's just the one bright light in our room.\nsupporter: (Self-disclosure) I have had racing thoughts and it used to drive me up the wall!\nsupporter: (Providing Suggestions) Can you buy a lamp? Even a second hand one if your budget is tight?\nseeker: Yeah, it's just so annoying and then I'm so tired and irritable the next day, I find myself snapping at everyone.\nsupporter: (Information) The bright light will keep your mind stimulated.\nseeker: I could buy a lamp I suppose, to see if it helps? But when I am awake all night it's in the dark so I'm not sure if the light is the problem>\n",
         "stage": "Exploration",
         "state": "The seeker is feeling desperate, tired, and frustrated due to his sleep problems. They are open to suggestions and willing to try different strategies to improve their sleep. However, they seem to be skeptical if certain suggestions, such as dimming the light, would help them.",
+        "emotion_type": "depression",
+        "problem_type": "sleep problems",
+        "situation": "I am having real trouble sleeping and it's bring me down so much.",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "Aw so you are so exhausted from racing thoughts and not enough sleep the night before that you end up taking it out on others, but not meaning to. Am I understanding correctly?",
@@ -1141,6 +1204,9 @@
         "context": "seeker: Next time I see her I want to hide my jealous feeling, but not sure if I can do it well\nseeker: great. I am good\nsupporter: (Restatement or Paraphrasing) so, you envy your friend having a good spouse, is that correct?\nseeker: yes that is correct\nsupporter: (Question) Are you a female, if I may ask?\nseeker: yes \nsupporter: (Question) Do you have a husband or bf?\nseeker: I could say I am a female that is one of those left out \nseeker: not currently\nseeker: I really don't know how those women find partners and get married and stay with the same partner for a long time. \nsupporter: (Restatement or Paraphrasing) You get frustrated that other people are achieving something, you are not able to do. Is that a fair understanding?\nseeker: I think so, I am not complaining but I guess I am haha\n",
         "stage": "Exploration",
         "state": "The seeker is feeling left out and envious of her friend who is in a stable relationship. She is also frustrated and confused about how others manage to find and maintain long-term relationships, something she has been unable to do. The seeker is looking for understanding and ways to manage these feelings.",
+        "emotion_type": "shame",
+        "problem_type": "breakup with partner",
+        "situation": "I broke up with partner , my friend sent me pic of her hubby etc",
         "Gold": {
             "strategy": "Question",
             "utterance": "What do you think about your self as person? Kid, affectionate, caring?",
@@ -1195,6 +1261,9 @@
         "context": "supporter: (Affirmation and Reassurance) I see. Sleep problems are very common you certainly aren't alone in this. With some changes I am confidant you can improve your sleep.\nseeker: Do you have any suggestions other than exorcising to help with sleeping?\nseeker: Anything would be taken into consideration if possible.\nsupporter: (Providing Suggestions) I listen to a really good podcast called Tracks to Relax. It's guided meditation that helps me deeply relax before I sleep.\nsupporter: (Self-disclosure) sometimes I use it in the middle of the night too, if I can't fall back asleep!\nsupporter: (Providing Suggestions) Have you tried meditation before bed?\nseeker: Oh wow, I never really thought listening to relaxing music to help go back to sleep. I will try that out tonight! I have never done meditation before bed, mostly during the day.\nsupporter: (Providing Suggestions) Is your room dark? Light blocking curtains can help.\nseeker: Its decently covered and at night it is pretty dark.\nsupporter: (Providing Suggestions) And a small snack of carbs, like a peice of toast or some cereal, before bed can help too. As you can see I have tried many things myself as I too have had sleep issues.\nseeker: I will try that out as well if listening to relaxing sounds doesn't help. Thank you very much for responding to my questions and needs!\n",
         "stage": "Comforting",
         "state": "The seeker is dealing with anxiety and sleep problems, which are negatively affecting their daily life. They also mention a difficult childhood with an impatient, abusive father, which may have contributed to their current issues. They are open to suggestions and actively seeking ways to improve their situation.",
+        "emotion_type": "anxiety",
+        "problem_type": "procrastination",
+        "situation": "It started during my childhood, when I was 9 years old, living my father. He had a bad temper and was impatient with me, especially with school. He would raise his voice at me and get physical when I didn't do well in classes. After the age of 10, I ended up living with my mother but I would spend most of my time with my friends because I enjoyed their company more than anything. I started to hate dealing with school because I felt I wouldn't be able to do well in school; I started to get anxiety from dealing with tests and it gotten bad to the point where I couldn't really stay in crowded place as well. Today, I still try my best to tolerate going to college and do my best in classes even when my anxiety comes back.",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "I certainly know how feeling tired can impact one's life, I have found it frustrating when I have a lot to do and just don't have the energy.",
@@ -1249,6 +1318,9 @@
         "context": "supporter: (Providing Suggestions) Doing little things every day\nseeker: So, keep myself busy and try to ignore my nervousness?\nsupporter: (Providing Suggestions) Really adds up and helps to get the big picture moving.\nseeker: OK, so with, well, kinf0f like baby steps....right\nsupporter: (Providing Suggestions) It is about making small adjustments to feed a good habit.\nseeker: Build up my confidence and not take things personally\n",
         "stage": "Action",
         "state": "The seeker is feeling anxious about re-entering the workforce after being retired for 2 years. They are seeking advice on how to manage their nervousness and are open to the suggestion of taking small steps and making adjustments to build good habits and boost their confidence.",
+        "emotion_type": "anxiety",
+        "problem_type": "procrastination",
+        "situation": "Applying for work, I have been retired for 2 years and would like to return to the work force.",
         "Gold": {
             "strategy": "Information",
             "utterance": "Building it in to your daily life will make you feel accomplished ",
@@ -1303,6 +1375,9 @@
         "context": "seeker: Well here you might can get help for free, but it does have to be paid back\nsupporter: (Providing Suggestions) Heh be grateful :) \nsupporter: (Information) Are you in the US? Our healthcare system is a little less rigid here I think (UK)\nseeker: Yes Im in the United States (Alabama)\nseeker: I heard of the UK so many times but truthfully I know nothing about it\nsupporter: (Others) Ah you are a long way away from me. I hope that you do manage to sort out your problems though and definitely do talk to your employers\nsupporter: (Information) Ah it's quite nice here. We pay for healthcare out of our taxes so it's free at source. \nseeker: I will eventually get the courage to, I know how people talk around here, especially in the South\\\n",
         "stage": "Comforting",
         "state": "The seeker is expressing fear and apprehension about revealing their alcohol abuse to their employer. They are also showing curiosity about the healthcare system in other countries, while expressing concern about how people might react to their situation in their local community.",
+        "emotion_type": "fear",
+        "problem_type": "alcohol abuse",
+        "situation": "I'm so scared my job will fire me when they find out about my alcohol abuse",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "Gossipy people are the worst. Just remind yourself that they all have skeletons in their closets too ",
@@ -1357,6 +1432,9 @@
         "context": "seeker: hello\nsupporter: (Question) Hello, how are you doing today?\nseeker: I am okay just anxious\nsupporter: (Affirmation and Reassurance) I can understand anxiety in these times, is there something specific that's bothering you?\nseeker: I believe i am going to fail all my finals for college\nsupporter: (Affirmation and Reassurance) College finals are a stressful time for sure, I'm sure you're doing your best to prepare.\nseeker: Yes i have been studying for hours everyday. sometimes it is hard to focus.\n",
         "stage": "Action",
         "state": "The seeker is feeling extremely anxious and stressed about their upcoming college finals. They are worried about failing and have been studying for hours each day, but are struggling to focus due to their anxiety.",
+        "emotion_type": "anxiety",
+        "problem_type": "academic pressure",
+        "situation": "It is finals week and i have a lot to do. I have been having bad dreams about my grades and future.",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "Sometimes it's best to take a short break to reset when you feel like your gears are grinding.",
@@ -1411,6 +1489,9 @@
         "context": "supporter: (Question) I am sorry to hear that, have you thought about seeing a counselor through the internet?\nseeker: yes may be i have to reach out for his school counseler\nseeker: thanks for listening .\nsupporter: (Providing Suggestions) I think that is a very nice idea. I also might suggest finding activities that you both could enjoy and spend time together. Maybe finding a show you both could enjoy will open up room for a greater connection!\nsupporter: (Affirmation and Reassurance) It could also help both of you feeling lonely during these hard times!\nseeker: Thanks... I need to find some motivation to do so as well...\nsupporter: (Providing Suggestions) Do you have any self-care activities that you enjoy doing? This could help feelings of depression. Even taking some time out of the week to do something you enjoy can help lift up one's mood.\nseeker: I don't have much hobbies but I tried to stay active like going to swim, doing yoga, reading books. So I kept myself busy already but more for the sake of getting my mind of things, like people playing video games and watching tv.\nsupporter: (Question) Well I am glad to hear that you have some activities you enjoy! In relation to your son, how do you feel when he plays video games constantly?\nseeker: He usually is ok but now is holiday I let him play more but got even worst!\nseeker: As if playing games made him even more depressed\nsupporter: (Providing Suggestions) Have you ever thought about using the video games as an incentive. For example, if he finishes his homework, he can play for two hours or something?\nseeker: Yes he usually only play after he finished all his homework on school days.\nseeker: But now school is out I just let him play whenever.\nseeker: But it doesn't make him happier\n",
         "stage": "Exploration",
         "state": "The seeker is struggling with managing their preteen son's anger and behavior during quarantine. They are considering reaching out to a school counselor for help and are open to suggestions for creating a better connection with their child. They are also trying to stay active and keep their mind off things but feel they need to find some motivation for themselves. They have concerns about their son's increased video gaming and its impact on his mood.",
+        "emotion_type": "anger",
+        "problem_type": "problems with friends",
+        "situation": "I have a problem with my preteen son.  Perhaps we have been together at home quarantine for too long that he just rage today, saying that he has no life while i told him that he need to at least finish up a math worksheet assignment.  This is after he already had 3 hours free video game time.  He yelled, I screamed.",
         "Gold": {
             "strategy": "Question",
             "utterance": "It is good to hear that the video games did not get in the way of him completing his work. Do you have any other ideas as to what hobbies makes him happy or interested?",
@@ -1465,6 +1546,9 @@
         "context": "seeker: how are you coping with that now?\nsupporter: (Providing Suggestions) I try to do yoga and meditate in order to deal with stress\nsupporter: (Affirmation and Reassurance) it's great that you are trying to find solutions\nseeker: That is awesome! Meditation is my go to. I love nature, crystals and meditation.\nseeker: Thank you\nseeker: I am trying my best.. it is challenging\nseeker: Im good at helping others, but I have neve been able to help myself or listen to my own advice for some reason.\nsupporter: (Self-disclosure) I have struggled with the same, have you considered counseling or another form of therapy ?\nseeker: I have, but I haven't followed through because of money constraints. It also makes me very nervous to open up and talk face to face about my struggles\nseeker: HAve you done that, if so, did it help you?\n",
         "stage": "Action",
         "state": "The seeker is a stay-at-home mom who is struggling with financial constraints and the stress of homeschooling her children during the pandemic. She finds solace in meditation and is open to the idea of therapy, but is held back by financial constraints and anxiety about opening up about her struggles. She appears to be struggling with self-care and taking her own advice.",
+        "emotion_type": "depression",
+        "problem_type": "job crisis",
+        "situation": "I am a mother of two and I have been a stay at home, homeschooling mom since Covid hit last year. Can hardly make ends meet.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "I have tried different methods of therapy, and have found low cost options in my area",
@@ -1519,6 +1603,9 @@
         "context": "supporter: (Providing Suggestions) Have you thought of offering rewards if she smartens up a bit?\nseeker: Sure, that's probably true.\nsupporter: (Affirmation and Reassurance) I think that once she hits puberty she will probably change her feelings about showering etc a lot :). \nsupporter: (Self-disclosure) Teenagers tend to get very very involved in their appearance :D I used to spend an hour in the shower each day \nseeker: Unfortunately I have spoiled her rotten so that she has most everything she could want (well, not an I-phone and nintendo switch! lol)\nsupporter: (Providing Suggestions) Perhaps you could gently explain to her why it's anti social to not shower for a week? \nseeker: I think she is getting very close to the age where she will pay attention to herself and general appearance, but she's not there yet.\n",
         "stage": "Comforting",
         "state": "The seeker is frustrated with their eleven-year-old daughter's behavior, including her refusal to do chores, her lack of focus on school, and her poor eating habits. The seeker is open to suggestions on how to handle the situation and improve her behavior.",
+        "emotion_type": "disgust",
+        "problem_type": "issues with children",
+        "situation": "My eleven year old daughter is being difficult right now. Won't pick up anything, spends all day on the computer or on her phone or tablet, isn't focusing on school, won't eat anything other than mac and cheese and chocolate.",
         "Gold": {
             "strategy": "Others",
             "utterance": "Ah you have all the fun of her teenage years to look forward to. I would not go through that again :D ",
@@ -1573,6 +1660,9 @@
         "context": "supporter: (Self-disclosure) I totally understand. I was the same way over worked and under motivated. I found that mixing in low impact weight work outs was really effective as well as each morning setting out healthy snacks that way i don't have to think about getting something it is already there.\nseeker: Oh that is a good idea what do you suggest?\nsupporter: (Providing Suggestions) Honestly my top favorite are chocolate covered almonds and sugar snap peas. have you tried lowering your carb and increasing your protein intake?\nseeker: No i hadn't thought about that don't you have to only drink protein if your work out. \nsupporter: (Information) Typically yes but having a low protein shake, ie one scoop not too, everyday is a great way to supplement your caloric intake with protein. You will find yourself less hungry and have more energy through the day. \nseeker: That actually makes a lot of sense. What about motivation i really need help with that i find when i am less motivated i am deffinitely more depressed.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling down and demotivated due to their struggles with weight gain. They are actively seeking advice and suggestions to manage their weight and improve their motivation levels. Their mood appears to be strongly linked to their motivation and self-perception of their body image.",
+        "emotion_type": "depression",
+        "problem_type": "appearance anxiety",
+        "situation": "I think that i am gaining weight and hard as i try I can not keep it off and i am getting vry put down.",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "Lots of people also struggle with depressive episodes and low motivation. Don't worry you are not alone. It is important to try and think is it depression related low motivation or vice versa.",
@@ -1627,6 +1717,9 @@
         "context": "seeker: I have been retired for over 2 years and would like to return to the workforce, part-time\nsupporter: (Restatement or Paraphrasing) So you are thinking of going back to work?\nseeker: Yes, It would help us greatly\nsupporter: (Affirmation and Reassurance) You have the right idea already.\nseeker: There are plenty of jobs and not sure where to start.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling anxious and uncertain about re-entering the workforce after retirement. They are unsure of where to start in their job search.",
+        "emotion_type": "anxiety",
+        "problem_type": "procrastination",
+        "situation": "Applying for work, I have been retired for 2 years and would like to return to the work force.",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "I'm sure you will find something suitable if you keep trying.",
@@ -1681,6 +1774,9 @@
         "context": "supporter: (Others) I am great. Is anything bothering you today?\nseeker: I wrote about it. I was pulled off of an important project last week and I'm a bit mad about it. I spent 6 months on something that now I have to let go and start helping another engineering team at work.\nsupporter: (Restatement or Paraphrasing) You seem very concerned about this. It seems quite unfair! How do you feel about helping the other engineer?\nseeker: I don't mind the work. The manager we have is very biased against us older engineers. He thinks we want to constantly help out the younger guys he hired. THey are mostly unqualified and their work is sub par.\nseeker: I'm 41 and the new guys are all about 24.\nsupporter: (Reflection of Feelings) I understand how stressful this must feel to you. Sounds like you are a great experienced worker, but they want to use your expertise instead to train the inexperienced worker.\nseeker: yes. I have been reluctant to complain to upper management. I have a couple of co-workers who have my level of experience. They have complained and supposedly one of them will be our manager soon. I have thought about looking for a new job. Covid protocol has kept me from making a move though.\nsupporter: (Providing Suggestions) I understand that. I think you have a legitimate complaint. Maybe go to upper management and make it more like a concern than a complaint? If you word it right, they will believe that you really care about your job (I can tell that you really do). I am sure they don't want to lose you.\nseeker: Thing is in my industry, aerospace interiors, the competition is cut throat in engineering. I already have to work about 55 hours/week. I do mturk to pay my phone bill (sort of a bet with my wife lol). I'm wanting to maybe move into freelance work but the market is flooded because of covid. So many working from home and freelancing these days.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling frustrated and undervalued at work due to his manager's bias towards younger, less experienced employees. He is considering looking for a new job, but is hesitant due to the current Covid-19 situation and the saturated freelance market. He also feels burdened by the competitive nature of his industry and the long work hours he has to put in.",
+        "emotion_type": "anger",
+        "problem_type": "job crisis",
+        "situation": "I was pulled off of a project I had been on for 6 months.  Last week I was transferred to a new team and all of the hard work I had put in for 6 months was given to another engineer to finish. The reason I was given was that my skills would be better used on this other team because they were behind on their project.",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "You are right. I feel your anxiety in this. Competition is high in all industries right now it seems.",
@@ -1735,6 +1831,9 @@
         "context": "supporter: (Providing Suggestions) Talk to who you feel most comfortable with. Start off easy. Hopefully they can help you then talk to the other parent. I am sure your parents have once had a period in life where they were down and blue and can relate to what you are going through.\nseeker: I feel reassured now will definitely find time to face dad and let him know what am going through. Thank you was nice talking to someone who can understand me easily.\nseeker: Bye\nsupporter: (Others) You are welcome. Best of luck!\nsupporter: (Others) I believe you have to end the conversation as I am not able to. I am here to keep on talking too if you would like.\nseeker: One more question, did you stop drinking alcohol completely or did you go about your consuption?\n",
         "stage": "Action",
         "state": "The seeker is struggling with alcohol addiction and is seeking ways to stop. They have previously attempted to quit but have not been successful. Their alcoholism has resulted in loss of confidence from their family and they are considering opening up about their struggles to their father. They seem to be in need of advice and reassurance.",
+        "emotion_type": "depression",
+        "problem_type": "alcohol abuse",
+        "situation": "My family have lost confidence in me due to my alcoholism. I want to stop but don't know how. I have tried before but some things I go through make me go back. What can I do?",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "I have done both; I have gone periods of 6-12 months having nothing to drink and then when I could control it I would allow myself to have drinks on special occasions. I tried not to drink during the week and only once on the weekend at most.",
@@ -1789,6 +1888,9 @@
         "context": "seeker: Maybe you know some online courses you are aware of?\nsupporter: (Information) Oh!! I just remembered. My daughter goes to meetings virtually because of the pandemic. I am pretty sure there would also be virtual AA meetings in the UK, via Zoom\nseeker: Oh that's great I will try then. Do you know if there are any fees?\nsupporter: (Providing Suggestions) Hmm I am afraid I don't, have you tried a google search? That's a great idea, to find an online program of some sort, if AA does not appeal to you. And no, there are no fees, AA is completely free.\nsupporter: (Information) And, you can get a sponsor, do you know about that?\nseeker: What do you mean by a sponsor?\n",
         "stage": "Action",
         "state": "The seeker is struggling with alcohol abuse and feels ashamed about drinking beers almost every day. They are considering seeking help and are interested in online courses or programs that could assist them. They are also curious about the concept of obtaining a sponsor but do not fully understand what it means.",
+        "emotion_type": "shame",
+        "problem_type": "alcohol abuse",
+        "situation": "I am drinkin beers almost every day",
         "Gold": {
             "strategy": "Information",
             "utterance": "My daughter has a sponsor, it's an important part of AA (and optional).  Her sponsor has been clean for over 20 years.  She is there to support my daughter, and help her work her way through learning the 12 steps.  Beacuse she's been through it, her sponsor is very understanding and supportive.",
@@ -1843,6 +1945,9 @@
         "context": "seeker: how could he do this to me?\nsupporter: (Restatement or Paraphrasing) I'm sorry to hear this. When did your boyfriend break up with you?\nseeker: last week. we were like a lovey - dovey couple. it hurts\nsupporter: (Affirmation and Reassurance) Breakups always hurt. They can be very painful, how long were you together? \nseeker: almost for 2 years. this is sad right?\nsupporter: (Reflection of Feelings) It's very sad and your emotions will take a toll, but you have to set some goals so you don't fall into a funk. Do you have a good support system?\nsupporter: (Question) Did he give a reason for the breakup?\nseeker: no. he didn't told me anything. avoiding me all the time. i don't have a support system either.\nsupporter: (Restatement or Paraphrasing) Are you telling me he just said \"I am breaking up with you\" then never said why and left?\nseeker: he thinks everything is casual . we were happy. he is behaving like this all of a sudden. what should i think then ?\n",
         "stage": "Exploration",
         "state": "The seeker is in a distressed and confused state, struggling to process a sudden breakup with her partner. She feels abandoned and is lacking a support system. The seeker is also seeking clarity and closure about the reason for the breakup.",
+        "emotion_type": "sadness",
+        "problem_type": "breakup with partner",
+        "situation": "my partner broke up with me. i have no idea how am going to handle it.",
         "Gold": {
             "strategy": "Question",
             "utterance": "I think he doesn't know what he wants and thinks the grass is greener on the other side of the fence. It is disrespectful to you. And hurtful. You say you have no support, don't you have friends? Family?",
@@ -1897,6 +2002,9 @@
         "context": "seeker: She doesn't listen to anything I say. She loves to play on the computer and tablet and her phone but when it comes to something simple, like turning off the light when she's done in the bathroom or throwing away a candy wrapper, she won't do it.\nsupporter: (Affirmation and Reassurance) Well ... to be honest it doesn't sound very terrible. Most children that age do things like that ;) \nseeker: She doesn't seem to think that it's wrong to thrown her dirty socks in the living room instead of the laundry.\nseeker: I guess so.\nsupporter: (Self-disclosure) Well, it is a bit anti social but there are a lot of worse things she could be doing :) I was pretty slobby at that age too \nseeker: I'm 53 so going through menopuase while she is going through puberty.\nseeker: True.\nseeker: I just wish she would take some pride in her things and herself.\n",
         "stage": "Exploration",
         "state": "The seeker is frustrated with their eleven year old daughter's behavior, which includes not picking up after herself, spending excessive time on electronic devices, and a lack of focus on schoolwork. They wish their daughter would show more responsibility and pride in her belongings and herself.",
+        "emotion_type": "disgust",
+        "problem_type": "issues with children",
+        "situation": "My eleven year old daughter is being difficult right now. Won't pick up anything, spends all day on the computer or on her phone or tablet, isn't focusing on school, won't eat anything other than mac and cheese and chocolate.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "Ah that's a bad combination. I hear you on the menopause thing. Do you think maybe it is making you more touchy? It is me! ",
@@ -1951,6 +2059,9 @@
         "context": "supporter: (Reflection of Feelings) ok, \nseeker: What about you?\nsupporter: (Reflection of Feelings) What are you doing?\nsupporter: (Self-disclosure) i am john from, new york\nseeker: Watching tom and jerry with my kids\nsupporter: (Reflection of Feelings) oh nice\nseeker: What you doing?\nsupporter: (Reflection of Feelings) tell about you?\nsupporter: (Reflection of Feelings) just i chating\nsupporter: (Affirmation and Reassurance) what your good name?\nseeker: Im 28. A mother of two who just moved after my marriage fell apart. I enjoy cartoons, reading,gaming, and listening to music and audiobooks\n",
         "stage": "Comforting",
         "state": "The seeker is feeling anxious and distressed due to her husband abandoning her and their children. Despite this, she tries to find solace and distraction through watching cartoons and other hobbies.",
+        "emotion_type": "anxiety",
+        "problem_type": "ongoing depression",
+        "situation": "My husband abandoned me and my kids",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "wow good job..",
@@ -2005,6 +2116,9 @@
         "context": "supporter: (Others) Good evening :-) What can I help with you with tonight? \nseeker: just graduated university and my parents are pressuring me to pursue becoming a doctor\nsupporter: (Affirmation and Reassurance) Oof, that is a very difficult situation. I'm sorry you're going through that. How do you feel about it? \nseeker: I'm angry. I just want to be done school. but parents are on my butt about it.\nsupporter: (Question) What do your parents say when/if you tell them you want to be done with school? \nseeker: they get mad at me and say they are dissapointed. I want to travel and see the world. not more schooling.\n",
         "stage": "",
         "state": "The seeker is feeling angry and frustrated due to parental pressure to pursue a medical degree. They express a desire to travel and see the world rather than continue with their education, but feel misunderstood and judged by their parents.",
+        "emotion_type": "anger",
+        "problem_type": "academic pressure",
+        "situation": "Parents are pressuring me to become a doctor",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "That's not a fair thing for them to say to their child. I will say that there are academic programs that combine travel and credits, but you probably know that already. And I don't think you should have to compromise anyway. ",
@@ -2059,6 +2173,9 @@
         "context": "supporter: (Others) Good evening.\nseeker: hello, goodevening\nsupporter: (Question) How are you tonight?\nseeker: I'm feeling unwell, because I've been wanting to stop drinking but here I am with another glass\nseeker: Its so hard to stop\nseeker: I just to have a day without having any alcohol you know\nsupporter: (Restatement or Paraphrasing) So just to make sure I understand, you are having issues with your amount of drinking and are struggling to stop?\nseeker: Yes thats the issue\nsupporter: (Question) Is there anything specific that is causing the drinking?\nseeker: When I feel down or just when I feel bored I want a drink\nseeker: But when I'm drinking with others I can't stop till I'm completely wasted\n",
         "stage": "Exploration",
         "state": "The seeker is struggling with alcohol addiction and is feeling unwell due to their inability to quit. They express a strong desire to have a day without alcohol. They also reveal that they tend to drink when they feel down, bored, or when they are in the company of others.",
+        "emotion_type": "shame",
+        "problem_type": "alcohol abuse",
+        "situation": "I can't go on a day without having a glass of alcohol",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "Just from chatting with you I can tell you are very disappointed and upset about this.",
@@ -2113,6 +2230,9 @@
         "context": "seeker: I'm just looking for a way to cope with the stresses of my job right now. I work in healthcare and have a lot to do and it feels like I have no time to get everything done\nsupporter: (Affirmation and Reassurance) I see how that would be overwhelming.\nsupporter: (Providing Suggestions) It can help to just allow yourself a brief rest when you can.\nseeker: Do you have any good ideas to cope with stress?\nsupporter: (Providing Suggestions) I find it helpful to find even just five minutes in the morning or evening to meditate.\nsupporter: (Providing Suggestions) Some deep breathing to clearly our mind.\nseeker: What do you do in the moment when you are overwhelmed? I get so busy I feel like a mess and so unorganized\nsupporter: (Restatement or Paraphrasing) So you feel like everything is happening at once, so how can you get to anything at all?\nseeker: I just feel like my work performance is suffering\nseeker: I'm supposed to get things done in a certain amount of time and I don't have the help I need to get everything done\nseeker: I work for a big company and corporate sets goals that cannot reasonably be met safely in the amount of time we are given with the lack of support\n",
         "stage": "Comforting",
         "state": "The seeker is feeling overwhelmed and stressed due to the high expectations and workload in their job in the healthcare field. They are also feeling anxious about their work performance and the lack of support they are receiving in their workplace.",
+        "emotion_type": "anxiety",
+        "problem_type": "academic pressure",
+        "situation": "High expectations at work and little time to complete them",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "This can be a common stressful feeling in health care.",
@@ -2167,6 +2287,9 @@
         "context": "seeker: Im feeling okay, just thinking about my anxiety\nsupporter: (Self-disclosure) Ah I hear you, I suffer from that really badly too. Do you want to talk about it? \nseeker: Yes, i would love too.\nsupporter: (Question) Well, could you give me a little bit of background .. are you seeking help for it for instance? \nseeker: Im not sure when my anxiety started but its like I have a hard time sleeping at night or it feel like i cant breath its very scary so its like i have panic attacks.\n",
         "stage": "Action",
         "state": "The seeker is feeling anxious and scared, particularly in social situations. They are also experiencing physical symptoms of anxiety such as trouble sleeping and feeling like they can't breathe, which seem to be leading to panic attacks. They are open to discussing their anxiety and seeking help for it.",
+        "emotion_type": "anxiety",
+        "problem_type": "appearance anxiety",
+        "situation": "When Im around a group of people i get very scared and shy.",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "Ah yes I know how that feels. Has anyone ever taught you any relaxation techniques? ",
@@ -2221,6 +2344,9 @@
         "context": "seeker: how about you?\nsupporter: (Others) I'm good than you\nsupporter: (Others) Everything going good\nseeker: How is the day going for you?\nsupporter: (Others) its going good , how is your day?\nseeker: Am just starting mine, quite early here\nseeker: what id the time like over there?\n",
         "stage": "Exploration",
         "state": "The seeker appears to be engaging in casual conversation and seems to be interested in the supporter's day and their surroundings. The seeker's emotional state or concerns are not explicitly expressed in this context.",
+        "emotion_type": "sadness",
+        "problem_type": "breakup with partner",
+        "situation": "I was in a relationship with someone that took 5 years. We were planning on building a home together and he liked the idea and promised we would pull through together. I loved him so much that I would literary do nothing to heart his feeling. We built friendship for years and we had something beautiful and close to perfection. As time went on, I did not know what went wrong but he started showing disinterest in matters that concerns me . When it started we had the conversation. I was worried and he assured me nothing was wrong. I later found out with a great dismay that he was going out with one of our high school acquaintances . It really hurt the more when he told me  what I thought we had was over. it shattered me emotional. He went from avoiding my calls to not wanting to see me around. it hurts  me badly. As I recall this am feeling emotional because tit was a terrible period for me.",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "its hard time for you but you can come out from this",
@@ -2275,6 +2401,9 @@
         "context": "seeker: I'm studying to be a pharmacist\nseeker: Really scared of getting sick too since I have to work in hosptials and such\nsupporter: (Affirmation and Reassurance) That's great! It is because of front-line workers and people like you that we are at least able to put a fight against the pandemic! My hat tip to you for choosing your line of profession.\nsupporter: (Information) Major pharma companies have already announced vaccines and they have a success rate of more than 90 -95%. So my friend, this too shall pass. \nseeker: Yeah I've been reading those research articles recently they look promising\nseeker: I'm hoping the vaccines get developed early next year and everything can go back to normal \nsupporter: (Reflection of Feelings) I feel the same way too! Modern technology is indistinguishable from magic! \nsupporter: (Affirmation and Reassurance) So hang in there, with the US election results and the vaccine announcement, things will surely get better. \nseeker: Yeah it's looking like things will improve\n",
         "stage": "Action",
         "state": "The seeker is studying to be a pharmacist and is anxious about the uncertainty of their job future due to COVID-19. They also express fear about getting sick as their profession requires working in hospitals. The seeker is hopeful about the development of vaccines, and is hopeful that things will improve soon.",
+        "emotion_type": "anxiety",
+        "problem_type": "job crisis",
+        "situation": "Uncertainty of job future due to covid",
         "Gold": {
             "strategy": "Information",
             "utterance": "If you are in North America, the pandemic rate will go high due to combination with flu season, but at the end of the day, we will develop herd immunity.",
@@ -2329,6 +2458,9 @@
         "context": "seeker: My friend has passed away and I'm having a hard time dealing with it at the moment.\nsupporter: (Self-disclosure) I'm so sorry to hear that. I've had a close friend pass away years ago, and I understand it is a hard thing to deal with.\nseeker: Yes we were close, the funeral was a few weeks ago. I miss him\nsupporter: (Question) Do you have other friends there for you to help you through this tough time?\nseeker: Yes I do have a few friends, actually we have some friends in common but I don't want to burden them with my sadness. Maybe I'm being soft?\nsupporter: (Providing Suggestions) I doubt if they would see you as being soft. Maybe your mutual friends would like someone to talk to as well? You could perhaps share some stories about your friend and cheer each other up.\nseeker: I think it would help to think of the good times yes. the only problem is this could leave me feeling a lot more sad. I know my friends miss him too so maybe we could link up?\nsupporter: (Affirmation and Reassurance) That's a great idea. You could help each other and celebrate his life, keeping his memory alive.\nseeker: I was thinking of starting a Facebook page but I know that trolls can Target those. \nsupporter: (Providing Suggestions) That's a great idea. Maybe have a Memorial Service in his name at a place he frequented often, this way, no trolls and all the people who knew him could share their personal stories about him.\nseeker: yeah that's not a bad idea. also may be speaking to somebody about it might help, I'm just reluctant at the moment as I don't want to appear weak.\nsupporter: (Reflection of Feelings) Let me reassure you that you would not appear weak. Death is something that everyone deals with in their own ways, and talking to someone about it could be the best way for you to deal with these emotions. Have you felt like giving up or extreme depression after his death?\nseeker: thanks for your concern by once a extreme depression or giving up. it's more just a constant sense of grief that just doesn't seem to go away. I think I will get over in time. I just wonder what I can do to speed that process up?\n",
         "stage": "Action",
         "state": "The seeker is grieving the loss of a close friend and is struggling to cope with their feelings of sadness. They are hesitant to share their feelings with mutual friends for fear of burdening them and appearing weak. However, they are considering reaching out for support and seeking ways to remember and honor their friend.",
+        "emotion_type": "sadness",
+        "problem_type": "problems with friends",
+        "situation": "My friend has passed away and I'm struggling to deal with the grief.",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "It sounds like you're going through the normal grieving process and that time and talking about it can be of a huge help.",
@@ -2383,6 +2515,9 @@
         "context": "seeker: Hey\nsupporter: (Question) How ae you feeling today? Is there anything you need to talk about?\nseeker: I feel drained, honestly. I'd love to talk about my current dilemma in my friend circle.\nsupporter: (Question) Can you share the dilemma you are having?\nseeker: Basically. This has happened for as long as I can remember, even back when I was a little kid. Any friend i've ever had has just used me for SOME gain. Whether that be boredom, money, or an emotional support pillow. I'm so sick of it. They'll literally ignore me for months and randomly text me for money. If i respond theyll read my messages then ignore me until they need money again. Or, they'll use me to throw alllll their problems onto me and never do the same for me. In some way shape or form- every person I become friends with uses me and throws me away when theyre done.\nseeker: Sometimes I feel like it must be me. Maybe i',m annoying? This happens so often the common denominator is ME. But i'm friendly, im assertive, im out spoken, im kind. I don't LET people walk all over me but it seems like that;s all I attract.\n",
         "stage": "Exploration",
         "state": "The seeker appears to be feeling emotionally drained and frustrated due to recurring issues with their friends who they perceive as using them for their own gain. They express a sense of helplessness and confusion, questioning their own behavior and characteristics as potentially contributing to the situation.",
+        "emotion_type": "anger",
+        "problem_type": "problems with friends",
+        "situation": "My friends suck at being friends. They use me, ignore me, and i'm only a benefit for them.",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "So you feel under valued in your relationships because people tend to take advantage of you. ",
@@ -2437,6 +2572,9 @@
         "context": "supporter: (Self-disclosure) I'm not too bad, but cases are also going up here in California. Luckily, my family and I haven't gotten sick. \nseeker: Thanks good to hear, New York was doing well up until the holidays season. Now we might get another lockdown. \nsupporter: (Information) I think that's true for a lot of states since cases seem to be going up everywhere, unfortunately. What are your plans for the holidays?\nseeker: Mostly stay home with the family, try to save money and cut expenses this year. How about you?\nsupporter: (Self-disclosure) We're planning on camping in the desert. That's a good idea to save money. How do you plan on saving money?\nseeker: No gifts giving and going make a modest size home made family dinner for thanksgiving this year. Usually we go visit family out state. We just want to get out of debt this year and save for next year. \nseeker: Coivd really humbled us. But it's a good thing\n",
         "stage": "Action",
         "state": "The seeker seems to be dealing with financial stress due to reduced work hours and the potential threat of a job loss. They are making efforts to cut expenses and save money in the face of these challenges. They also express a certain level of resilience and positivity, seeing the situation as a humbling experience.",
+        "emotion_type": "depression",
+        "problem_type": "job crisis",
+        "situation": "I was given reduced hours at work and there might be a chance I could get laid off because I just started and there is lack of work. However, my expenses are the same and income is reducing.",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "Those are all really good ideas, and it sounds like you know what's really important! It's definitely been a tough year, but it's also good to look ahead and plan for the future. ",
@@ -2491,6 +2629,9 @@
         "context": "supporter: (Question) How're you doing?\nseeker: I'm ok\nseeker: how are you\nsupporter: (Restatement or Paraphrasing) I'm doing well, thanks. Why are you only doing okay, and not great? \nseeker: I'm going through some things at the moment\n",
         "stage": "Exploration",
         "state": "The seeker is feeling okay but not great, indicating that they are dealing with some issues or challenges currently. They might be feeling regretful and unmotivated due to having to withdraw from a semester of college because of the isolation caused by COVID-19.",
+        "emotion_type": "depression",
+        "problem_type": "ongoing depression",
+        "situation": "i had to withdraw from a semester of college. covid has led to isolation and i was unmotivated. i am regretful.",
         "Gold": {
             "strategy": "Question",
             "utterance": "Many people are at this time. Is there anything in particular that is bothering you?",
@@ -2545,6 +2686,9 @@
         "context": "seeker: I am feeling okay how are you?\nsupporter: (Restatement or Paraphrasing) I am glad to hear that I am fine as well. How can I help you?\nseeker: Thank you. That is good. I feel I am depressed because I have been bullied and it is still continuing today.\nsupporter: (Affirmation and Reassurance) I am sorry to hear that. How can I help you deal with the bullies? Can you stand up to them in a safe way?\nseeker: Well, to be honest, dealing with these bullies are pretty tough, Is there a safe way I can handle them?\nsupporter: (Providing Suggestions) I understand your concern, but I feel you have to tell them that you do not deserve to be bullied and they need to stop now.\nseeker: Okay. I will do that. Thank you.\nseeker: Also, what if one of the bullies starts a fight with me?\nsupporter: (Information) Do you need any more advice on this matter or do you have any other concerns? The bully is the problem, not you. Do you have anyone who can stand up to them with you for support?\nseeker: I do. One more piece of advice before we part ways. I have my fiance for support.\nseeker: I would want to know how I can stand up to these bullies.\n",
         "stage": "Action",
         "state": "The seeker is feeling depressed due to ongoing bullying related to their skin color. They are struggling with how to confront and handle the bullies safely. They express worry about the situation escalating into a physical confrontation. The seeker is looking for advice on how to stand up to the bullies and mentions having a fiance for support.",
+        "emotion_type": "depression",
+        "problem_type": "school bullying",
+        "situation": "people would make fun of me based on the color of my skin or anything that has to do with my color.",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "Have your fiance approach them with you so you are safe. Be strong and firm and do this in a very public area if possible so you have witnesses.",
@@ -2599,6 +2743,9 @@
         "context": "supporter: (Question) Ah that can be a very difficult age. Is it anything specific or just general?\nseeker: She doesn't listen to anything I say. She loves to play on the computer and tablet and her phone but when it comes to something simple, like turning off the light when she's done in the bathroom or throwing away a candy wrapper, she won't do it.\nsupporter: (Affirmation and Reassurance) Well ... to be honest it doesn't sound very terrible. Most children that age do things like that ;) \nseeker: She doesn't seem to think that it's wrong to thrown her dirty socks in the living room instead of the laundry.\nseeker: I guess so.\n",
         "stage": "Comforting",
         "state": "The seeker is frustrated and exasperated with their eleven-year-old daughter's behavior. They are struggling with her lack of responsibility, her constant usage of electronic devices, and her resistance to following simple instructions or rules. They seem to be seeking advice or reassurance on how to handle this situation.",
+        "emotion_type": "disgust",
+        "problem_type": "issues with children",
+        "situation": "My eleven year old daughter is being difficult right now. Won't pick up anything, spends all day on the computer or on her phone or tablet, isn't focusing on school, won't eat anything other than mac and cheese and chocolate.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "Well, it is a bit anti social but there are a lot of worse things she could be doing :) I was pretty slobby at that age too ",
@@ -2653,6 +2800,9 @@
         "context": "seeker: You're not very responsive.\nsupporter: (Affirmation and Reassurance) That's great. And some tips i would give you is to thank about all the benefits of completing the programs\nsupporter: (Others) yes i apologize for the long response.\nseeker: Thanks, that will be helpful to decide on the programs I want to apply to\nseeker: Are you based in the US?\nsupporter: (Self-disclosure) You welcome. and yes\nseeker: How have you been handling your anxiety during the pandemic?\nseeker: I could use some tips!\nsupporter: (Providing Suggestions) some things you can do is try to do the things that makes you happy and stay positive through this time.\nseeker: Anything that has worked for you?\nsupporter: (Information) one thing i have done was have a watch party on hulu with friends which was really fun.\nseeker: That does sound fun, especially while staying home. Do you chat with your friends on Zoom?\n",
         "stage": "Action",
         "state": "The seeker is feeling anxious about the changes in their educational environment due to the COVID-19 pandemic. They feel less connected in their classes and are worried about the potential impact on their future grad school applications. They are also seeking advice on how to handle their anxiety during the pandemic, indicating a willingness to learn and adopt new coping mechanisms. They are responsive and open to the supporter's suggestions and personal experiences.",
+        "emotion_type": "anxiety",
+        "problem_type": "academic pressure",
+        "situation": "COVID-19 has changed the way we learn and the last year has been really difficult. I don't feel as connected in my classes and I plan to apply to grad school. I don't know how this will affect me as I begin to think about programs to apply to next year.",
         "Gold": {
             "strategy": "Information",
             "utterance": "yes i do chat on zoom, and through social media sites.",
@@ -2707,6 +2857,9 @@
         "context": "supporter: (Question) Hi How are you this evening?\nseeker: Hi. I'm okay at the moment, how are you?\nsupporter: (Self-disclosure) I am doing great! Would you like to talk about anything that may be bothering you\nsupporter: (Question) I have a some time and would love to listen to you if you would like to share anything\nsupporter: (Question) Are you there?\nseeker: Just feeling really bad lately. Like nothing I do is enough. Like I'm not a good mom to my kids. Like nothing I do is right.\nsupporter: (Affirmation and Reassurance) I can understand how you feel like you are worthless. However, I know for a fact you are NOT worthless. You were created with a purpose and a plan and God doesn't make Mistakes. \nsupporter: (Self-disclosure) I apologize I mean no disrespect just sharing my personal belief\nseeker: It's fine, no need to apologize\n",
         "stage": "Exploration",
         "state": "The seeker is feeling overwhelmed and inadequate, particularly in their role as a parent. They are experiencing negative thoughts about their self-worth and abilities, and are struggling with feelings of anxiety and depression.",
+        "emotion_type": "anxiety",
+        "problem_type": "ongoing depression",
+        "situation": "A build up of things over time, and some recent things",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "Have you had any chance for ME Time where husband friend or family could watch your kids and give mommy a break. I Know I know its hard with Covid but lets pretend Covid isn't here",
@@ -2761,6 +2914,9 @@
         "context": "seeker: Im good at helping others, but I have neve been able to help myself or listen to my own advice for some reason.\nsupporter: (Self-disclosure) I have struggled with the same, have you considered counseling or another form of therapy ?\nseeker: I have, but I haven't followed through because of money constraints. It also makes me very nervous to open up and talk face to face about my struggles\nseeker: HAve you done that, if so, did it help you?\nsupporter: (Self-disclosure) I have tried different methods of therapy, and have found low cost options in my area\nseeker: That is good! Can I ask what state you are from?\nseeker: I am in Tennessee\nsupporter: (Others) I am from connecticut \nseeker: nice, I have never been there before. How was the weather there today? It was 65 degrees and sunny here today.\nsupporter: (Others) around 40 degrees and windy and there is still snow on the ground\nseeker: Oh wow! We rarely get snow, but a couple weeks ago we got snowed in. The mos snow my kids have ever seen! \n",
         "stage": "Comforting",
         "state": "The seeker seems to be stressed and overwhelmed with their current situation as a stay-at-home mom and struggling to make ends meet. They are open to seeking help and therapy but have financial constraints and feel nervous about opening up about their struggles. They are also seeking some connection and distraction by engaging in small talk about weather and locations.",
+        "emotion_type": "depression",
+        "problem_type": "job crisis",
+        "situation": "I am a mother of two and I have been a stay at home, homeschooling mom since Covid hit last year. Can hardly make ends meet.",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "I miss the sun we have been snowed in for months",
@@ -2815,6 +2971,9 @@
         "context": "seeker: Hi\nsupporter: (Others) hello\nseeker: I am having trouble with depression lately after I had a sister pass away a few months ago in an unexpected fire.\nsupporter: (Reflection of Feelings) Oh no, i am sorry to hear that. It must be devastating for you\nseeker: Yes, it has been extremely hard.\n",
         "stage": "Exploration",
         "state": "The seeker is dealing with depression and grief due to the unexpected loss of their younger sister in an apartment fire a few months ago. The situation is extremely hard for them and they are struggling with their feelings.",
+        "emotion_type": "depression",
+        "problem_type": "ongoing depression",
+        "situation": "My younger sister passed away unexpectedly a few months ago in an apartment fire and I am having trouble dealing with this.",
         "Gold": {
             "strategy": "Question",
             "utterance": "How are you feeling now?",
@@ -2869,6 +3028,9 @@
         "context": "seeker: It did - I had to figure out what was important in life after that but the loss of my high school friends drove me into a mild depression.\nsupporter: (Question) Of course. Do you still experience feelings of sadness when thinking of that time in your life?\nseeker: Occasionally when I think about that time in my life.\nsupporter: (Question) Does that loss still affect your day-to-day life or do you feel like you were able to handle those feelings in a healthy way?\nseeker: I am still feeling the effects of it today. I don't know exactly how to cope properly.\nsupporter: (Reflection of Feelings) It sounds like you're still struggling with that loss. That is entirely normal. \nseeker: That's great that it's normal....but I'm not sure how that's helping me.\n",
         "stage": "Comforting",
         "state": "The seeker is still struggling with feelings of loss and sadness from past actions that led to the end of their high school friendships. They are unsure how to cope with these feelings and are still affected by them in their day-to-day life.",
+        "emotion_type": "shame",
+        "problem_type": "problems with friends",
+        "situation": "In my youthful exuberance for entertainment, I had ditched study plans with my high school friend while we were in college to go play video games with some of my new college friends.  After this event, I lost my high school friends",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "It sounds like you're looking for a way to handle these feelings in a healthy way. Am i right in that? ",
@@ -2923,6 +3085,9 @@
         "context": "seeker: Sometimes I feel like it must be me. Maybe i',m annoying? This happens so often the common denominator is ME. But i'm friendly, im assertive, im out spoken, im kind. I don't LET people walk all over me but it seems like that;s all I attract.\nsupporter: (Restatement or Paraphrasing) So you feel under valued in your relationships because people tend to take advantage of you. \nseeker: Pretty much. it just happens every single time. It's kind of discouraging and just makes me an angry person\nsupporter: (Reflection of Feelings) It sounds like this is really bothering you. It is good that you are talking about it though.\nsupporter: (Providing Suggestions) Have you tried telling them how they make you feel?\nseeker: Some of them. The others I never even get a chance because they just ignore my existence anytime I try and reach out to talk. I've just been waiting for them to pour their problems onto me or have the nerve to ask for money. Then i'll tell them. I already know they won't respond but atleast ill say my peace\n",
         "stage": "Exploration",
         "state": "The seeker is feeling frustrated and angry due to feeling undervalued and used in their friendships. They feel ignored and believe that their friends only approach them for their own benefit. This has made them quite disheartened and they are seeking a resolution to this situation.",
+        "emotion_type": "anger",
+        "problem_type": "problems with friends",
+        "situation": "My friends suck at being friends. They use me, ignore me, and i'm only a benefit for them.",
         "Gold": {
             "strategy": "Question",
             "utterance": "After you tell them how you feel do you still give them money or listen to what's going on and try to help them.",
@@ -2977,6 +3142,9 @@
         "context": "seeker: Somewhat, but all I feel I have time for is the school work\nseeker: not the social aspect so much\nsupporter: (Question) I think that you need to be easier on yourself. Do you have many friends? \nseeker: some\nsupporter: (Question) Are you able to confide in your friends about your situation and your worries? \nseeker: Yes at times, which makes things a little better in the moment.\n",
         "stage": "Exploration",
         "state": "The seeker is feeling anxious and overwhelmed due to academic pressure and the fear of disappointing their mother. They are dedicating all their time to schoolwork, leaving little time for social interactions. Although they have some friends to confide in, their anxiety persists. The pressure to perform and the lack of social activities are causing the seeker distress.",
+        "emotion_type": "anxiety",
+        "problem_type": "academic pressure",
+        "situation": "I have this overwhelming fear and pressure that my mother will not be accepting of my grades in school. This pressure has caused me to feel anxiety everyday and perfect all homework assignments which I do not have time for.",
         "Gold": {
             "strategy": "Question",
             "utterance": "Do you feel that your friends are able to empathise with your situation? Are any of them going through the same thing? ",
@@ -3031,6 +3199,9 @@
         "context": "supporter: (Affirmation and Reassurance) Hai\nseeker: hi\nsupporter: (Affirmation and Reassurance) why?\nsupporter: (Affirmation and Reassurance) Any problem?\nseeker: well we were together for 3 years. he broke up with me a week ago but we're on the lease for the apartment and share the place with 5 other people. He moved into the room we had open. but now he's turning my roommates against me\nseeker: i think he's pissed because i'm dating my other ex again.\nsupporter: (Affirmation and Reassurance) oh, you settle elsewhere\nseeker: you think i should move?\n",
         "stage": "Action",
         "state": "The seeker is in a state of distress and anger after a breakup. They are living in a hostile environment where they believe their ex-boyfriend is turning their roommates against them. The seeker also shows confusion about what to do next, questioning whether they should move out.",
+        "emotion_type": "anger",
+        "problem_type": "breakup with partner",
+        "situation": "My boyfriend broke up with me, but we live together and have roommates. Now he is turning the roommates against me.",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "yes",
@@ -3085,6 +3256,9 @@
         "context": "supporter: (Affirmation and Reassurance) that's very good that you are going to talk to a therapist. you showed great strength by reaching out.\nseeker: I am hoping it helps because I feel helpless, especially today and on edge\nsupporter: (Question) have you been sleeping mostly during the day, or at night?\nseeker: I can't sleep through the day because I have kids but when my ex gets home I just go hide and try to sleep so it's typically late afternoon\nsupporter: (Affirmation and Reassurance) it sounds like you are doing the very best you can under difficult circumstances. you should feel very proud about that.\nseeker: thank you\nseeker: i feel very tired tho. i feel like i want every day to go by faster. the relationship i am in is a long distance relationship and i am supposed to go home to see him in ten days and i just want them to be over. \n",
         "stage": "Exploration",
         "state": "The seeker is feeling helpless, tired, and on edge due to their complicated living situation and relationship issues. They are also struggling with sleep problems because of their responsibilities. The seeker is looking forward to an upcoming visit to their long-distance boyfriend, but they also wish for the days to go by faster, indicating a sense of mental exhaustion and desire for escape. They are hopeful that therapy might provide some relief.",
+        "emotion_type": "sadness",
+        "problem_type": "ongoing depression",
+        "situation": "I live with my ex and he's having a break down and my current boyfriend lives far away and is struggling with addiction and money problems. I feel constantly worn down.",
         "Gold": {
             "strategy": "Question",
             "utterance": "it sounds to me that your sleep issue is really weighing on your mind. you may be setting yourself up for sleep issues by thinking about this so much. is that possible?",
@@ -3139,6 +3313,9 @@
         "context": "supporter: (Affirmation and Reassurance) I think that once she hits puberty she will probably change her feelings about showering etc a lot :). \nsupporter: (Self-disclosure) Teenagers tend to get very very involved in their appearance :D I used to spend an hour in the shower each day \nseeker: Unfortunately I have spoiled her rotten so that she has most everything she could want (well, not an I-phone and nintendo switch! lol)\nsupporter: (Providing Suggestions) Perhaps you could gently explain to her why it's anti social to not shower for a week? \nseeker: I think she is getting very close to the age where she will pay attention to herself and general appearance, but she's not there yet.\nsupporter: (Others) Ah you have all the fun of her teenage years to look forward to. I would not go through that again :D \nseeker: I have, lol.\nseeker: She is getting much better about putting clean underwear on everyday at least.\nsupporter: (Others) Well that is definitely something!! \nsupporter: (Providing Suggestions) Maybe try to help her take pride in her appearance? Give her some make up lessons?\nseeker: She also loves to go through my personal things. Takes my nail clippers. Tries on my blush and lipstick. Looks through my drawers.\nsupporter: (Affirmation and Reassurance) I think that's pretty normal for a tweenage girl :) She's probably starting to be interested in make up and things \nseeker: I don't wear makeup, except for rare days where I put on a little blush and lipstick.\n",
         "stage": "Comforting",
         "state": "The seeker is frustrated and disgusted with their eleven-year-old daughter's behavior, which includes not cleaning up, spending excessive time on electronic devices, neglecting school, and being picky about food. The seeker recognizes that they may have spoiled their child, which could be contributing to the issue. The seeker also observes that their daughter is showing signs of interest in personal appearance and makeup, even though she hasn't reached that stage yet.",
+        "emotion_type": "disgust",
+        "problem_type": "issues with children",
+        "situation": "My eleven year old daughter is being difficult right now. Won't pick up anything, spends all day on the computer or on her phone or tablet, isn't focusing on school, won't eat anything other than mac and cheese and chocolate.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "I don't either to be honest but a lot of young girls are interested in it ",
@@ -3193,6 +3370,9 @@
         "context": "supporter: (Question) Do you like doggies?\nseeker: Unfortunately I am allergic to dogs\nsupporter: (Question) Or are you a cat person?\nseeker: No I can't be around cats either\nsupporter: (Reflection of Feelings) I feel that you seem to be taking to food delivery.\nsupporter: (Self-disclosure) I did food delivery for three different companies and I have liked it.\nseeker: Yes definitelh.\nseeker: Oh wow really? You liked it?\nseeker: That is good to hear!\nsupporter: (Affirmation and Reassurance) You seem to be a real go-getter from the short conversation that we have had so far.\nseeker: Thank you. You have made me see that my situation is not as hopeless as I thought!\nsupporter: (Self-disclosure) I worked in the restaurant business about a decade ago, but restaurants need so many people to deliver their food.\nsupporter: (Self-disclosure) When I was younger, the food delivery business was minimal.\nseeker: Yes, I bet they do, and especially now during Covid!\n",
         "stage": "Action",
         "state": "The seeker is feeling scared and hopeless due to losing their job and struggling to find a new one amidst the Covid-19 pandemic. They are considering food delivery as a job option and feeling a bit reassured after hearing the supporter's positive experience in the same field.",
+        "emotion_type": "depression",
+        "problem_type": "job crisis",
+        "situation": "I lost my job due to Covid 19 and I can't find a new one. I'm scared!",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "I feel that if you start applying now for those jobs and you have a decent car, there is plenty of opportunity to make money with Grub Hub and Uber Eats",
@@ -3247,6 +3427,9 @@
         "context": "seeker: and they prepared to get married soon\nseeker: i dont have any idea for what to do\nsupporter: (Affirmation and Reassurance) That's even a better reason for you to just forget about her, with her cheating on you like that, you know she's not the type for you. You're so much better than her. So just focus on yourself. If you need some help emotionally, find yourself a counselor to talk to.\nseeker: I tried to forget her, but whenever i tried the memories are repeating again and again\nseeker: which sometimes makes me mad\nsupporter: (Providing Suggestions) Just try to focus on your hobbies, and hang out with your close friends. Keep yourself occupied on other things so you wouldn't have to think about her. Just think that you're lucky that it ended now, and it would've been worse if you found out about the cheating even later.\nseeker: whenever i try to share my feelings with my friends, they are making fun on me\nseeker: and irritates me so much\n",
         "stage": "Action",
         "state": "The seeker is feeling heartbroken, betrayed, and depressed due to a breakup with their lover who is now preparing to marry someone else. Attempts to forget their ex-partner are proving unsuccessful, with memories causing distress and anger. The seeker is also feeling isolated and upset since their friends are not providing the emotional support needed, instead making fun of the situation.",
+        "emotion_type": "depression",
+        "problem_type": "breakup with partner",
+        "situation": "breakup with my lover",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "Awww maybe try to share you feelings with your family then",
@@ -3301,6 +3484,9 @@
         "context": "supporter: (Reflection of Feelings) It seems it must be very challenging for you. \nseeker: Exactly! This is a big step for me in the PhD program I'm in, so it's definitely a bit more pressure than previous deadlines.\nsupporter: (Self-disclosure) In such situation, I make the strategy by distributing the time and work load equally. That's how I stay energetic and motivated.. \nseeker: That's a good idea. Do you mean just do a little bit each day?\nsupporter: (Others) Take a rough estimate like how much can be done in a day. It will reduce your work load\nseeker: Well I have 30 more revisions to address and 15 more days to complete it. So, maybe I can make a goal of 2-3 revisions each day?\n",
         "stage": "Action",
         "state": "The seeker is feeling anxious due to the pressure of having to make major revisions to a scientific paper within a short time frame. This task is significant for their progress in their PhD program, which adds to their stress. They are seeking strategies to effectively manage their time and workload.",
+        "emotion_type": "anxiety",
+        "problem_type": "procrastination",
+        "situation": "I only have two weeks left to make major revisions to my scientific paper that was recently submitted to a journal. I am freaking out.",
         "Gold": {
             "strategy": "Information",
             "utterance": "Apparently when we start working on such project, things start coming at right place itself. ",
@@ -3355,6 +3541,9 @@
         "context": "supporter: (Others) Good evening :-) What can I help with you with tonight? \nseeker: just graduated university and my parents are pressuring me to pursue becoming a doctor\nsupporter: (Affirmation and Reassurance) Oof, that is a very difficult situation. I'm sorry you're going through that. How do you feel about it? \nseeker: I'm angry. I just want to be done school. but parents are on my butt about it.\nsupporter: (Question) What do your parents say when/if you tell them you want to be done with school? \nseeker: they get mad at me and say they are dissapointed. I want to travel and see the world. not more schooling.\nsupporter: (Reflection of Feelings) That's not a fair thing for them to say to their child. I will say that there are academic programs that combine travel and credits, but you probably know that already. And I don't think you should have to compromise anyway. \nseeker: They won't take a compromise. parents are stubborn. What should i do? please parents or pursue my passion?\n",
         "stage": "Action",
         "state": "The seeker is feeling pressured and angry due to their parents' insistence on them pursuing a career as a doctor. They have recently graduated from university and would prefer to travel and explore the world rather than continue with more schooling. The seeker is torn between pleasing their parents and pursuing their own passion.",
+        "emotion_type": "anger",
+        "problem_type": "academic pressure",
+        "situation": "Parents are pressuring me to become a doctor",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "I cannot tell you what to do exactly, but I would encourage you to fulfill yourself before anyone else's dictation of your life. ",
@@ -3409,6 +3598,9 @@
         "context": "seeker: Hello\nsupporter: (Others) Hi! How are you today?\nseeker: I'm grounded so i'm not happy\nsupporter: (Affirmation and Reassurance) I'm sorry to hear that. It must be hard.\nsupporter: (Question) Can I ask what has happened?\nseeker: My sibling broke the tv and blamed it on me and my parents believed them\n",
         "stage": "Comforting",
         "state": "The seeker is feeling angry and frustrated because they have been unfairly blamed and punished for something they didn't do.",
+        "emotion_type": "anger",
+        "problem_type": "issues with parents",
+        "situation": "My parents grounded me for something I didn't do. My sibling broke the TV, I did not!!",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "Oh no! I'm sorry to hear that.  That must be a hard situation, to not have your folks believe you.",
@@ -3463,6 +3655,9 @@
         "context": "seeker: It happened in my teens, but it still impacts me\nsupporter: (Affirmation and Reassurance) You are a very strong person for reaching out and expressing your feelings. You have a lot to be proud of!\nseeker: They were very harsh, with me.. just like my parents\nsupporter: (Reflection of Feelings) You were put in a very difficult situation with multiple people. I can imagine that you have been so stressed out from the pressure of people hurting you.\nseeker: Thats how it is... what do you think i should do to overcome it?\nsupporter: (Self-disclosure) I had this same problem in school and as I grew up I learned how to speak up and defend myself when people were rude and mean to me. I was my own advocate and you are also being your own by reaching out today and being so strong.\nseeker: What did they tell you?\nsupporter: (Others) I was told that I was overweight by others. I was able to defend myself by saying that I am a good person with a good heart and they are not important to me and neither are their opinions. I became more confident in myself. Have you ever wrote your feelings down in a journal?\nseeker: I think we suffer the same\nseeker: I have never written my feelings\n",
         "stage": "Action",
         "state": "The seeker is still dealing with the emotional impact of bullying that occurred during their teenage years. They feel stressed and hurt, not only from the bullies at school but also from their own parents. They are seeking advice on how to overcome these feelings and have shown interest in the supporter's experiences and coping mechanisms.",
+        "emotion_type": "depression",
+        "problem_type": "school bullying",
+        "situation": "I suffered bullying at school. for the simple fact of being not very fat but if stuffed, they called me a cow, they made the expression of a cow, they threw my bag in the trash, I had no friends. It was hard and strong to be able to study there, after that they changed my school, everything was fine until those from the previous school found out where I was studying and the bullying started again. It has had an impact on my life, I believe that even my feelings are the same, I have not been able to forget it.",
         "Gold": {
             "strategy": "Information",
             "utterance": "Yes, I agree. A lot of research shows that when we write down our positive attributes we reaffirm our belief in ourselves. Listing the things are are good at can help give you more self confidence.",
@@ -3517,6 +3712,9 @@
         "context": "supporter: (Question) Hi, how can I help you?\nseeker: Hi, is someone there?\nseeker: I need some help. I'm feeling really bad.\nsupporter: (Question) What's the problem?\nseeker: My company just laid off 10% of the workforce and furloughed another 10%. I'm worried I'm going to be in the next round.\n",
         "stage": "Exploration",
         "state": "The seeker is feeling anxious and worried about their job security, due to recent layoffs and furloughs at their company. They fear they might be next in line for job loss.",
+        "emotion_type": "anxiety",
+        "problem_type": "job crisis",
+        "situation": "My job just laid off 10% of the workforce and I'm afraid I'm next.",
         "Gold": {
             "strategy": "Question",
             "utterance": "Why do you think you are the next round? Do you know how did they choose them?",
@@ -3571,6 +3769,9 @@
         "context": "seeker: hello\nsupporter: (Question) Hello, how are you doing today?\nseeker: I am okay just anxious\nsupporter: (Affirmation and Reassurance) I can understand anxiety in these times, is there something specific that's bothering you?\nseeker: I believe i am going to fail all my finals for college\nsupporter: (Affirmation and Reassurance) College finals are a stressful time for sure, I'm sure you're doing your best to prepare.\nseeker: Yes i have been studying for hours everyday. sometimes it is hard to focus.\nsupporter: (Providing Suggestions) Sometimes it's best to take a short break to reset when you feel like your gears are grinding.\nseeker: that is true, but i feel guilty when i take breaks\n",
         "stage": "Comforting",
         "state": "The seeker is feeling anxious due to academic pressure, specifically fearing failure in their final exams. They are struggling to focus despite studying for long hours every day and feel guilty about taking breaks, suggesting a high level of stress and potentially poor self-care habits.",
+        "emotion_type": "anxiety",
+        "problem_type": "academic pressure",
+        "situation": "It is finals week and i have a lot to do. I have been having bad dreams about my grades and future.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "I often feel the same way when I'm not busy doing work. But sometimes you need that little break to get back into the zone and be more productive.",
@@ -3625,6 +3826,9 @@
         "context": "supporter: (Providing Suggestions) I would definitely recommend seeking help sooner rather than later! \nsupporter: (Question) Hello? Are you wanting to talk?\nseeker: Yes of course I didn't hear it go off, my apologies. I really appreciate that, it really is helpful knowing that I'm not the only one who feels this way\nseeker: I really know that that's what I need to do, and I am trying my best to get over my fears and just do it ya know\nsupporter: (Question) What level of alcohol consumption do you have?\nseeker: no matter how hard it seems, maybe it wont be when I actual do it\nsupporter: (Information) Trust me everyone will be very sympathetic :). Everyone there will be in the same place\nsupporter: (Information) And the longer you keep drinking the more damage you are doing to yourself \nseeker: and quite a bit, about half a gallon or more a day . And thank you, I really do appreciate your help. I know that and I know its time for me to better my life because its no way to live ya know. Id like to grow up and have a normal life (:\nsupporter: (Others) I am not sure how much half a gallon is to you ... I am in the UK and I know it differs between the US and UK :) \nseeker: thank you, i do feel better about going now. I just dont know what to expect and it can be scary sometimes\n",
         "stage": "Action",
         "state": "The seeker is dealing with shame and fear related to their alcohol addiction. They are aware of their problem and recognize the need for help, but are afraid of being judged and are finding it hard to motivate themselves to seek help. They are also worried about how they will be perceived by counselors and others in rehab. Despite their fears, they are expressing a desire to change and live a better life.",
+        "emotion_type": "shame",
+        "problem_type": "alcohol abuse",
+        "situation": "I've had a drinking problem for a few years now, and I know that I need to seek help now. I just am having a hard time finding the motivation to, and I'm having a hard time with being worried about being judged for my drinking and other addiction problems. I'm worried about how the counselors will see me, how others at a rehab will view me, and any one else that I have to share my story with. I'm ashamed of myself, my life, and the choices that i've made that have gotten me to this point in my life.",
         "Gold": {
             "strategy": "Information",
             "utterance": "You will be treated with respect at all times. ",
@@ -3679,6 +3883,9 @@
         "context": "seeker: Hey, I'm doing good at the moment. How about yourself?\nsupporter: (Others) Not too bad! It looks like a lovely day out. \nseeker: Haha, I wish I could say the same. New York is depressing, cloudy and cold.\nsupporter: (Others) Well make sure you're bundled up and warm!\nseeker: I got the heater on and a sweater, working from home so it's not too bad.\n",
         "stage": "Comforting",
         "state": "The seeker appears to be doing well at the moment. They are engaged in a casual conversation, discussing their current situation and environment. They seem to be handling the cold weather and work from home situation well.",
+        "emotion_type": "depression",
+        "problem_type": "job crisis",
+        "situation": "I was given reduced hours at work and there might be a chance I could get laid off because I just started and there is lack of work. However, my expenses are the same and income is reducing.",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "Sounds cozy. Glad to hear that you're staying safe indoors! ",
@@ -3733,6 +3940,9 @@
         "context": "supporter: (Self-disclosure) Oh well I understand your concern then. As a son or daughter it is certainly reasonable to be concerned about your parents especially as they grow older. I have a similar situation with my own mother.\nseeker: I just don't know what more to do.\nsupporter: (Providing Suggestions) Well first of all, you have to take care of yourself because if you don't you can't help them. So just take a moment to close your eyes and take some deep breaths and realize you stressing is probably going to make them stress.\nseeker: That is helpful information. What can I tell them?\nsupporter: (Providing Suggestions) Well if you can get some concrete info such as from the CDC and John Hopkins showing case counts in your area. Show them graphs so they can visually see the impact. Also if you can get a hold of their doctor yourself, see if you can convince them to give your parents a call, say to check on them and give them some advice.\nseeker: That sounds like a good plan. Is there anything else I can do to decrease the anxiety for me?\n",
         "stage": "Action",
         "state": "The seeker is feeling anxious about their parents' health, especially their father's, during the COVID-19 pandemic. They have tried to give their parents advice, but their father isn't listening and their attempts to help are causing them stress. They are seeking advice on how to better communicate their concerns to their parents and what they can do to reduce their own anxiety.",
+        "emotion_type": "anxiety",
+        "problem_type": "conflict with parents",
+        "situation": "Since COVID-19 I've been trying to help my parents by giving them advice.  I tell them to avoid large crowds due to my dad being on Oxygen at night.  He doesn't want to listen and goes places without caring.  I'm very anxious about him getting sick.",
         "Gold": {
             "strategy": "Information",
             "utterance": "Don't get absorbed in the numbers, it can drive you crazy. Also if you are using social media like twitter and getting inundated with info, remember a lot of it is fake. I would suggest limiting exposure for a little while just to get you fixed a little bit, if that makes sense. ",
@@ -3787,6 +3997,9 @@
         "context": "supporter: (Reflection of Feelings) Do you meet up with your exes?\nseeker: i'm still friends with many of my exes, but he knows that and we all hang out together\nseeker: thats why it's weird that he lied\nsupporter: (Others) He lied because he didn't want you to know the truth. Which is betrayal. \nseeker: also, when he gets home, how do i tell him how i found out.\nseeker: i mean, i literally got into his facebook without asking\nseeker: i just had this intuition that he was being suspicious\nsupporter: (Others) It's a hot mess, is it not? Why did you feel you wanted to spy on him? Did you already mistrust him?\nseeker: well, it was weird that he got so dressed up to go hang out with friends\nseeker: it makes sense now that i know he went for a photoshoot\n",
         "stage": "Exploration",
         "state": "The seeker is feeling conflicted and distressed after discovering their boyfriend lied about meeting his ex. They are considering breaking up with him, but are unsure about how to confront him about their discovery, which they made by accessing his Facebook without his permission.",
+        "emotion_type": "sadness",
+        "problem_type": "breakup with partner",
+        "situation": "I found out my boyfriend went to see his ex and I don't know if I should break up with him or not.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "Ok, so this is a HUGE red flag to you. You can ignore it, or not. Women KNOW when a man is cheating, so you had that inside of you. And you went with your hunch and now you have found he is dishonest. ",
@@ -3841,6 +4054,9 @@
         "context": "seeker: I'm afraid I'm going down a bad road, but I don't know how to stop. \nsupporter: (Reflection of Feelings) These are not the best times... but lets dig deeper to the root of this new behavior. \nseeker: How do we do that?\nsupporter: (Affirmation and Reassurance) I have been down that road myself, and I didn't have anyone to help me. But luckily, you have resources and support. Help me understand what makes you drink? Is it a trigger like stress? Or just a habit? \nseeker: Work has been stressful, but I feel like was before things got bad. Most nights I come home to drink so that I can forget about my day.\nsupporter: (Question) What do you do for work? \nseeker: I work in finance at a large corporation.\nsupporter: (Reflection of Feelings) Oh I can definitely understand your reasoning. I am not justifying your behavior, but at least we see now, it goes hand in hand. The corporate dinner parties and cocktail hours.. it is usually much deeper than the surface\nseeker: Hmm. I never thought of it that way.\nseeker: I guess maybe I need to look into how such events affect me.\nsupporter: (Providing Suggestions) Usually when I find myself going off the deep end, I can reign it back by realizing that the power lies in me. My control to use a relaxer like a cocktail hour, to just be that. It does not have to be a contest. It should make you feel good, then leave it. But if you cannot control it, try and de-stress another way like baths or massages\nsupporter: (Affirmation and Reassurance) It sounds like you are pretty self aware, which is a great short cut to this dilemma. \nsupporter: (Providing Suggestions) You can use this to your advantage, and make more conscious choices to better your life \nseeker: Yeah, that makes sense. \nseeker: I think I understand the problem I have much better now.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling lost, fearful, and stressed due to their alcohol abuse. They have been using alcohol as a coping mechanism to deal with their work stress. The seeker seems to be open to understanding the root cause of their problem and is considering ways to deal with their stress in a healthier manner.",
+        "emotion_type": "depression",
+        "problem_type": "alcohol abuse",
+        "situation": "I drank too much and don't remember what happened last night.",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "That is great, please share with me your findings ",
@@ -3895,6 +4111,9 @@
         "context": "seeker: That is a good idea.\nseeker: How did it work\nsupporter: (Information) It was really good and I also did lot of physical work throughout the day which helped a lot in falling a sleep at night.\nsupporter: (Providing Suggestions) Few other tips - life style changes, breathing exercise, reduce screen use, reduce stress, being more active.\nseeker: Oh, those are a lot of choices to try\nseeker: Do you have one that you think works best?\n",
         "stage": "Action",
         "state": "The seeker is struggling with sleep problems and is open to suggestions for improvement. They are actively seeking advice and information about possible solutions to help them unwind and sleep better at night.",
+        "emotion_type": "anxiety",
+        "problem_type": "sleep problems",
+        "situation": "I just can't seem to unwind at night.",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "Yes You don't have to try all but just start with two to three first like breathing exercise, stretching and reduce screen usage.",
@@ -3949,6 +4168,9 @@
         "context": "seeker: Hey, I'm doing good at the moment. How about yourself?\nsupporter: (Others) Not too bad! It looks like a lovely day out. \nseeker: Haha, I wish I could say the same. New York is depressing, cloudy and cold.\nsupporter: (Others) Well make sure you're bundled up and warm!\nseeker: I got the heater on and a sweater, working from home so it's not too bad.\nsupporter: (Restatement or Paraphrasing) Sounds cozy. Glad to hear that you're staying safe indoors! \nseeker: Yeah it's a good benefit, especially with covid going on\n",
         "stage": "Comforting",
         "state": "The seeker seems to be in a relatively stable state of mind, but there are indications of underlying concerns related to work and the ongoing pandemic. They are currently working from home due to COVID-19 and are dealing with the cold and gloomy weather which they find depressing.",
+        "emotion_type": "depression",
+        "problem_type": "job crisis",
+        "situation": "I was given reduced hours at work and there might be a chance I could get laid off because I just started and there is lack of work. However, my expenses are the same and income is reducing.",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "Definitely! How are you dealing with the pandemic? It's been a long year.",
@@ -4003,6 +4225,9 @@
         "context": "supporter: (Question) has she written anything you haven't read yet that you think you would enjoy?\nseeker: that's also another good idea. i haven't read all of her bookis \nsupporter: (Question) do you live near a library?\nseeker: i do but they're closed because of covid\nsupporter: (Providing Suggestions) there may be some libraries in your area that are open, or have reduced hours.\nseeker: i can try\nseeker: the bookstores are open\nsupporter: (Affirmation and Reassurance) wonderful! do you live near a book store?\nseeker: sorta but not that close but i can take the bus out there\nsupporter: (Providing Suggestions) you can call the store and see if they have anything written by your favorite author.\nseeker: that's a great idea\n",
         "stage": "Action",
         "state": "The seeker is feeling worn down due to the struggles in their personal life. They are trying to find solace and distraction in books written by their favorite author. The seeker is considering visiting a library or a bookstore, even if they are not very close to their location.",
+        "emotion_type": "sadness",
+        "problem_type": "ongoing depression",
+        "situation": "I live with my ex and he's having a break down and my current boyfriend lives far away and is struggling with addiction and money problems. I feel constantly worn down.",
         "Gold": {
             "strategy": "Providing Suggestions",
             "utterance": "getting back to the sleep issue, have you considered thinking some pleasant thoughts before going to bed? ",
@@ -4057,6 +4282,9 @@
         "context": "supporter: (Others) It's never too late, and it would be better to do it now than let him find out himself :)\nseeker: On a training they told that need to report any accident straight away and if delay it will result in losing job for sure\nseeker: I know I did wrong and it bothers me as I don't want to lose my job\nsupporter: (Others) Yes but if you report it now you still have a chance of being let off, but if u don't report it now, you would almost certainly lose your job.\nsupporter: (Affirmation and Reassurance) In any case, always prepare for the worst circumstance at this point\nseeker: But also there is a chance they will not find out?\n",
         "stage": "Action",
         "state": "The seeker is in a state of fear and anxiety due to an accident that occurred at their workplace. They are worried about losing their job if they report the incident, but are also concerned about the potential consequences if they don't report it and it is discovered later.",
+        "emotion_type": "fear",
+        "problem_type": "job crisis",
+        "situation": "I've made an accident at work in warehouse and didn't report it",
         "Gold": {
             "strategy": "Information",
             "utterance": "They most likely will, so it is better not to use that chance",
@@ -4111,6 +4339,9 @@
         "context": "supporter: (Self-disclosure) When I get stressed, I try to do vigorous exercises with pushups, chin ups, sit ups or walking fast.\nsupporter: (Question) Do you have a place that you can walk briskly in your area of town?\nseeker: I am not worried financially . I am feeling depressed by trying again and agian, never happened with me before\nsupporter: (Restatement or Paraphrasing) Losing a job? It never happened for you before?\nseeker: There are recreational parks, and trails near by\nsupporter: (Providing Suggestions) I would join a support group for those people who need support and want to change careers.\nsupporter: (Providing Suggestions) There are support groups online to help with job loss who can advise you on where to use your interests and skills to have a more fulfilling life.\nseeker: I love my career just getting bit demotivated\nsupporter: (Question) Well, what other questions or concerns do you have for me?\nseeker: Thanks for letting me know. I would definitely do search \nseeker: That was all! Thanks for all your support\n",
         "stage": "Comforting",
         "state": "The seeker is feeling depressed and demotivated due to their struggle in finding a job. They love their career but are feeling disheartened due to repeated failures in their job search. They are not financially worried but are emotionally affected by the situation.",
+        "emotion_type": "sadness",
+        "problem_type": "job crisis",
+        "situation": "Trying to find a job",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "I feel that you have really expressed the important things in your life that you need to. I am proud of you.",
@@ -4165,6 +4396,9 @@
         "context": "supporter: (Question) have you been sleeping mostly during the day, or at night?\nseeker: I can't sleep through the day because I have kids but when my ex gets home I just go hide and try to sleep so it's typically late afternoon\nsupporter: (Affirmation and Reassurance) it sounds like you are doing the very best you can under difficult circumstances. you should feel very proud about that.\nseeker: thank you\nseeker: i feel very tired tho. i feel like i want every day to go by faster. the relationship i am in is a long distance relationship and i am supposed to go home to see him in ten days and i just want them to be over. \nsupporter: (Question) it sounds to me that your sleep issue is really weighing on your mind. you may be setting yourself up for sleep issues by thinking about this so much. is that possible?\nseeker: yes it may be. i'm not sure. i sometimes wake up panicking.\nsupporter: (Affirmation and Reassurance) you're under a lot of pressure. it's only natural that you would feel overwhelmed. dont be hard on yourself. you're doing the best you can.\nseeker: thank you. that is very supportive\nseeker: i just dont know how to make the next ten days go by faster\nsupporter: (Providing Suggestions) perhaps you can spend some time doing pleasant things. it is true that time seems to go fast when we're having fun.\nseeker: that's true. i thought about maybe playing video games \nsupporter: (Affirmation and Reassurance) fantastic! that's a great way to spend your time.\nseeker: maybe overwatch\nseeker: i haven't been playing them much\n",
         "stage": "Action",
         "state": "The seeker is experiencing feelings of exhaustion and sadness due to the challenging circumstances in their personal life - living with an ex who is going through a breakdown, being in a long-distance relationship with a boyfriend who is struggling with addiction and money problems, and taking care of kids. They are having trouble sleeping and sometimes wake up in a panic. They are looking forward to an upcoming visit with their boyfriend but wish the time would pass faster. The seeker is considering taking up activities, such as video games, to help pass the time.",
+        "emotion_type": "sadness",
+        "problem_type": "ongoing depression",
+        "situation": "I live with my ex and he's having a break down and my current boyfriend lives far away and is struggling with addiction and money problems. I feel constantly worn down.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "i'm wondering: are you a reader? do you enjoy reading? i'm asking because i find when i read a good book, time seems to move very quickly.",
@@ -4219,6 +4453,9 @@
         "context": "seeker: Yet, I have a block. I feel unworthy to write. Who am I.\nsupporter: (Reflection of Feelings) It seems like it might be overwhelming for you to begin. Maybe you can start small, like think of ideas or maybe just start writing 10 minutes a day.\nsupporter: (Affirmation and Reassurance) Everybody has a story and we can all learn from others. You don't need to a famous but just honest with what you have learned from your life.\nseeker: Yes, I have been given this encouragement from other writers. Yet, still feel like I lack motivation and passion.\nseeker: Hmmmm. That is so true.\nseeker: I just get frustrated with myself.\nsupporter: (Self-disclosure) Maybe you can start with a part of your life that you do feel passionate about first. I know for me, it's easier to start with something I enjoy the most.\nseeker: Yeah, thats interesting. I am a Life Coach and that is what I tell others.\nsupporter: (Self-disclosure) Yes, I understand it is easy to get frustrated with a lack of motivation.\nseeker: Thanks. I appreaciate what you are saying.\nseeker: Have you ever thought about writing....book, blog?\n",
         "stage": "",
         "state": "The seeker is feeling frustrated and overwhelmed due to a lack of motivation and passion in writing a book. They are struggling with feelings of unworthiness and self-doubt, questioning their ability to create meaningful content.",
+        "emotion_type": "depression",
+        "problem_type": "procrastination",
+        "situation": "I have been trying to get motivated to write a book to help others.",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "I am happy to help. Sometimes what we need is someone who affirms our dreams.",
@@ -4273,6 +4510,9 @@
         "context": "supporter: (Question) Hello, how are you?\nseeker: I'm ok. How are you?\nsupporter: (Question) I am good. What is on your mind?\nseeker: I have had little motivation to get out of bed and go to work lately.\nsupporter: (Restatement or Paraphrasing) Seems like it has been hard to get motivated.\nseeker: Yes, do you have any advice to help me?\nsupporter: (Affirmation and Reassurance) A lot of people experience this struggle. You are able to overcome this and you will find happiness.\nseeker: Thank you. I really would like to get my motivation back\nsupporter: (Reflection of Feelings) You had it in the past, it is just a matter of bringing it back.\nseeker: Yes, with some hard work, I'm certain it can return. Do you do anything to keep yourself motivated?\nsupporter: (Self-disclosure) I have found that accomplishing small tasks makes good momentum.\nseeker: That is a good advice\nseeker: I will start to focus on smaller tasks first\n",
         "stage": "Comforting",
         "state": "The seeker is feeling unmotivated and is struggling with procrastination, particularly with regards to their work assignments. They are seeking advice on how to regain their motivation and are open to suggestions. They have a positive outlook towards their recovery and are open to implementing strategies such as focusing on smaller tasks first.",
+        "emotion_type": "shame",
+        "problem_type": "procrastination",
+        "situation": "I have no motivation to finish my work assignments",
         "Gold": {
             "strategy": "Information",
             "utterance": "It helps to get things moving and becomes a good habit.",
@@ -4327,6 +4567,9 @@
         "context": "supporter: (Others) hello\nseeker: I am having trouble with depression lately after I had a sister pass away a few months ago in an unexpected fire.\nsupporter: (Reflection of Feelings) Oh no, i am sorry to hear that. It must be devastating for you\nseeker: Yes, it has been extremely hard.\nsupporter: (Question) How are you feeling now?\nseeker: I am feeling extremely sad and like I don't feel like doing anything.\nsupporter: (Self-disclosure) Have you seek therapy? Even if they can't lessen the pain, at least you have a place to vent out\nseeker: I have not for this particular issue, I tried it in the past and didn't like it too much.\nsupporter: (Providing Suggestions) You can ask around to see if your friends know anyone good. If not, I'd suggest joining a group of people of the same problem where you can talk to each other\nseeker: I think that is a really good idea, I hadn't thought about seeking out others with the same situation.\nseeker: Have you ever experienced anything like this in your life?\n",
         "stage": "Comforting",
         "state": "The seeker is experiencing severe depression following the unexpected death of their younger sister in a fire. They are feeling extremely sad and unmotivated, and while they have tried therapy in the past, they did not find it helpful. However, they are open to the suggestion of seeking support from others who have experienced a similar loss.",
+        "emotion_type": "depression",
+        "problem_type": "ongoing depression",
+        "situation": "My younger sister passed away unexpectedly a few months ago in an apartment fire and I am having trouble dealing with this.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "Yes I have, I lost one of my friends by suicide, It's very difficult and took years for me to somehow get over it",
@@ -4381,6 +4624,9 @@
         "context": "seeker: Yes, but at least I do everything that I can do.\nseeker: No, it's ok\nseeker: Probably I will try to listen to a music before the test\nsupporter: (Others) Okay, whenever you're ready.\nsupporter: (Affirmation and Reassurance) I know you'll try very hard! Relax so you can do your best\nseeker: Yes, because sometimes I see people studying before the test and I don't think it's a good idea due to you will be more anxious\n",
         "stage": "Action",
         "state": "The seeker is dealing with anxiety related to various situations including tests and travel. They are aware that their level of anxiety is high and are trying to find ways to manage it, such as listening to music before a test. They are aware of their efforts and believe in doing their best.",
+        "emotion_type": "anxiety",
+        "problem_type": "appearance anxiety",
+        "situation": "I am an anxiety person, when I have test, I'm going to travel, I'm going out and so on I will always have anxiety however I don't think it's goo to have so much anxiety, it's not good for yourself.",
         "Gold": {
             "strategy": "Information",
             "utterance": "I agree. It can stress you out more when you're already stressed.",
@@ -4435,6 +4681,9 @@
         "context": "supporter: (Question) Are you a female, if I may ask?\nseeker: yes \nsupporter: (Question) Do you have a husband or bf?\nseeker: I could say I am a female that is one of those left out \nseeker: not currently\nseeker: I really don't know how those women find partners and get married and stay with the same partner for a long time. \n",
         "stage": "Exploration",
         "state": "The seeker seems to be feeling left out and possibly lonely after a breakup. They are questioning how other women are able to find partners and maintain long-term relationships.",
+        "emotion_type": "shame",
+        "problem_type": "breakup with partner",
+        "situation": "I broke up with partner , my friend sent me pic of her hubby etc",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "You get frustrated that other people are achieving something, you are not able to do. Is that a fair understanding?",
@@ -4489,6 +4738,9 @@
         "context": "seeker: I'm ok, feeling so overwhelmed\nsupporter: (Affirmation and Reassurance) it's really a terrible time. you are definitely not alone in feeling that way. Is there something specific going on?\nseeker: lately there has been a project at work in which extra help is required. the volume of things i have to take care of has increased, and my manager doesn't seem to care\nsupporter: (Providing Suggestions) Is there a way you can write down in an email why the extra work is required and what specifically needs to get done in order to make this project successful for both you and your manager?\nseeker: i have sent her a spreadsheet showing how the project has increased my workload, but she brushes it off.\nseeker: it sucks that i'm working so hard and yet my paycheck does not support my basic needs.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling overwhelmed and frustrated due to a demanding work situation. They are struggling to keep up with an increased workload and feel their concerns are not being acknowledged by their manager. Additionally, they are experiencing financial difficulties, as their current income does not cover their basic needs. They are seeking advice on how to handle their work situation.",
+        "emotion_type": "anxiety",
+        "problem_type": "job crisis",
+        "situation": "I work and work and work but I can't seem to get ahead. The volume at work has gotten so bad that I can't keep up. I'm getting injured and no one cares. I can barely pay my bills and it feels like there is no end in sight.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "I have had managers like that. It's so frustrating. Is there a way you can have an in-person meeting and show her how extra help will make HER look good? Otherwise what I've done in the past is go over my immediate manager's head - or called a meeting with 3 of us.",
@@ -4543,6 +4795,9 @@
         "context": "seeker: said well get used to being on your knees\nseeker: and touched himself\nsupporter: (Reflection of Feelings) That's gross. I can't believe he said all those things to you. I'm sorry you have to hear those words from your husband.\nseeker: He's always saying stuff like that and constantly trying to refer to lets just say going down\nsupporter: (Affirmation and Reassurance) You need to stand up for yourself. I know it's difficult and as you said, won't even do any good. However, if you keep your silence, he'd think it's okay to treat you that way because he has power over you\nseeker: I know even my good friends that know me and everything that is said agrees with you\nsupporter: (Others) I'd advise you to disclose this to a family member and have them with you (on the phone) when he starts talking like that\nsupporter: (Others) that way the other person can call him off\nseeker: My mom already knows and his parents are dead and he has no relations with any other family. \nseeker: HE wont listen He knows everything and its HIs way or else\nseeker: He is very controlling\nsupporter: (Reflection of Feelings) if you want, you can talk to him one last time and let him know it's enough. I fhe doesn't change, you will cut off with him\nsupporter: (Others) You have to stand up for you self first before expecting him to do that\nseeker: Thats true and its time for a change. Thank you so much . I do feel better\n",
         "stage": "Action",
         "state": "The seeker is feeling angry, upset, and powerless due to ongoing abusive behavior from her husband. She is in a state of despair and frustration, but also seems to be motivated to make a change for her betterment.",
+        "emotion_type": "anger",
+        "problem_type": "ongoing depression",
+        "situation": "I have been diagnosed with Major Clinical Depression over 20 years ago. I am struggling with anger with my husband lately",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "If he intimidates you, you should practice what to say and then do the talk in public or when someone else is around",
@@ -4597,6 +4852,9 @@
         "context": "seeker: what other options are there?\nsupporter: (Information) There is free therapy available for people who feel that they cannot get along with one or both parents.\nseeker: I am already in therapy with him but it doesnt seem to be helping that much\nsupporter: (Affirmation and Reassurance) Please know that you are not alone in this situation. \nseeker: Thank you i appreciate that\n",
         "stage": "Exploration",
         "state": "The seeker is feeling anxious and possibly depressed due to conflicts with their father, which have resulted in them being kicked out of their father's house. They are currently in therapy, but they don't feel it's helping much. They are seeking other options and reassurance.",
+        "emotion_type": "anxiety",
+        "problem_type": "ongoing depression",
+        "situation": "I was recently kicked out of my fathers house.",
         "Gold": {
             "strategy": "Question",
             "utterance": "Do you think it might be better to make a totally clean break and move on from your dad then? ",
@@ -4651,6 +4909,9 @@
         "context": "seeker: have you done any public speaking\nsupporter: (Question) Only required in high school luckily in college I didn't have to do public speaking . What is your major ? I mean it sounds like this is a part of your major\nsupporter: (Self-disclosure) Either way it is EXTREMELY stressful and I would hate it\nseeker: I am a psychology major and while i am great at interacting with others to help them through thier feelings and any problems or difficulties that may be facing, this one is just different for me.\nsupporter: (Providing Suggestions) I can tell this is challenging for you. May I suggest talking with your professor maybe you could pre record your speech and play it instead of actually doing it? Or maybe practicing with some friends or collegues and seeing if they would help you not be so nervous\nseeker: I do not really have any friends I am online student and the presentation is being held on campus at the university and there are no other ways around the public speaking\nsupporter: (Providing Suggestions) This is certainly a difficult time and a unique one. How about searching online for speech public speaking tips and or training type videos or even libraries some have online books/videos\nsupporter: (Others) I would be willing to do a zoom meeting and practice with you if you would like\nseeker: I have done everything I can think of to prepare for this. I have been meditating to try and overcome this fear. I have spoken about my anxiety to my partner and family as well.\nsupporter: (Others) I am sure there are some support groups out there you could search for maybe. Also prayer works if you believe in God as I do!\nseeker: I am not as anxious on video, just mainly in person in crowds of peopole\nsupporter: (Providing Suggestions) I understand better now sorry for the confusion\nsupporter: (Providing Suggestions) Have you spoken to your doctor for maybe temporary mild anxiety pills or something since you seem to have tried numerous things without much help\nseeker: No problem no need to apologize\nseeker: I used to be on anxity medication but I wanted to get off the medication when I got sober becuase it could lead to a bigger problem for me.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling extremely nervous and stressed due to an upcoming public speaking engagement for their university class. Despite being good at interacting with others in a therapeutic context, the seeker is struggling with this particular challenge due to a phobia of public speaking. They've tried various methods like meditation and discussing their anxiety with their partner and family, but are still finding the situation difficult. They're not open to taking medication for their anxiety again as they are sober and fear it could lead to a bigger problem. They need alternative solutions to cope with their public speaking anxiety.",
+        "emotion_type": "nervousness",
+        "problem_type": "academic pressure",
+        "situation": "I have a presentation to give to my class and I have a phobia of speaking in public.",
         "Gold": {
             "strategy": "Self-disclosure",
             "utterance": "Yes I completely agree! I am going be honest and not sure how to help you. I will pray for you but I don't know what else to help ",
@@ -4705,6 +4966,9 @@
         "context": "supporter: (Reflection of Feelings) You had it in the past, it is just a matter of bringing it back.\nseeker: Yes, with some hard work, I'm certain it can return. Do you do anything to keep yourself motivated?\nsupporter: (Self-disclosure) I have found that accomplishing small tasks makes good momentum.\nseeker: That is a good advice\nseeker: I will start to focus on smaller tasks first\nsupporter: (Information) It helps to get things moving and becomes a good habit.\nseeker: Yes, sometimes it is hard to just get into that groove\nsupporter: (Providing Suggestions) Getting yourself to bed and waking up at a good time will help too.\nseeker: Yes, I am not very good at getting good night rests\nsupporter: (Providing Suggestions) Make sure to cease intake of caffeine at least 6 hours before you want to go to bed.\nseeker: Should I stop playing on my mobile device as well?\n",
         "stage": "Action",
         "state": "The seeker is struggling with a lack of motivation to complete their work assignments. They are acknowledging their problem and are actively seeking advice. They are open to suggestions and are looking for strategies to regain their motivation and improve their productivity. They are showing a willingness to make changes to their routines to improve their situation.",
+        "emotion_type": "shame",
+        "problem_type": "procrastination",
+        "situation": "I have no motivation to finish my work assignments",
         "Gold": {
             "strategy": "Information",
             "utterance": "True. The blue light emitted tricks your body in to thinking that it wants to be alert still.",
@@ -4759,6 +5023,9 @@
         "context": "supporter: (Providing Suggestions) Or have a new haircut or something :) \nseeker: I like that idea too, I will give it a try\nsupporter: (Question) Is it just your weight that bothers you about your appearance? \nseeker: No, I just dont like looking at myself in the mirror. I just feel ugly and gross\nsupporter: (Providing Suggestions) I have a feeling that other people do not feel that way about you :) \nseeker: That is kind of you to say, thank you\nseeker: You have helped me quite a bit today, I appreciate it\n",
         "stage": "Comforting",
         "state": "The seeker is dealing with self-esteem and body image issues, feeling unattractive and repulsive. They are also receptive to suggestions and appreciative of the support offered.",
+        "emotion_type": "disgust",
+        "problem_type": "appearance anxiety",
+        "situation": "I hate looking at myself in the mirror, every time I do I feel like the ugliest person in the whole world. I feel like nobody will ever love me.",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "I think a lot of people do see themselves in a much worse light as others see them :) It's a human thing. ",
@@ -4813,6 +5080,9 @@
         "context": "supporter: (Question) How are you today?\nseeker: Really bad. My 10 year marriage is failing. Things have not gotten better.\nsupporter: (Question) What happened?\nseeker: That's the thing. Nothing really happened. No cheating, drugs, or abuse. I suppose the euphoria has worn off, and she just doesn't find me interesting anymore.\nsupporter: (Information) I understand how you feel. Have you guys tried spending more time with each other? Maybe going out on dates?\nseeker: Maybe we haven't done this enough in the past. We both had busy careers. I tried initiating this last year, but without success. Maybe, I was too late. \nsupporter: (Affirmation and Reassurance) Its never too late to put spice back into the relationship.\nseeker: I hope you're right. Do you have other suggestions about how to do so?\n",
         "stage": "Action",
         "state": "The seeker is feeling distressed and hopeless due to their failing marriage. They are actively seeking advice and guidance on how to improve their relationship with their spouse. Despite their efforts, they are not seeing any positive changes, which is leading to feelings of hopelessness.",
+        "emotion_type": "depression",
+        "problem_type": "breakup with partner",
+        "situation": "My marriage of 10 years is currently failing.",
         "Gold": {
             "strategy": "Information",
             "utterance": "Show her that your still love because by being spontaneous. Surprise her with gifts. Maybe take her on a random vacation somewhere. Have a deep conversation about how you are feeling and that you still love her and want her in your life.",
@@ -4867,6 +5137,9 @@
         "context": "seeker: My suitaion is really very sad and depressed\nsupporter: (Restatement or Paraphrasing) I was a homeless drug addicted junkie for over 10 years. Tell me how yours is worse sweety.\nsupporter: (Question) Tell me why you are so sad and depressed.\nseeker: I had breakup with my partner ,it was really very horrible to me to overcome .\nsupporter: (Question) Was he abusive, tell me more.\nseeker: I tried a lot but i couldnt forget him at all \nseeker: He was not abusive at all \nsupporter: (Question) So what was the problem?\nsupporter: (Question) Tell me more.\nsupporter: (Question) I can't help you if you don't talk to me darling'\nseeker: i was really a bad suitation \nseeker: i am stressed and depressed right now . \n",
         "stage": "Exploration",
         "state": "The seeker is feeling extremely sad and depressed due to a recent breakup with their partner. They're struggling to forget their partner and move on from the relationship, even though it wasn't abusive. They're currently experiencing a lot of stress and depression as a result.",
+        "emotion_type": "depression",
+        "problem_type": "breakup with partner",
+        "situation": "AFTER BRAEKING UP WITH THE PARTNER I HAD LOT OF STRESS AND DEPRESSION IN MY LIFE .I WAS FACING REALLY A MENTAL STRESS WITHOUT MY BOYFRIEND",
         "Gold": {
             "strategy": "Question",
             "utterance": "Tell me about it.",
@@ -4921,6 +5194,9 @@
         "context": "seeker: Yes,it was for me,a total of $10000\nsupporter: (Reflection of Feelings) Oh, That is a very large amount of money. I can understand your being upset with them\nsupporter: (Question) Have you talked to them about the money and returning it?\nseeker: Yes,i am very very upset.What would you do in my position?\nseeker: Yes,she just sounded non-comittal,saying that she will return it when she can\nsupporter: (Providing Suggestions) I see. It is a financially difficult time for us all. I am wondering if your friend might be upset and embarrassed that they can not pay you back immediately? Have you asked her if she could even afford some sort of small payments?\nseeker: Yes,i asked her how we could restructure the payment in her favor because i understand how difficult it is for everyone right now but she did not answer\nsupporter: (Question) Were you speaking on the phone or in person? Is this a financial burden for you?\nsupporter: (Question) Would you consider this person a good friend? Would you be sad if they were not in your life anymore?\nseeker: We were speaking on phone because i wanted to set up a physical meeting where we could discuss the logistics\nseeker: Yes,it is a financial burden because this is money i was saving for a venture\nsupporter: (Reflection of Feelings) That is very difficult. It is hard to judge things on the phone. \nseeker: Yes,this is a really close friend from way back and i would be devastated to lose the friendship\nseeker: It is difficult to judge on the phone yes,which is why i wanted a physical meeting but she snapped at me and said that she will just pay me when she can\n",
         "stage": "Comforting",
         "state": "The seeker is feeling frustrated and upset because their friend has not returned a significant amount of money they borrowed. The situation is causing them financial strain and they are worried it might also harm their close friendship. They have tried to discuss a possible solution with their friend but have been met with a non-committal response.",
+        "emotion_type": "anger",
+        "problem_type": "problems with friends",
+        "situation": "My friend borrowed money from me and she did not return it in the time that we agreed.",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "I see. I am very sorry about that! it is very difficult when a friend betrays your trust like that. ",
@@ -4975,6 +5251,9 @@
         "context": "supporter: (Affirmation and Reassurance) I bet you are handsome! Don't let it get to you.\nseeker: The teacher would probably make fun of me!\nseeker: Thanks it's hard to look in the mirror now\nsupporter: (Providing Suggestions) Try to tell yourself you are good looking and deserve good things to happen every morning! Look in that mirror and tell yourself good things.\nseeker: I'll try to be positive for once.\nseeker: Do you believe working out will help\nsupporter: (Self-disclosure) Working out will help a lot! When I was feeling down on myself I decided to go to the gym three times a week. It was a great confidence boost.\nseeker: Awesome. I will start to take care of myself and not worry about others then.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling sad and has low self-esteem due to negative comments from friends about their appearance. They are struggling with their self-image, finding it hard to look in the mirror, but show willingness to try to be more positive and consider working out as a way to boost their confidence.",
+        "emotion_type": "sadness",
+        "problem_type": "problems with friends",
+        "situation": "Friends keep calling my face ugly",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "That sounds like a fantastic idea.",
@@ -5029,6 +5308,9 @@
         "context": "seeker: They will make plans in front of me and not invite me,\nsupporter: (Restatement or Paraphrasing) so, your friend and thier friends make plans in front of you but dont invite you?\nsupporter: (Question) have you ever just showed up? maybe they assume talking in front of you is like an invite\nsupporter: (Question) or have you ever asked your friend what is going on?\nseeker: Yeah. They will also talk about how they did something previously and I wasn't invited.\nseeker: That's not my personality. I think it's rude to show up or assume.\nsupporter: (Reflection of Feelings) that has to be frusterating. have you thought about moving on and finding better friends?\nsupporter: (Affirmation and Reassurance) it sounds like you are a great person and you deserve a lot better than that. \nseeker: I have always been shy and have a very hard time making friends. My hisband is also in the military so we move a lot and it's a constant struggle of trying to fit in with new people.\nseeker: Thank you for saying that.\nsupporter: (Self-disclosure) i understand that, i am an army veteran\nseeker: Yeah it can be very hard.\nsupporter: (Others) what about having a dinner for some other couples in his unit? have him plan a get together? even drinks and bowling or something\nseeker: Unfortunately we can't do that right now because his base is under strict rules for covid. But normally that would be a good idea.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling excluded and frustrated as their friends are making plans without them. They are also struggling with shyness and the constant moving due to their husband's military job, which makes it difficult for them to make new friends. They are feeling undervalued and are in search of solutions to improve their social situation.",
+        "emotion_type": "sadness",
+        "problem_type": "problems with friends",
+        "situation": "My friends are always leaving me out of activities.",
         "Gold": {
             "strategy": "Affirmation and Reassurance",
             "utterance": "fair enough. well maybe you can just hang in there till this stupid virus thing is over i heard the fda has approved a vaccine for emergency purposes . i bet military will be some of the first to get it. ",
@@ -5083,6 +5365,9 @@
         "context": "seeker: Sometimes I feel like it must be me. Maybe i',m annoying? This happens so often the common denominator is ME. But i'm friendly, im assertive, im out spoken, im kind. I don't LET people walk all over me but it seems like that;s all I attract.\nsupporter: (Restatement or Paraphrasing) So you feel under valued in your relationships because people tend to take advantage of you. \nseeker: Pretty much. it just happens every single time. It's kind of discouraging and just makes me an angry person\nsupporter: (Reflection of Feelings) It sounds like this is really bothering you. It is good that you are talking about it though.\nsupporter: (Providing Suggestions) Have you tried telling them how they make you feel?\nseeker: Some of them. The others I never even get a chance because they just ignore my existence anytime I try and reach out to talk. I've just been waiting for them to pour their problems onto me or have the nerve to ask for money. Then i'll tell them. I already know they won't respond but atleast ill say my peace\nsupporter: (Question) After you tell them how you feel do you still give them money or listen to what's going on and try to help them.\nseeker: No. Whenever I do get to say my peace, i'll just cut contact completely. Lately i've been holding it in and just barely responding if at all.\nseeker: I've told one of them that i have no money and she hasn't contacted me since. But if she tries again i'll say something about the issue. I don't like feeling used. Who even has the nerve to blatantly use somebody like that? It's irritating\nsupporter: (Affirmation and Reassurance) It's good that you let them know how you feel. By doing that, you are taking the first step in now allowing them to take advantage of you\nseeker: Agreed. I just hope that one day I can meet people and form actual friendships with them\nsupporter: (Affirmation and Reassurance) It's really hard to stand up for yourself but it sounds like you are off to a good start.\nsupporter: (Providing Suggestions) Have you taken any steps in trying to form new more meaningful relationships\nseeker: I thought I did. My husband and I made a couple friends. Theyre a couple and so are we so we go on double dates but they seem more drawn to him. Me and the other girl got very close and then boom she randomly decided she only wants to talk to me when shes mad or bored\n",
         "stage": "Exploration",
         "state": "The seeker is feeling frustrated, used, and lonely due to their friends seemingly taking advantage of them. They are trying to assert themselves and cut off contact in response, but they are also struggling with feelings of being ignored and unappreciated. Despite their efforts to form new, more meaningful relationships, they continue to feel undervalued.",
+        "emotion_type": "anger",
+        "problem_type": "problems with friends",
+        "situation": "My friends suck at being friends. They use me, ignore me, and i'm only a benefit for them.",
         "Gold": {
             "strategy": "Restatement or Paraphrasing",
             "utterance": "So feel that this new couple might value the friendship with your husband more then you",
@@ -5137,6 +5422,9 @@
         "context": "seeker: Hi!\nsupporter: (Question) Hello. How are you feeling today?\nseeker: Well, I'm a little tired and anxious but I got use to it.\nseeker: And you?\nsupporter: (Self-disclosure) I'm doing well, thanks for asking. Do you know what's might be causing these feelings of anxiety and fatigue?\nseeker: Well, its very difficult to sleep because of the nightmares. Every time I sleep I have the same dream. I recall the event in my sleep and its just horrible.\n",
         "stage": "Exploration",
         "state": "The seeker is feeling tired and anxious due to recurring nightmares about a traumatic event. They struggle to sleep because of these nightmares, which contributes to their fatigue and anxiety.",
+        "emotion_type": "sadness",
+        "problem_type": "appearance anxiety",
+        "situation": "Well when I was 19 years old; my mom, my brothers and I went to spend the weekend at my grandmother's house. My grandmother's boyfriend took advantage of me on the night and started touching me. I couldn't say anything, cause he threatened me with killing my family if I talked.",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "That must be very distressing to have the same nightmare every night. Do you have a nighttime routine to help you get to rest in a more relaxed state?",
@@ -5191,6 +5479,9 @@
         "context": "seeker: I have to think about it more but I am lonely already\nsupporter: (Affirmation and Reassurance) I understand but wouldnt you rather be alone and focusing on yourself instead of miserable relationship?\nseeker: I am thinking of pursuing a new relationship and hoping to move forward\nsupporter: (Reflection of Feelings) I think that would be a wonderful idea for you.\nseeker: I just don't know where to find someone.\nsupporter: (Others) Dont go looking for someone . Let them find you. Just live your life and love will find you.\nseeker: I have to think positive and love will come when I don't expect it.\n",
         "stage": "Comforting",
         "state": "The seeker is feeling lonely and sad due to a recent breakup with her boyfriend. She is considering the possibility of starting a new relationship but is unsure about where to find a new partner. She is trying to stay positive and hopes that love will find her when she least expects it.",
+        "emotion_type": "sadness",
+        "problem_type": "breakup with partner",
+        "situation": "How can I cope with losing my boyfriend to another woman?",
         "Gold": {
             "strategy": "Reflection of Feelings",
             "utterance": "Exactly.",
@@ -5245,6 +5536,9 @@
         "context": "seeker: Yes, I am focusing on my grades and the pressure I feel from my mom.\nsupporter: (Question) Have you been performing below your normal standard this year? \nseeker: she wants me to get all A's. I feel she has too high of expectations sometimes, which makes me feel like I need to perfect my assignments and spend all this time on them.\nseeker: No, I do well, it just causes me a great amount of stress.\nsupporter: (Self-disclosure) I hear you, I have been in a similar situation. Parents sometimes do not realise just how much pressure they are putting on their children to be perfect. \nseeker: I feel like as long as I am meeting the requirements and am passing, she should be proud of my accomplishments. \nseeker: She should be proud I am even going to college.\nsupporter: (Affirmation and Reassurance) Exactly! there is nothing at all wrong with not being a straight A student. \nsupporter: (Question) Have you tried to tell her how you feel about her behaviour and attitude towards your studies?\nseeker: Exactly. I feel like there is this society stereotype of needing straight A's otherwise you are a failure or something.\nseeker: A bit, but she uses the \"I pay for your education\" card.\nseeker: Which makes sense, but still, I know I am doing well so it's just a lot at times.\nsupporter: (Affirmation and Reassurance) Absolutely not. There is nothing wrong with not being perfect. And she has no right to emotionally manipulate you by mentioning money. \nseeker: I agree, but she does have money over my head, which sucks.\nseeker: Don't get me wrong, I am very grateful for her financial support, but she uses it to manipulate me at times.\n",
         "stage": "Exploration",
         "state": "The seeker is feeling a high level of anxiety and pressure due to their mother's high academic expectations. They are stressed about getting all A's and perfecting all assignments, even though they are already performing well. They feel that their mother should be proud of their accomplishments and that they are even attending college, but are confronted with financial manipulation when they try to express their feelings. Despite their gratitude for the financial support, they feel manipulated and overwhelmed.",
+        "emotion_type": "anxiety",
+        "problem_type": "academic pressure",
+        "situation": "I have this overwhelming fear and pressure that my mother will not be accepting of my grades in school. This pressure has caused me to feel anxiety everyday and perfect all homework assignments which I do not have time for.",
         "Gold": {
             "strategy": "Question",
             "utterance": "Are there any scholarships or hardship funds that you could potentially look into applying for? ",
@@ -5299,6 +5593,9 @@
         "context": "supporter: (Providing Suggestions) So, then, it's how to figure out how to make that happen.\nseeker: well my parents dont believe me so not much i can do\nsupporter: (Question) May I ask why they believe your sibling? Is your sibling a different age?\nseeker: they are younger and the favorite\nsupporter: (Affirmation and Reassurance) I understand.\nseeker: I just need to wait until I'm 18 so I can move far away\nsupporter: (Question) So, it sounds like you already have a plan to turn things around. How far away from 18 are you, if I can ask?\nseeker: 1 year\nsupporter: (Affirmation and Reassurance) OK, good for you. It may not seem like it, but you can do anything for a year.\nseeker: True.\nseeker: I can't wait\n",
         "stage": "Exploration",
         "state": "The seeker is feeling angry and unfairly treated due to a situation at home. They are upset that their parents unjustly grounded them and favor their younger sibling. The seeker is looking forward to turning 18 so they can move away and gain independence. They have a plan in place and are counting down to reaching legal adulthood.",
+        "emotion_type": "anger",
+        "problem_type": "issues with parents",
+        "situation": "My parents grounded me for something I didn't do. My sibling broke the TV, I did not!!",
         "Gold": {
             "strategy": "Question",
             "utterance": "So, the question is....how do you deal in the short term?",
@@ -5353,6 +5650,9 @@
         "context": "seeker: im ok kinda stressed\nsupporter: (Question) Anything I can help with :) ?\nsupporter: (Reflection of Feelings) Feeling stressed is never fun :(\nsupporter: (Question) What has been making you feel stressed?\nseeker: im feeling very overwhelmed and cant get anything done cause i dont know where to start!\nseeker: i want to declutter my house but dont know where to start\nsupporter: (Reflection of Feelings) I hear you, feeling overwhelmed and like you don't know where to start can leave a person feeling stressd forsure! \nsupporter: (Affirmation and Reassurance) Decluttering sounds like a great idea! \nsupporter: (Providing Suggestions) Sometimes taking baby steps is a good place to start! \nseeker: but there are so many thinggs to do and ideas i have\nsupporter: (Restatement or Paraphrasing) Of course! It can feel so stressful when we have all these little things we want to do but don't know where to start! \nseeker: should i start in one room or one group of things and collect them from all the rooms?\n",
         "stage": "Action",
         "state": "The seeker is feeling stressed and overwhelmed due to wanting to declutter their house but not knowing where to start. They have many ideas but the enormity of the task is causing anxiety and procrastination. They are open to suggestions and guidance on how to approach their task.",
+        "emotion_type": "anxiety",
+        "problem_type": "procrastination",
+        "situation": "need to declutter my house and dont know where to start",
         "Gold": {
             "strategy": "Question",
             "utterance": "What is one little area that maybe seems easier to start with?",
