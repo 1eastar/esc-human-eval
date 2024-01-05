@@ -89,14 +89,14 @@ export default function Home({
           key: q.key,
           score: "0",
         })),
-        [Tab.GPT_REFEEL]: Questions.map(q => ({
-          key: q.key,
-          score: "0",
-        })),
-        [Tab.GPT_REFEELP]: Questions.map(q => ({
-          key: q.key,
-          score: "0",
-        })),
+        // [Tab.GPT_REFEEL]: Questions.map(q => ({
+        //   key: q.key,
+        //   score: "0",
+        // })),
+        // [Tab.GPT_REFEELP]: Questions.map(q => ({
+        //   key: q.key,
+        //   score: "0",
+        // })),
         [Tab.LLAMA2_INITIAL]: Questions.map(q => ({
           key: q.key,
           score: "0",
@@ -105,14 +105,14 @@ export default function Home({
           key: q.key,
           score: "0",
         })),
-        [Tab.LLAMA2_REFEEL]: Questions.map(q => ({
-          key: q.key,
-          score: "0",
-        })),
-        [Tab.LLAMA2_REFFELP]: Questions.map(q => ({
-          key: q.key,
-          score: "0",
-        })),
+        // [Tab.LLAMA2_REFEEL]: Questions.map(q => ({
+        //   key: q.key,
+        //   score: "0",
+        // })),
+        // [Tab.LLAMA2_REFFELP]: Questions.map(q => ({
+        //   key: q.key,
+        //   score: "0",
+        // })),
       }
     } as SampleScore
   ), [currentId, scoreResult])

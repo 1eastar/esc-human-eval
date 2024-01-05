@@ -21,12 +21,12 @@ const tabFieldMatch = {
   [Tab.GOLD]: 'Gold',
   [Tab.GPT_INITIAL]: 'GPT_initial',
   [Tab.GPT_DIRECT]: 'GPT_direct',
-  [Tab.GPT_REFEEL]: 'GPT_refeel',
-  [Tab.GPT_REFEELP]: 'GPT_refeelP',
+  // [Tab.GPT_REFEEL]: 'GPT_refeel',
+  // [Tab.GPT_REFEELP]: 'GPT_refeelP',
   [Tab.LLAMA2_INITIAL]: 'LLaMA2_initial',
   [Tab.LLAMA2_DIRECT]: 'LLaMA2_direct',
-  [Tab.LLAMA2_REFEEL]: 'LLaMA2_refeel',
-  [Tab.LLAMA2_REFFELP]: 'LLaMA2_refeelP',
+  // [Tab.LLAMA2_REFEEL]: 'LLaMA2_refeel',
+  // [Tab.LLAMA2_REFFELP]: 'LLaMA2_refeelP',
 }
 
 function Tabs({
